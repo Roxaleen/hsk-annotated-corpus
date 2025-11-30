@@ -35,8 +35,8 @@ def process_sentences(sentences, characters):
             id = int(row[0])
             sentence = row[2]
             
-            # Filter sentence
-            sentence = filter_sentence(sentence, characters)
+            # Process sentence
+            sentence = process_sentence(sentence, characters)
             if sentence is None:
                 return
             
@@ -49,8 +49,8 @@ def process_sentences(sentences, characters):
         writer.writerows(sentences)
 
 
-# Filter sentence
-def filter_sentence(sentence, characters):
+# Process sentence
+def process_sentence(sentence, characters):
     """
     Standardize and check the validity of a sentence.
     Return processed sentence if valid, else None.
@@ -59,8 +59,7 @@ def filter_sentence(sentence, characters):
     if re.search(r"[a-zA-Z]", sentence) or not sentence.endswith(tuple(PUNCT_TERMINAL)):
         return None
 
-    # Convert sentence from traditional to simplified Chinese
-    # https://pypi.org/project/chinese-converter/
+    # Convert to simplified characters
     sentence = chinese_converter.to_simplified(sentence)
 
     # Standardize punctuation

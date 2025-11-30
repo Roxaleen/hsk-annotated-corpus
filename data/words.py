@@ -1,5 +1,6 @@
 """
 Process word data sets.
+
 HSK headwords and CC-CEDICT definitions: https://github.com/drkameleon/complete-hsk-vocabulary
 Wiktionary dataset: https://kaikki.org/dictionary/Chinese/index.html
 """
@@ -57,6 +58,9 @@ POS_WIKTIONARY = {
 
 # Process word data
 def process_words(words, characters):
+    """
+    Process raw word datasets.
+    """
     # Process word set by drkameleon
     words_drkameleon = process_words_drkameleon(words, characters)
     
@@ -70,6 +74,7 @@ def process_words(words, characters):
 def process_words_drkameleon(words,characters, export_csv=False):
     """
     Process word set by drkameleon.
+
     Source: https://github.com/drkameleon/complete-hsk-vocabulary
     """
     words_drkameleon = {}
@@ -130,6 +135,7 @@ def process_words_drkameleon(words,characters, export_csv=False):
 def process_words_kaikki(words, export_csv=False):
     """
     Process Wiktionary dataset.
+
     Source: https://kaikki.org/dictionary/Chinese/index.html
     """
     words_kaikki = {}
@@ -212,6 +218,7 @@ def process_words_kaikki(words, export_csv=False):
 def merge_word_sources(words, words_drkameleon, words_kaikki, export_csv=True, export_json=True):
     """
     Merge processed datasets.
+
     For single-character words, use drkameleon set.
     For multi-character words, use Kaikki entries whenever available (with drkameleon set as fallback).
     """

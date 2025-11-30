@@ -4,7 +4,7 @@
 # Word list: https://github.com/drkameleon/complete-hsk-vocabulary
 # Sentence list: https://tatoeba.org/en/downloads
 
-import csv
+import csv, json
 
 from words import process_words
 from sentences import process_sentences
@@ -15,7 +15,15 @@ words = {}
 sentences = []
 
 def main():
-    process_words(words, characters)
+    # Import word data
+    try:
+        with open("../export/json/words.json", "r", encoding="utf-8") as words_json:
+            words = json.load(words_json)
+        characters = {character for word in words for character in set(word)}
+    except:
+        process_words(words, characters)
+
+    # Import sentence data
     # process_sentences(sentences, characters)
 
     # cloze = []
