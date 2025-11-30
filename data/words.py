@@ -1,5 +1,5 @@
 """
-Process word data sets.
+Process word datasets.
 
 HSK headwords and CC-CEDICT definitions: https://github.com/drkameleon/complete-hsk-vocabulary
 Wiktionary dataset: https://kaikki.org/dictionary/Chinese/index.html
@@ -99,7 +99,7 @@ def process_words_drkameleon(words,characters, export_csv=False):
             word_meanings = [
                 re.sub(r" \(Taiwan pr\. .*\)", "", meaning)
                 for form in word_forms for meaning in form["meanings"] if not (
-                    any(meaning.startswith(prefix) for prefix in ["Taiwan", "(Taiwan", "Beijing pr. ", "also ", "used in ", "(used ", "equivalent ", "(indicates ", "abbr. ", "see ", "Kangxi radical "]) or
+                    meaning.startswith(("Taiwan", "(Taiwan", "Beijing pr. ", "also ", "used in ", "(used ", "equivalent ", "(indicates ", "abbr. ", "see ", "Kangxi radical ")) or
                     any(substring in meaning for substring in ["(Tw)", "(Taiwan)", "variant of"])
                 )
             ]
@@ -171,7 +171,7 @@ def process_words_kaikki(words, export_csv=False):
                 word_definition = "; ".join([
                     re.sub(r" \(Classifier: .*\)", "", gloss)
                     for gloss in sense["glosses"] if not(
-                        any(gloss.lower().startswith(prefix) for prefix in ["alternative ", "synonym of", "short for", "erhua"])
+                        gloss.lower().startswith(("alternative ", "synonym of", "short for", "erhua"))
                     )
                 ])
                 if word_definition:
