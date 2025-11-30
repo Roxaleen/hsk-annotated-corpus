@@ -1,0 +1,1 @@
+data/raw/words/kaikki_dictionary-Chinese.jsonl filter=lfs diff=lfs merge=lfs -text
