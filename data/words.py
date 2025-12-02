@@ -8,7 +8,7 @@ Wiktionary dataset: https://kaikki.org/dictionary/Chinese/index.html
 import chinese_converter, csv, json, re
 
 
-# Standardized values for parts of speech
+# Standardized POS labels
 POS_PKU = {
     "a": "adjective",
     "b": "adjective",
@@ -57,23 +57,27 @@ POS_WIKTIONARY = {
 
 
 # Process word data
-def process_words(words, characters):
+def process_words(words, characters, export=False):
     """
     Process raw word datasets.
     """
-    # Process word set by drkameleon
-    words_drkameleon = process_words_drkameleon(words, characters)
+    # Load word set by drkameleon
+    words_drkameleon = load_words_drkameleon(words, characters)
     
-    # Process Wiktionary dataset
-    words_kaikki = process_words_kaikki(words)
+    # Load Wiktionary dataset
+    words_kaikki = load_words_kaikki(words)
 
     # Merge word datasets
     merge_word_sources(words, words_drkameleon, words_kaikki)
 
+    # Export processed data
+    if export:
+        export_word_data(words, characters)
 
-def process_words_drkameleon(words,characters, export_csv=False):
+
+def load_words_drkameleon(words, characters, export_csv=False):
     """
-    Process word set by drkameleon.
+    Load word set by drkameleon.
 
     Source: https://github.com/drkameleon/complete-hsk-vocabulary
     """
@@ -84,11 +88,10 @@ def process_words_drkameleon(words,characters, export_csv=False):
         words_full = json.load(words_json)
 
         # Extract needed fields
-        for (index, word) in enumerate(words_full):
+        for word in enumerate(words_full):
+            word_level = int(re.sub(r"[a-zA-Z\+\-]", "", word["level"][0]))
             words[word["simplified"]] = {
-                "id": index,
-                "word": word["simplified"],
-                "level": int(re.sub(r"[a-zA-Z\+\-]", "", word["level"][0])),
+                "level": word_level,
                 "difficulty": int(word["frequency"]),
             }
 
@@ -115,26 +118,39 @@ def process_words_drkameleon(words,characters, export_csv=False):
             word_data = {
                 "pos": ", ".join(sorted(list(pos_set))),
                 "pinyin": " | ".join({form["transcriptions"]["pinyin"] for form in word_forms}),
-                "definitions": " | ".join(word_meanings)
+                "definitions": " | ".join(word_meanings),
+                "source": "drkameleon"
             }            
             words_drkameleon[word["simplified"]] = [word_data]
-            characters |= set(word["simplified"])
+            
+            # Record character level
+            for character in set(word["simplified"]):
+                if character in characters:
+                    characters[character] = min(characters[character], word_level)
+                else:
+                    characters[character] = words[word["simplified"]]["level"]
     
     # Export cleaned data to CSV
     if export_csv:
         with open("cleaned/words_drkameleon.csv", "w", encoding="utf-8") as words_csv:
-            writer = csv.DictWriter(words_csv, ["id", "word", "level", "difficulty", 
+            writer = csv.DictWriter(words_csv, ["word", "level", "difficulty", 
                                     "pos", "pinyin", "definitions"])
             writer.writeheader()
             for word in words_drkameleon:
-                writer.writerow(words[word] | words_drkameleon[word][0])
+                writer.writerow({
+                    "word": word
+                } | {
+                    key : words[word][key] for key in ["level", "difficulty"]
+                } | {
+                    key : words_drkameleon[word][0][key] for key in ["pos", "pinyin", "definitions"]
+                })
 
     return words_drkameleon
 
 
-def process_words_kaikki(words, export_csv=False):
+def load_words_kaikki(words, export_csv=False):
     """
-    Process Wiktionary dataset.
+    Load Wiktionary dataset.
 
     Source: https://kaikki.org/dictionary/Chinese/index.html
     """
@@ -160,7 +176,8 @@ def process_words_kaikki(words, export_csv=False):
             if word not in words_kaikki:
                 words_kaikki[word] = []
             word_data = {
-                "pos": POS_WIKTIONARY[word_pos]
+                "pos": POS_WIKTIONARY[word_pos],
+                "source": "kaikki"
             }
 
             # Extract definitions
@@ -205,17 +222,23 @@ def process_words_kaikki(words, export_csv=False):
     # Export cleaned data to CSV
     if export_csv:
         with open("cleaned/words_kaikki.csv", "w") as words_csv:
-            writer = csv.DictWriter(words_csv, ["id", "word", "level", "difficulty", 
+            writer = csv.DictWriter(words_csv, ["word", "level", "difficulty", 
                                     "pos", "pinyin", "definitions"])
             writer.writeheader()
             for word in words_kaikki:
                 for word_entry in words_kaikki.get(word):
-                    writer.writerow(words[word] | word_entry)
+                    writer.writerow({
+                        "word": word
+                    } | {
+                        key : words[word][key] for key in ["level", "difficulty"]
+                    } | {
+                        key : word_entry[key] for key in ["pos", "pinyin", "definitions"]
+                    })
 
     return words_kaikki
 
 
-def merge_word_sources(words, words_drkameleon, words_kaikki, export_csv=True, export_json=True):
+def merge_word_sources(words, words_drkameleon, words_kaikki):
     """
     Merge processed datasets.
 
@@ -229,20 +252,37 @@ def merge_word_sources(words, words_drkameleon, words_kaikki, export_csv=True, e
             words[word]["entries"] = words_drkameleon[word]
         else:
             words.pop(word)
+
+
+def export_word_data(words, characters):
+    """
+    Export processed word and character data.
+    """
+    # Export to JSON
+    with open("../export/json/words.json", "w", encoding="utf-8") as words_json:
+        json.dump(words, words_json, ensure_ascii=False)
     
-    # Export merged dataset to CSV
-    if export_csv:
-        with open("../export/csv/words.csv", "w", encoding="utf-8") as words_csv:
-            writer = csv.DictWriter(words_csv, ["id", "word", "level", "difficulty", 
-                                    "pos", "pinyin", "definitions"])
-            writer.writeheader()
-            for word in words:
-                for word_entry in words[word]["entries"]:
-                    writer.writerow({
-                        key : words[word][key] for key in ["id", "word", "level", "difficulty"] 
-                    } | word_entry)
+    with open("../export/json/characters.json", "w", encoding="utf-8") as characters_json:
+        json.dump(characters, characters_json, ensure_ascii=False)
+
+    # Export to CSV
+    with open("../export/csv/words.csv", "w", encoding="utf-8") as words_csv:
+        writer = csv.DictWriter(words_csv, ["word", "level", "difficulty", 
+                                "pos", "pinyin", "definitions", "source"])
+        writer.writeheader()
+        for word in words:
+            for word_entry in words[word]["entries"]:
+                writer.writerow({
+                    "word": word
+                } | {
+                    key : words[word][key] for key in ["level", "difficulty"] 
+                } | word_entry)
     
-    # Export merged dataset to JSON
-    if export_json:
-        with open("../export/json/words.json", "w", encoding="utf-8") as words_json:
-            json.dump(words, words_json, ensure_ascii=False)
+    with open("../export/csv/characters.csv", "w", encoding="utf-8") as characters_csv:
+        writer = csv.DictWriter(characters_csv, ["character", "level"])
+        writer.writeheader()
+        for character in characters:
+            writer.writerow({
+                "character": character,
+                "level": characters[character]
+            })
