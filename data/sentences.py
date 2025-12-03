@@ -277,7 +277,7 @@ def export_sentence_data(sentences):
         for sentence in sentences:
             if "tags" not in sentences[sentence]:
                 continue
-            for tag in sentence["tags"]:
+            for tag in sentences[sentence]["tags"]:
                 writer.writerow({
                     "sentence": sentence,
                     "word": tag[0],

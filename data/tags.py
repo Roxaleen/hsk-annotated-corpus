@@ -1,5 +1,7 @@
 """
 Tag the words and characters present in each sentence.
+
+HanLP documentation: https://hanlp.hankcs.com/docs/index.html
 """
 
 import hanlp, math
@@ -46,7 +48,7 @@ def tag_sentences(sentences, words, characters):
             for (index, word) in enumerate(sentence_tokens):
                 if word not in words:
                     continue
-                sentences[sentence]["tags"].append((word, POS_PKU[sentence_tags[index].lower()[0]]))
+                sentences[sentence]["tags"].append([word, POS_PKU[sentence_tags[index].lower()[0]]])
 
             # Compute sentence level
             (character_level, word_level) = compute_sentence_level(sentence, sentences, words, characters)

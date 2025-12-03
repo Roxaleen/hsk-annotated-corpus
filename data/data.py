@@ -1,3 +1,7 @@
+"""
+Controller module for all processing, tagging, and exporting operations.
+"""
+
 import json
 
 from words import process_words
