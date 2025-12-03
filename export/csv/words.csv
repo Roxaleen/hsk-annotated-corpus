@@ -1,9 +1,9 @@
 word,level,difficulty,pos,pinyin,definitions,source
 阿拉伯语,7,27202,noun,ālābóyǔ,Arabic (language),kaikki
 阿姨,4,4355,noun,āyí,"maternal aunt (mother's sister or female cousin) | maternal aunt (mother's sister or female cousin); one's mother's younger sister | auntie (form of address for any woman around one's mother's age) | a form of address for working-age female caretakers, including nurses, cleaning ladies, live-in staff, etc. | mom; mother",kaikki
-呵,6,5230,"interjection, particle, verb",hē | ā,expel breath | my goodness,drkameleon
+呵,6,5230,"interjection, particle, verb",ā | hē,expel breath | my goodness,drkameleon
 呵护,7,13381,verb,hēhù,to look after; to take care of | to take good care of; to cherish | to protect; to guard | to bless and protect; to be safeguarded,kaikki
-啊,2,47,"interjection, particle",a | ā | á | à | ǎ,"interjection of surprise | Ah! | Oh! | interjection expressing doubt or requiring answer | Eh? | what? | interjection of surprise or doubt | Eh? | My! | what's up? | interjection or grunt of agreement | uhm | Ah, OK | expression of recognition | Oh, it's you! | modal particle ending sentence, showing affirmation, approval, or consent",drkameleon
+啊,2,47,"interjection, particle",à | ā | a | á | ǎ,"interjection of surprise | Ah! | Oh! | interjection expressing doubt or requiring answer | Eh? | what? | interjection of surprise or doubt | Eh? | My! | what's up? | interjection or grunt of agreement | uhm | Ah, OK | expression of recognition | Oh, it's you! | modal particle ending sentence, showing affirmation, approval, or consent",drkameleon
 哎,7,2092,interjection,āi,hey! | (interjection used to attract attention or to express surprise or disapprobation),drkameleon
 哎呀,7,4772,interjection,āiyā,"aiya; alas; ah; oh; ugh; ouch (expressing surprise, annoyance, pain, frustration, sarcasm, etc.)",kaikki
 哎哟,6,7054,interjection,āiyō,"aiyo; hey; oh; ouch; ow (expressing surprise, pain, annoyance, regret, frustration, admiration, etc.)",kaikki
@@ -99,7 +99,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 疤,6,9775,noun,bā,scar | scab,drkameleon
 拔,5,3803,verb,bá,to pull up | to pull out | to draw out by suction | to select | to pick | to stand out (above level) | to surpass | to seize,drkameleon
 拔苗助长,6,59082,idiom,bámiáozhùzhǎng,"to be hasty and use inappropriate methods in order to achieve a goal quickly, but by doing so ruin things instead and fail in the end",kaikki
-把,3,50,"classifier, numeral, preposition, verb",bǎ | bà,"to hold; to grasp | to hold a baby in position to help it urinate or defecate | handlebar | classifier: handful, bundle, bunch | classifier for things with handles | handle",drkameleon
+把,3,50,"classifier, numeral, preposition, verb",bà | bǎ,"to hold; to grasp | to hold a baby in position to help it urinate or defecate | handlebar | classifier: handful, bundle, bunch | classifier for things with handles | handle",drkameleon
 把柄,7,20374,noun,bǎbǐng,handle (the part of a utensil that is easy to hold by hand) | information that yields a bargaining advantage to the other party in a lawsuit or argument; information that can be used against someone,kaikki
 把关,7,24750,verb,bǎguān,to guard a pass | to check (e.g. for conformity to a standard); to keep a check on,kaikki
 把手,7,8291,noun,bǎshǒu,handle; grip; knob,kaikki
@@ -118,7 +118,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 巴结,6,27264,verb,bājie,to kiss up to; to curry favor; to fawn on; to brownnose; to suck up | to be pregnant,kaikki
 巴结,6,27264,adjective,bājie,hardworking; diligent,kaikki
 巴士,4,8312,noun,bāshì,bus,kaikki
-吧,1,58,particle,bā | biā | ba,"bar (loanword) (serving drinks, or providing Internet access etc) | to puff (on a pipe etc) | (onom.) bang | (modal particle indicating suggestion or surmise) | ...right? | ...OK? | ...I presume. | (onom.) smack!",drkameleon
+吧,1,58,particle,bā | ba | biā,"bar (loanword) (serving drinks, or providing Internet access etc) | to puff (on a pipe etc) | (onom.) bang | (modal particle indicating suggestion or surmise) | ...right? | ...OK? | ...I presume. | (onom.) smack!",drkameleon
 罢工,6,8001,verb,bàgōng,to go on strike; to strike (refuse to work as protest),kaikki
 罢了,6,3807,verb,bàliǎo,to let pass,kaikki
 罢了,6,3807,particle,bàle,that's all; only; (there's) nothing more (to it),kaikki
@@ -232,7 +232,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 包装,5,4634,noun,bāozhuāng,packaging; wrapping,kaikki
 包子,1,16315,noun,bāozi,Chinese steamed stuffed bun; baozi | jiaozi dumpling | weak and useless person,kaikki
 煲,7,14364,verb,bāo,to cook slowly over a low flame | pot | saucepan,drkameleon
-薄,4,4129,adjective,bò | báo | bó,thin | cold in manner | indifferent | weak | light | infertile | meager | slight | weak | ungenerous or unkind | frivolous | to despise | to belittle | to look down on | to approach or near,drkameleon
+薄,4,4129,adjective,bó | báo | bò,thin | cold in manner | indifferent | weak | light | infertile | meager | slight | weak | ungenerous or unkind | frivolous | to despise | to belittle | to look down on | to approach or near,drkameleon
 薄弱,5,10648,adjective,bóruò,weak; frail; lacking,kaikki
 宝,4,1908,"noun, verb",bǎo,jewel | gem | treasure | precious,drkameleon
 宝宝,4,1968,noun,bǎobao,baby; newborn | darling; honey (often said of a child or lover); sweetheart | silkworm | item; merchandise; product,kaikki
@@ -346,7 +346,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 备忘录,6,10931,noun,bèiwànglù,memo; memorandum; reminder; aide-mémoire | notepad (made from paper); notebook,kaikki
 备用,7,7153,verb,bèiyòng,to reserve for use as a backup,kaikki
 备用,7,7153,adjective,bèiyòng,reserve; spare; backup,kaikki
-背,2,1623,"noun, verb",bēi | bèi,to be burdened | to carry on the back or shoulder | the back of a body or object | to turn one's back | to hide something from | to learn by heart | to recite from memory | unlucky (slang) | hard of hearing,drkameleon
+背,2,1623,"noun, verb",bèi | bēi,to be burdened | to carry on the back or shoulder | the back of a body or object | to turn one's back | to hide something from | to learn by heart | to recite from memory | unlucky (slang) | hard of hearing,drkameleon
 背包,5,8274,noun,bēibāo,backpack,kaikki
 背后,3,2349,noun,bèihòu,"on the back (of someone) | behind (someone or something) | behind (a story, situation, etc.)",kaikki
 背后,3,2349,adverb,bèihòu,in secret; in private; surreptitiously; behind someone's back; privately; on the sly,kaikki
@@ -402,8 +402,8 @@ word,level,difficulty,pos,pinyin,definitions,source
 笨重,7,25279,adjective,bènzhòng,bulky; unwieldy; cumbersome | arduous; strenuous; tiring,kaikki
 笨拙,6,17203,adjective,bènzhuō,"clumsy, skilless, ungraceful, ungainly",kaikki
 崩溃,7,4192,verb,bēngkuì,to collapse; to fall apart; to crumble; to have a breakdown | to crash,kaikki
-甭,6,15279,"adverb, verb",bèng | béng,(contraction of 用) need not; please don't | (dialect) very,drkameleon
-绷,7,11156,verb,bēng | běng,to draw tight | to stretch taut | to tack (with thread or pin) | embroidery hoop | woven bed mat | to have a taut face,drkameleon
+甭,6,15279,"adverb, verb",béng | bèng,(contraction of 用) need not; please don't | (dialect) very,drkameleon
+绷,7,11156,verb,běng | bēng,to draw tight | to stretch taut | to tack (with thread or pin) | embroidery hoop | woven bed mat | to have a taut face,drkameleon
 绷带,7,16542,noun,bēngdài,bandage | swaddling clothes (for a baby),kaikki
 迸发,6,23536,verb,bèngfā,to burst forth; to gush out,kaikki
 蹦,7,7023,verb,bèng,to jump | to bounce | to hop,drkameleon
@@ -473,7 +473,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 避难,7,17616,verb,bìnàn,to take refuge; to seek asylum; to take sanctuary,kaikki
 避暑,7,23952,verb,bìshǔ,to dispel summer heat; to beat the heat | to prevent heat stroke,kaikki
 臂,6,7284,noun,bì,arm,drkameleon
-边,2,803,"adverb, noun",biān | bian,side | edge | margin | border | boundary | simultaneously | suffix of a noun of locality,drkameleon
+边,2,803,"adverb, noun",bian | biān,side | edge | margin | border | boundary | simultaneously | suffix of a noun of locality,drkameleon
 边疆,7,28113,noun,biānjiāng,frontier; border,kaikki
 边界,7,7042,noun,biānjiè,boundary; border; periphery,kaikki
 边境,5,5914,noun,biānjìng,border; frontier,kaikki
@@ -499,7 +499,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 贬低,6,17829,verb,biǎndī,to abase; to belittle; to depreciate; to play down,kaikki
 贬义,6,38391,noun,biǎnyì,derogatory sense; negative connotation; pejorative,kaikki
 贬值,7,19175,verb,biǎnzhí,to devalue; to depreciate,kaikki
-扁,6,5218,adjective,biǎn | piān,flat | (coll.) to beat (sb) up | small boat,drkameleon
+扁,6,5218,adjective,piān | biǎn,flat | (coll.) to beat (sb) up | small boat,drkameleon
 变,2,501,verb,biàn,to change | to become different | to transform | to vary | rebellion,drkameleon
 变成,2,853,verb,biànchéng,to become; to change into; to turn into,kaikki
 变动,5,7124,verb,biàndòng,to alter; to change | to alternate; to oscillate between two options,kaikki
@@ -515,7 +515,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 变形,6,6036,verb,biànxíng,to change shape; to become deformed; to be out of shape; to transfigure | to change (of one's personality),kaikki
 变异,7,8927,verb,biànyì,to vary; to deviate | to mutate; to undergo mutation,kaikki
 变质,7,13083,verb,biànzhì,to go bad; to go off; to deteriorate | to become morally corrupted | to metamorphose,kaikki
-便,6,811,adverb,pián | biàn,plain | informal | suitable | convenient | opportune | to urinate or defecate | in that case | even if | soon afterwards,drkameleon
+便,6,811,adverb,biàn | pián,plain | informal | suitable | convenient | opportune | to urinate or defecate | in that case | even if | soon afterwards,drkameleon
 便道,7,28502,noun,biàndào,"shortcut (shorter, alternative route) | pavement; sidewalk | makeshift road",kaikki
 便饭,7,51135,noun,biànfàn,ordinary meal; simple meal; home cooking; potluck,kaikki
 便饭,7,51135,verb,biànfàn,to eat an ordinary or simple meal; to enjoy some home cooking; to have potluck,kaikki
@@ -881,7 +881,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 裁判,5,4450,verb,cáipàn,to act as umpire or referee | to act as judge; to adjudicate,kaikki
 裁判,5,4450,noun,cáipàn,umpire; referee | judgement | judge; adjudicator,kaikki
 裁员,6,13947,verb,cáiyuán,to make employees redundant; to downsize; to cut staff; to lay off employees,kaikki
-采,7,4885,verb,cǎi | cài,to pick | to pluck | to collect | to select | to choose | to gather | color | complexion | looks | allotment to a feudal noble,drkameleon
+采,7,4885,verb,cài | cǎi,to pick | to pluck | to collect | to select | to choose | to gather | color | complexion | looks | allotment to a feudal noble,drkameleon
 采访,4,1893,verb,cǎifǎng,to gather news; to cover and investigate a story | to interview someone for a story | to search; to explore,kaikki
 采购,5,7654,verb,cǎigòu,to select and purchase,kaikki
 采购,5,7654,noun,cǎigòu,buyer; purchasing agent,kaikki
@@ -932,7 +932,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 惨痛,7,19765,adjective,cǎntòng,painful; miserable; harrowing,kaikki
 惨重,7,14052,adjective,cǎnzhòng,disastrous; grievous; calamitous; heavy,kaikki
 灿烂,7,7167,adjective,cànlàn,resplendent; bright; glittering | gorgeous; magnificent; splendid; outstanding; distinguished,kaikki
-掺,7,9989,verb,chān | shǎn,to mix | to grasp,drkameleon
+掺,7,9989,verb,shǎn | chān,to mix | to grasp,drkameleon
 仓促,6,15377,adjective,cāngcù,hurried; hasty; all of a sudden,kaikki
 仓库,6,4658,noun,cāngkù,warehouse; storehouse | repository,kaikki
 沧桑,7,21433,noun,cāngsāng,vicissitudes of life; great changes; complete transformations,kaikki
@@ -940,7 +940,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 苍白,6,8479,adjective,cāngbái,pale; wan; pallid | lifeless; flat,kaikki
 苍蝇,7,9274,noun,cāngying,housefly; fly | low-ranking corrupt public employee,kaikki
 舱,7,5838,noun,cāng,cabin | the hold of a ship or airplane,drkameleon
-藏,6,1544,"adjective, verb",zàng | cáng,to conceal | to hide away | to harbor | to store | to collect | storehouse | depository | Buddhist or Taoist scripture,drkameleon
+藏,6,1544,"adjective, verb",cáng | zàng,to conceal | to hide away | to harbor | to store | to collect | storehouse | depository | Buddhist or Taoist scripture,drkameleon
 藏匿,7,14901,verb,cángnì,to hide something; to cause something to not be found,kaikki
 藏品,7,17462,noun,cángpǐn,collected item; collectible,kaikki
 藏身,7,12426,verb,cángshēn,to hide oneself; to go into hiding | to settle oneself down; to take shelter,kaikki
@@ -953,14 +953,14 @@ word,level,difficulty,pos,pinyin,definitions,source
 操作,4,2640,verb,cāozuò,to operate; to maneuver; to manipulate (with the hands) | to do physical work; to do manual labour; to toil | to implement; to carry out; to put into practice,kaikki
 嘈杂,6,19603,adjective,cáozá,noisy; clamorous,kaikki
 槽,7,5706,other,cáo,trough | manger | groove | channel,drkameleon
-草,2,2467,noun,cǎo | cào,grass | straw | manuscript | draft (of a document) | careless | rough,drkameleon
+草,2,2467,noun,cào | cǎo,grass | straw | manuscript | draft (of a document) | careless | rough,drkameleon
 草案,7,12348,noun,cǎo'àn,"draft (of a plan, law, statement, etc.)",kaikki
 草地,2,9048,noun,cǎodì,lawn; grass | grassland; meadow | country; rural area; countryside,kaikki
 草率,6,17191,adjective,cǎoshuài,careless; perfunctory; rash; sloppy,kaikki
 草坪,7,8857,noun,cǎopíng,lawn; grass,kaikki
 草原,5,8743,noun,cǎoyuán,grassland; prairie; steppe; savanna,kaikki
 册,5,8165,classifier,cè,book | booklet | classifier for books,drkameleon
-侧,6,2493,"classifier, postposition, verb",zhāi | cè,the side | to incline towards | to lean | inclined | lateral | side | lean on one side,drkameleon
+侧,6,2493,"classifier, postposition, verb",cè | zhāi,the side | to incline towards | to lean | inclined | lateral | side | lean on one side,drkameleon
 侧面,7,8235,noun,cèmiàn,lateral side | side; aspect,kaikki
 侧重,7,27115,verb,cèzhòng,to place particular emphasis on; to emphasise; to focus on; to prioritize,kaikki
 厕所,6,3393,noun,cèsuǒ,toilet; bathroom; lavatory; WC,kaikki
@@ -981,13 +981,13 @@ word,level,difficulty,pos,pinyin,definitions,source
 曾,4,545,"adverb, noun",céng | zēng,"once | already | ever (in the past) | former | previously | (past tense marker used before verb or clause) | great- (grandfather, grandchild etc)",drkameleon
 曾经,3,723,adverb,céngjīng,once; before; used to; in the past,kaikki
 蹭,7,9534,verb,cèng,to rub against | to walk slowly | (coll.) to freeload,drkameleon
-叉,5,7708,"noun, verb",chǎ | chā | chá,"fork | pitchfork | prong | pick | cross | intersect | ""X"" | to cross | be stuck | to diverge | to open (as legs)",drkameleon
+叉,5,7708,"noun, verb",chá | chā | chǎ,"fork | pitchfork | prong | pick | cross | intersect | ""X"" | to cross | be stuck | to diverge | to open (as legs)",drkameleon
 叉子,5,26304,noun,chāzi,fork | cross,kaikki
 插,5,2875,verb,chā,to insert | stick in | pierce | to take part in | to interfere | to interpose,drkameleon
 插手,7,11136,verb,chāshǒu,"to poke one's nose into; to meddle in | to take part; to lend a hand | to put one's hand in (one's pocket, muff, etc.)",kaikki
 插图,7,20743,noun,chātú,illustration (in a book),kaikki
 插嘴,7,21594,verb,chāzuǐ,to interrupt; to cut in; to butt in; to chime in,kaikki
-查,2,1010,verb,zhā | chá,to research | to check | to investigate | to examine | to refer to | to look up (e.g. a word in a dictionary),drkameleon
+查,2,1010,verb,chá | zhā,to research | to check | to investigate | to examine | to refer to | to look up (e.g. a word in a dictionary),drkameleon
 查出,6,5557,verb,cháchū,"to find out, to discover",kaikki
 查处,7,18600,verb,cháchǔ,to investigate and deal with accordingly,kaikki
 查获,6,26153,verb,cháhuò,to hunt down and seize; to track down | to uncover (criminal activity),kaikki
@@ -1002,7 +1002,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 察看,7,14308,verb,chákàn,"to observe; to check (the progress of something, etc.) | to put on probation (as a disciplinary measure)",kaikki
 岔,6,21163,verb,chà,"fork in road | bifurcation | branch in road, river, mountain range etc | to branch off | to turn off | to diverge | to stray (from the path) | to change the subject | to interrupt | to stagger (times)",drkameleon
 诧异,7,18266,adjective,chàyì,surprised; astonished; flabbergasted; astounded,kaikki
-差,1,968,"adjective, verb",cī | chā | chāi | chà,difference; discrepancy | (math.) difference (amount remaining after a subtraction) | (literary) a little; somewhat; slightly | different | wrong; mistaken | to fall short; to lack | not up to standard; inferior | to send (on an errand) | (archaic) person sent on such an errand | job; official post,drkameleon
+差,1,968,"adjective, verb",chà | cī | chā | chāi,difference; discrepancy | (math.) difference (amount remaining after a subtraction) | (literary) a little; somewhat; slightly | different | wrong; mistaken | to fall short; to lack | not up to standard; inferior | to send (on an errand) | (archaic) person sent on such an errand | job; official post,drkameleon
 差别,5,5380,noun,chābié,difference; variance,kaikki
 差不多,2,2024,adjective,chàbuduō,similar; about the same; good enough | not bad | good (of one's behavior),kaikki
 差不多,2,2024,adverb,chàbuduō,almost; nearly,kaikki
@@ -1055,7 +1055,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 常务,6,27826,adjective,chángwù,standing | executive,kaikki
 常用,2,9671,adjective,chángyòng,commonly used; in common use,kaikki
 嫦娥,7,38717,noun,Cháng'é,"moon | graceful, beautiful woman",kaikki
-厂,3,2329,noun,chǎng | hǎn,"""cliff"" radical in Chinese characters (Kangxi radical 27), occurring in 原, 历, 压 etc | factory | yard | depot | workhouse | works | (industrial) plant",drkameleon
+厂,3,2329,noun,hǎn | chǎng,"""cliff"" radical in Chinese characters (Kangxi radical 27), occurring in 原, 历, 压 etc | factory | yard | depot | workhouse | works | (industrial) plant",drkameleon
 厂家,7,12737,noun,chǎngjiā,factory; plant | factory owner,kaikki
 厂商,6,12339,noun,chǎngshāng,manufacturer; producer; factory owner | firm; business,kaikki
 厂长,5,34641,noun,chǎngzhǎng,factory manager; factory director,kaikki
@@ -1096,7 +1096,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 超速,7,13022,verb,chāosù,to speed; to break the speed limit | to overtake another vehicle,kaikki
 超越,5,4202,verb,chāoyuè,to exceed; to surpass; to transcend; to surmount | to overstep the bounds; to go beyond one's role | to fly across; to jump over; to pass,kaikki
 超越,5,4202,adjective,chāoyuè,transcendental,kaikki
-朝,3,1321,"adjective, classifier, noun, preposition, verb",zhāo | cháo,imperial or royal court | government | dynasty | reign of a sovereign or emperor | court or assembly held by a sovereign or emperor | to make a pilgrimage to | facing | towards | morning,drkameleon
+朝,3,1321,"adjective, classifier, noun, preposition, verb",cháo | zhāo,imperial or royal court | government | dynasty | reign of a sovereign or emperor | court or assembly held by a sovereign or emperor | to make a pilgrimage to | facing | towards | morning,drkameleon
 朝代,7,33998,noun,cháodài,dynasty; reign | period (of time); age,kaikki
 朝气蓬勃,7,35838,idiom,zhāoqìpéngbó,full of vigor and vitality; spirited,kaikki
 朝三暮四,7,59231,idiom,zhāosānmùsì,to deceive using tricks; to take in someone | to change one's mind frequently; to blow hot and cold; to be fickle or capricious,kaikki
@@ -1113,7 +1113,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 炒,6,2197,verb,chǎo,to sauté | to stir-fry | to speculate | to hype | to fire (sb),drkameleon
 炒股,6,26869,verb,chǎogǔ,to speculate on the stock market,kaikki
 炒作,6,13479,verb,chǎozuò,to hype; to sensationalise | to speculate | to drive up prices,kaikki
-车,1,186,"classifier, noun",jū | chē,car | vehicle | machine | to shape with a lathe | war chariot (archaic) | rook (in Chinese chess) | rook (in chess),drkameleon
+车,1,186,"classifier, noun",chē | jū,car | vehicle | machine | to shape with a lathe | war chariot (archaic) | rook (in Chinese chess) | rook (in chess),drkameleon
 车道,7,9479,noun,chēdào,driveway; lane; ramp,kaikki
 车号,6,34947,noun,chē hào,"vehicle number (license plate number, taxi number, bus number, train car number)",drkameleon
 车祸,7,4500,noun,chēhuò,car accident; traffic incident; car crash,kaikki
@@ -1165,7 +1165,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 趁机,7,12640,verb,chènjī,to seize an opportunity; to exploit a situation,kaikki
 趁早,7,23121,adverb,chènzǎo,as soon as possible; at the first opportunity; before it is too late,kaikki
 趁着,7,11732,preposition,chènzhe,while,drkameleon
-称,2,1100,verb,chèng | chèn | chēng,to fit | balanced | suitable | to weigh | to state | to name | name | appellation | to praise | steelyard,drkameleon
+称,2,1100,verb,chēng | chèng | chèn,to fit | balanced | suitable | to weigh | to state | to name | name | appellation | to praise | steelyard,drkameleon
 称号,5,7705,noun,chēnghào,title (usually a complimentary one); name; designation,kaikki
 称呼,7,6082,verb,chēnghū,to call; to address (someone in the specified way when talking to them),kaikki
 称呼,7,6082,noun,chēnghū,name; designation | term of address; form of address,kaikki
@@ -1251,7 +1251,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 橙汁,7,16540,noun,chéngzhī,orange juice,kaikki
 逞能,7,41929,verb,chěngnéng,to boast one's abilities; to show off one's skills,kaikki
 逞强,7,21363,verb,chěngqiáng,to flaunt one's superiority,kaikki
-秤,7,11539,"classifier, noun",chèng | chēng,steelyard | Roman balance,drkameleon
+秤,7,11539,"classifier, noun",chēng | chèng,steelyard | Roman balance,drkameleon
 吃,1,142,verb,chī,"to eat; to consume | to eat at (a cafeteria etc) | to eradicate; to destroy | to absorb | to suffer (shock, injury, defeat etc)",drkameleon
 吃不上,7,1000000,,chī bu shàng,unable to get anything to eat | to miss a meal,drkameleon
 吃饭,1,1415,verb,chīfàn,to eat; to have a meal | to make a living,kaikki
@@ -1281,7 +1281,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 持续,3,1749,verb,chíxù,to continue; to persist,kaikki
 持有,6,4039,verb,chíyǒu,"to hold (a passport, an opinion, a share, etc.); to possess",kaikki
 持之以恒,7,29365,idiom,chízhīyǐhéng,to persevere,kaikki
-尺,4,4305,classifier,chě | chǐ,"one of the characters used to represent a musical note in gongche notation, 工尺谱 | a Chinese foot | one-third of a meter | a ruler | a tape-measure | one of the three acupoints for measuring pulse in Chinese medicine",drkameleon
+尺,4,4305,classifier,chǐ | chě,"one of the characters used to represent a musical note in gongche notation, 工尺谱 | a Chinese foot | one-third of a meter | a ruler | a tape-measure | one of the three acupoints for measuring pulse in Chinese medicine",drkameleon
 尺寸,4,5892,noun,chǐcùn,"size (typically of clothes); dimensions (of an object); measurement; fitting | standard; yardstick | sense of propriety; proper limits (of decorum, speech, behaviour, etc.) | small amount",kaikki
 尺度,7,14903,noun,chǐdù,"scale; measure | yardstick; standard; criterion | boundary (outside which it becomes illegal, immoral or otherwise unacceptable); bound; limit; bottom line",kaikki
 尺子,4,36385,noun,chǐzi,rule; ruler (measuring or drawing device),kaikki
@@ -1300,7 +1300,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 充实,7,7964,adjective,chōngshí,rich; full; substantial,kaikki
 充实,7,7964,verb,chōngshí,to enrich; to augment; to substantiate (an argument); to strengthen,kaikki
 充足,5,6559,adjective,chōngzú,adequate; sufficient; abundant,kaikki
-冲,4,1312,verb,chōng | chòng,(of water) to dash against | to mix with water | to infuse | to rinse | to flush | to develop (a film) | to rise in the air | to clash | to collide with | thoroughfare | to go straight ahead | to rush | to clash | powerful | vigorous | pungent | towards | in view of,drkameleon
+冲,4,1312,verb,chòng | chōng,(of water) to dash against | to mix with water | to infuse | to rinse | to flush | to develop (a film) | to rise in the air | to clash | to collide with | thoroughfare | to go straight ahead | to rush | to clash | powerful | vigorous | pungent | towards | in view of,drkameleon
 冲刺,7,12963,verb,chōngcì,to sprint; to make the final sprint towards the finish line | flèche | to make the final efforts for success,kaikki
 冲动,5,3849,verb,chōngdòng,to get excited; to act on impulse; to become impetuous,kaikki
 冲动,5,3849,noun,chōngdòng,urge; impulse; impetuousness,kaikki
@@ -1328,7 +1328,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 抽象,7,12568,adjective,chōuxiàng,"abstract (not specific) | bizarre, illogical, difficult to make sense of, brainrot",kaikki
 抽象,7,12568,verb,chōuxiàng,to form a general idea from particular circumstances; to abstract,kaikki
 抽烟,4,5335,verb,chōuyān,to smoke (tobacco),kaikki
-仇,7,7742,noun,chóu | qiú,"hatred | animosity | enmity | foe | enemy | to feel animosity toward (the wealthy, foreigners etc) | spouse | companion",drkameleon
+仇,7,7742,noun,qiú | chóu,"hatred | animosity | enmity | foe | enemy | to feel animosity toward (the wealthy, foreigners etc) | spouse | companion",drkameleon
 仇恨,7,7685,verb,chóuhèn,to hate,kaikki
 仇恨,7,7685,noun,chóuhèn,hatred; enmity; hostility,kaikki
 仇人,7,17149,noun,chóurén,enemy; foe,kaikki
@@ -1450,7 +1450,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 储存,6,8658,noun,chǔcún,storage capacity,kaikki
 储蓄,7,8678,verb,chǔxù,to save money,kaikki
 储蓄,7,8678,noun,chǔxù,savings (money set aside for the future),kaikki
-处,4,505,"classifier, noun, verb",chǔ | chù,"to reside | to live | to dwell | to be in | to be situated at | to stay | to get along with | to be in a position of | to deal with | to discipline | to punish | place | location | spot | point | office | department | bureau | respect | classifier for locations or items of damage: spot, point",drkameleon
+处,4,505,"classifier, noun, verb",chù | chǔ,"to reside | to live | to dwell | to be in | to be situated at | to stay | to get along with | to be in a position of | to deal with | to discipline | to punish | place | location | spot | point | office | department | bureau | respect | classifier for locations or items of damage: spot, point",drkameleon
 处处,6,7980,adverb,chùchù,everywhere | in all respects,kaikki
 处罚,5,5634,verb,chǔfá,to punish; to penalise,kaikki
 处罚,5,5634,noun,chǔfá,punishment; penalty,kaikki
@@ -1531,9 +1531,9 @@ word,level,difficulty,pos,pinyin,definitions,source
 床,1,961,"classifier, noun",chuáng,bed | couch | classifier for beds,drkameleon
 床单,6,10967,noun,chuángdān,bedsheet | transaction made in exchange for sexual services,kaikki
 床位,7,17311,noun,chuángwèi,"berth; bunk; bed (in a hospital, hotel, train, etc.)",kaikki
-幢,7,5366,classifier,chuáng | zhuàng,banner | classifier for buildings | carriage curtain (old),drkameleon
+幢,7,5366,classifier,zhuàng | chuáng,banner | classifier for buildings | carriage curtain (old),drkameleon
 闯,5,4698,verb,chuǎng,to rush | to charge | to dash | to break through | to temper oneself (through battling hardships),drkameleon
-创,7,3252,verb,chuàng | chuāng,a wound | cut | injury | trauma | to begin | to initiate | to inaugurate | to start | to create,drkameleon
+创,7,3252,verb,chuāng | chuàng,a wound | cut | injury | trauma | to begin | to initiate | to inaugurate | to start | to create,drkameleon
 创办,6,10196,verb,chuàngbàn,to found; to establish; to set up,kaikki
 创建,6,6904,verb,chuàngjiàn,to found; to establish; to set up; to create,kaikki
 创立,5,10611,verb,chuànglì,to establish; to set up; to found,kaikki
@@ -1612,7 +1612,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 次要,5,16951,adjective,cìyào,secondary; of lesser importance,kaikki
 伺候,7,12125,verb,cìhou | sìhòu,to serve; to wait on | to spy on; to scout; to lie in wait for | to wait for; to await,kaikki
 伺机,7,19846,verb,sìjī,to watch for one's chance,kaikki
-刺,4,2566,"noun, verb",cì | cī,(onom.) whoosh | thorn | sting | thrust | to prick | to pierce | to stab | to assassinate | to murder,drkameleon
+刺,4,2566,"noun, verb",cī | cì,(onom.) whoosh | thorn | sting | thrust | to prick | to pierce | to stab | to assassinate | to murder,drkameleon
 刺耳,7,17939,adjective,cì'ěr,irritating to the ear; penetrating; shrill; ear-piercing | caustic; uncomfortable to hear,kaikki
 刺骨,7,23267,adjective,cìgǔ,piercing to the bones; piercing; biting,kaikki
 刺激,4,1968,verb,cìjī,to stimulate; to excite; to spur | to provoke; to upset; to irritate,kaikki
@@ -1713,12 +1713,12 @@ word,level,difficulty,pos,pinyin,definitions,source
 达标,7,17413,verb,dábiāo,to be up to standard; to reach a set standard,kaikki
 达成,5,2644,verb,dáchéng,to reach (an agreement); to attain (an objective),kaikki
 达到,3,1234,verb,dádào,"to achieve (a standard, objective, etc.); to attain; to reach",kaikki
-答,5,2744,verb,dá | dā,"bound form having the same meaning as the free word 答, used in 答应, 理 etc | to answer | to reply | to respond",drkameleon
+答,5,2744,verb,dā | dá,"bound form having the same meaning as the free word 答, used in 答应, 理 etc | to answer | to reply | to respond",drkameleon
 答案,4,1912,noun,dá'àn,answer; solution,kaikki
 答辩,7,20688,verb,dábiàn,to reply to accusations; to defend oneself; to enter a plea | to give a thesis defense,kaikki
 答复,5,6463,verb,dá fù,to answer | to reply | Reply to: (in email header),drkameleon
 答应,2,2130,verb,dāyìng,to answer; to respond | to agree; to say yes; to allow; to permit | to promise,kaikki
-打,1,153,verb,dá | dǎ,dozen (loanword) | to beat | to strike | to hit | to break | to type | to mix up | to build | to fight | to fetch | to make | to tie up | to issue | to shoot | to calculate | to play (a game) | since | from,drkameleon
+打,1,153,verb,dǎ | dá,dozen (loanword) | to beat | to strike | to hit | to break | to type | to mix up | to build | to fight | to fetch | to make | to tie up | to issue | to shoot | to calculate | to play (a game) | since | from,drkameleon
 打败,4,5317,verb,dǎbài,to defeat; to beat | to be beaten; to lose,kaikki
 打扮,5,4394,verb,dǎban,to dress up; to deck out; to make up,kaikki
 打扮,5,4394,noun,dǎban,style of dress,kaikki
@@ -1761,7 +1761,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 打招呼,7,7931,verb,dǎ zhāohū,to greet (someone); to say hello | to give prior notice,kaikki
 打折,4,10290,verb,dǎzhé,to give a discount; to give a concession | discounted; discount; concession,kaikki
 打针,4,13196,verb,dǎzhēn,to give or receive an injection,kaikki
-大,1,66,"adjective, adverb, noun",dà | dài,big; large; great | older (than another person) | eldest (as in 姐) | greatly; freely; fully | (dialect) father | (dialect) uncle (father's brother),drkameleon
+大,1,66,"adjective, adverb, noun",dài | dà,big; large; great | older (than another person) | eldest (as in 姐) | greatly; freely; fully | (dialect) father | (dialect) uncle (father's brother),drkameleon
 大巴,4,11932,noun,dàbā,large bus; coach,kaikki
 大包大揽,7,57488,verb,dà bāo dà lǎn,to take complete charge (idiom),drkameleon
 大笔,7,14672,noun,dàbǐ,pen | writing; (your) handwriting,kaikki
@@ -1895,7 +1895,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 带头,7,10484,verb,dàitóu,to take the lead; to show initiative; to be the first; to set an example,kaikki
 带头人,7,36083,noun,dàitóurén,leader; pioneer,kaikki
 带有,5,5699,verb,dàiyǒu,to contain; to involve; to have,kaikki
-待,5,1207,"preposition, verb",dāi | dài,to stay | to wait | to treat | to deal with | to need | going to (do sth) | about to | intending to,drkameleon
+待,5,1207,"preposition, verb",dài | dāi,to stay | to wait | to treat | to deal with | to need | going to (do sth) | about to | intending to,drkameleon
 待遇,4,4791,noun,dàiyù,treatment; reception | remuneration; compensation; reward; pay; benefit,kaikki
 待遇,4,4791,verb,dàiyù,to receive (a visitor); to admit (to allow somebody to enter),kaikki
 怠工,7,54646,verb,dàigōng,to slack off; to goof off (on the job),kaikki
@@ -1921,7 +1921,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 单位,2,2350,noun,dānwèi,"unit of measure; unit of measurement; unit | unit (in an organisation, or other contexts) | work unit; danwei | workplace | flat (apartment) unit",kaikki
 单一,5,10541,adjective,dānyī,single; the only; sole; singular | monotonous; dull,kaikki
 单元,3,7926,noun,dānyuán,unit | module,kaikki
-担,7,5380,"classifier, verb",dān | dàn,"to undertake | to carry | to shoulder | to take responsibility | picul (100 catties, 50 kg) | two buckets full | carrying pole and its load | classifier for loads carried on a shoulder pole",drkameleon
+担,7,5380,"classifier, verb",dàn | dān,"to undertake | to carry | to shoulder | to take responsibility | picul (100 catties, 50 kg) | two buckets full | carrying pole and its load | classifier for loads carried on a shoulder pole",drkameleon
 担保,4,4985,verb,dānbǎo,to guarantee; to vouch for; to sponsor | to provide legal guarantee; to provide judicial guarantee,kaikki
 担当,7,11201,verb,dāndāng,"to take on; to assume (a task, responsibility, risk, charge, etc.) | to operate",kaikki
 担当,7,11201,noun,dāndāng,"sense of responsibility | the most excellent person in a group, in terms of a certain quality",kaikki
@@ -2025,7 +2025,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 到头来,7,13609,adverb,dàotóulái,at the end of the day; in the end,kaikki
 到位,7,5078,verb,dàowèi,to reach the scheduled destination; to attain the desired goal; to meet the stipulated standard | to become available (of something expected),kaikki
 到位,7,5078,adjective,dàowèi,satisfactory; adequate; sufficiently good,kaikki
-倒,2,780,"adverb, verb",dào | dǎo,to fall; to collapse; to lie horizontally | to fail; to go bankrupt | to overthrow | to change (trains or buses) | to move around | to resell at a profit | to invert; to place upside down or frontside back | to pour out | to tip out; to dump | inverted; upside down; reversed | to go backward | contrary to what one might expect; but; yet,drkameleon
+倒,2,780,"adverb, verb",dǎo | dào,to fall; to collapse; to lie horizontally | to fail; to go bankrupt | to overthrow | to change (trains or buses) | to move around | to resell at a profit | to invert; to place upside down or frontside back | to pour out | to tip out; to dump | inverted; upside down; reversed | to go backward | contrary to what one might expect; but; yet,drkameleon
 倒闭,4,11967,verb,dǎobì,to go bankrupt; to close down; to go into liquidation,kaikki
 倒车,4,16831,verb,dàochē | dǎochē,"to back a car; to reverse a vehicle; to drive backwards | to regress; to abandon a newer practice, norm or ideology and adopt an older one | to change (buses, trains, etc.)",kaikki
 倒计时,7,10111,verb,dàojìshí,to count down (to a time),kaikki
@@ -2054,7 +2054,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 稻草,7,16234,noun,dàocǎo,rice straw,kaikki
 稻谷,6,34191,noun,dàogǔ,rice crop; paddy,kaikki
 德,7,1174,"adjective, noun",dé,virtue | goodness | morality | ethics | kindness | favor | character | kind,drkameleon
-地,1,132,"noun, particle",de | dì,"-ly | structural particle: used before a verb or adjective, linking it to preceding modifying adverbial adjunct | earth | ground | field | place | land",drkameleon
+地,1,132,"noun, particle",dì | de,"-ly | structural particle: used before a verb or adjective, linking it to preceding modifying adverbial adjunct | earth | ground | field | place | land",drkameleon
 地板,6,3788,noun,dìbǎn,floor | floor covering; flooring | ground; soil | third person to reply or comment on an online forum,kaikki
 地步,7,6037,noun,dìbù,"situation; plight | degree; extent | leeway; room (for negotiation, to maneuver, etc.); latitude; margin; space | location; sector; section | position (in society, the world, etc.); standing; status",kaikki
 地带,5,6317,noun,dìdài,region; zone; territory; land,kaikki
@@ -2091,7 +2091,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 地震,5,3938,verb,dìzhèn,to have an earthquake,kaikki
 地址,4,1067,noun,dìzhǐ,address (such as a home or business address); location | address (such as a home or business address); location; postal address | address (a number identifying a specific storage location in computer memory),kaikki
 地质,7,11668,noun,dìzhì,geological features | geology (science that studies the structure of the earth),kaikki
-的,1,1,"noun, particle",dī | de | dì | dí,of; ~'s (possessive particle) | a taxi; a cab (abbr. for 士) | really and truly | (bound form) bull's-eye; target,drkameleon
+的,1,1,"noun, particle",dì | dí | de | dī,of; ~'s (possessive particle) | a taxi; a cab (abbr. for 士) | really and truly | (bound form) bull's-eye; target,drkameleon
 的话,2,2226,particle,dehuà,particle put at the end of a conditional clause,kaikki
 的确,4,1392,adverb,díquè,indeed; really,kaikki
 得,2,58,"particle, verb",de | dé | děi,"to obtain | to get | to gain | to catch (a disease) | proper | suitable | proud | contented | to allow | to permit | ready | finished | structural particle: used after a verb (or adjective as main verb), linking it to following phrase indicating effect, degree, possibility etc | to have to | must | ought to | to need to",drkameleon
@@ -2265,7 +2265,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 吊销,7,14932,verb,diàoxiāo,"to revoke; to rescind; to suspend (a license, etc.)",kaikki
 钓,5,7545,verb,diào,to fish with a hook and bait,drkameleon
 钓鱼,7,8342,verb,diàoyú,"to fish; to angle | to dupe; to trick; to deceive; to catfish | to entrap someone; to enforce the law by framing a case against the captured | to phish | to nod off; to doze off (in class, meeting, etc. and lower and raise the head cyclically, like the tip of a fishing rod) | to troll",kaikki
-调,3,1481,"noun, verb",diào | tiáo,to transfer | to move (troops or cadres) | to investigate | to enquire into | accent | view | argument | key (in music) | mode (music) | tune | tone | melody | to harmonize | to reconcile | to blend | to suit well | to adjust | to regulate | to season (food) | to provoke | to incite,drkameleon
+调,3,1481,"noun, verb",tiáo | diào,to transfer | to move (troops or cadres) | to investigate | to enquire into | accent | view | argument | key (in music) | mode (music) | tune | tone | melody | to harmonize | to reconcile | to blend | to suit well | to adjust | to regulate | to season (food) | to provoke | to incite,drkameleon
 调查,3,512,verb,diàochá,to investigate; to probe | to survey; to poll,kaikki
 调查,3,512,noun,diàochá,investigation; probe | survey; poll,kaikki
 调动,5,7622,verb,diàodòng,to transfer; shift | to move; to manoeuvre (especially troops) | to invoke (cause a program or subroutine to execute),kaikki
@@ -2559,7 +2559,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 鹅,7,7741,noun,é,goose,drkameleon
 额外,7,6599,adjective,éwài,extra; additional; added,kaikki
 厄运,7,15845,noun,èyùn,bad luck; misfortune,kaikki
-恶,7,3536,adjective,è | wù | ě,evil | fierce | vicious | ugly | coarse | to harm | to hate | to loathe | ashamed | to fear | to slander,drkameleon
+恶,7,3536,adjective,è | ě | wù,evil | fierce | vicious | ugly | coarse | to harm | to hate | to loathe | ashamed | to fear | to slander,drkameleon
 恶化,7,6138,verb,èhuà,to worsen; to deteriorate; to take a turn for the worse | to make worse; to exacerbate; to harm; to damage,kaikki
 恶劣,7,6454,adjective,èliè,of poor quality; bad; inferior | adverse; tough; hard | vile; nasty; evil,kaikki
 恶心,4,2463,noun,ěxīn | èxīn,nausea; queasiness | bad habit; vice,kaikki
@@ -2856,7 +2856,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 费,3,1997,"noun, verb",fèi,to cost | to spend | fee | wasteful | expenses,drkameleon
 费劲,7,14739,verb,fèijìn,to need great effort; to be difficult,kaikki
 费用,3,2364,noun,fèiyòng,fee; expense; charge; cost,kaikki
-分,1,372,"adverb, classifier, noun, verb",fēn | fèn,to divide; to separate | to distribute; to allocate | to distinguish (good and bad) | (bound form) branch of (an organization); sub- (as in 局) | fraction | one tenth (of certain units) | unit of length equivalent to 0.33 cm | minute (unit of time) | minute (angular measurement unit) | a point (in sports or games) | 0.01 yuan (unit of money) | part | share | ingredient | component,drkameleon
+分,1,372,"adverb, classifier, noun, verb",fèn | fēn,to divide; to separate | to distribute; to allocate | to distinguish (good and bad) | (bound form) branch of (an organization); sub- (as in 局) | fraction | one tenth (of certain units) | unit of length equivalent to 0.33 cm | minute (unit of time) | minute (angular measurement unit) | a point (in sports or games) | 0.01 yuan (unit of money) | part | share | ingredient | component,drkameleon
 分辨,7,9367,verb,fēnbiàn,to distinguish; to differentiate,kaikki
 分别,3,2885,verb,fēnbié,to part; to leave each other | to distinguish; to differentiate,kaikki
 分别,3,2885,adverb,fēnbié,separately | respectively,kaikki
@@ -2999,7 +2999,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 佛教,6,13331,noun,Fójiào,Buddhism,kaikki
 扶,5,4500,verb,fú,to support with the hand | to help sb up | to support oneself by holding onto something | to help,drkameleon
 扶持,7,10825,verb,fúchí,to help (someone) by the arm; to hold by the arm | to assist; to support (the development of),kaikki
-服,6,1682,"classifier, verb",fú | fù,"clothes | dress | garment | to serve (in the military, a prison sentence etc) | to obey | to be convinced (by an argument) | to convince | to admire | to acclimatize | to take (medicine) | mourning clothes | to wear mourning clothes | classifier for medicine: dose",drkameleon
+服,6,1682,"classifier, verb",fù | fú,"clothes | dress | garment | to serve (in the military, a prison sentence etc) | to obey | to be convinced (by an argument) | to convince | to admire | to acclimatize | to take (medicine) | mourning clothes | to wear mourning clothes | classifier for medicine: dose",drkameleon
 服从,5,6168,verb,fúcóng,to obey; to submit,kaikki
 服气,6,24524,verb,fúqì,to be convinced | to practice Daoist breathing exercises,kaikki
 服饰,7,7795,noun,fúshì,clothing; costume; apparel,kaikki
@@ -3132,7 +3132,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 概论,7,56444,noun,gàilùn,introduction; outline; general discussion,kaikki
 概念,3,3465,noun,gàiniàn,concept; notion; idea,kaikki
 甘心,7,17629,verb,gānxīn,to be willing; to be glad (to do something) | to be contented | to be resigned to,kaikki
-杆,6,2562,classifier,gǎn | gān,pole | stick | pole | lever | classifier for long objects such as guns,drkameleon
+杆,6,2562,classifier,gān | gǎn,pole | stick | pole | lever | classifier for long objects such as guns,drkameleon
 肝,6,4573,noun,gān,"liver | (slang) to put in long hours, typically late into the night, playing (a video game) | (of a video game) involving a lot of repetition in order to progress; grindy",drkameleon
 肝脏,7,6835,noun,gānzàng,liver,kaikki
 尴尬,7,3013,adjective,gāngà,awkward; embarrassing; uncomfortable | embarrassed; uneasy; sheepish; flustered | unusual; sneaky; strange | impoverished; poor | irresolute; unreasonable,kaikki
@@ -3175,7 +3175,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 感兴趣,4,11617,verb,gǎn xìngqù,to be interested in,kaikki
 感性,7,8987,adjective,gǎnxìng,sensible; perceptual; perceptive | inductive,kaikki
 感性,7,8987,noun,gǎnxìng,sensibility; perception,kaikki
-干,1,463,"adjective, verb",gàn | gān,dry | dried food | empty; hollow | taken in to nominal kinship; adoptive; foster | futile; in vain | (dialect) rude; blunt | (dialect) to cold-shoulder | (bound form) to have to do with; to concern oneself with | one of the ten heavenly stems 干 | (archaic) shield | tree trunk | main part of sth | to manage | to work | to do | capable | cadre | to kill (slang) | to fuck (vulgar) | (coll.) pissed off | annoyed,drkameleon
+干,1,463,"adjective, verb",gān | gàn,dry | dried food | empty; hollow | taken in to nominal kinship; adoptive; foster | futile; in vain | (dialect) rude; blunt | (dialect) to cold-shoulder | (bound form) to have to do with; to concern oneself with | one of the ten heavenly stems 干 | (archaic) shield | tree trunk | main part of sth | to manage | to work | to do | capable | cadre | to kill (slang) | to fuck (vulgar) | (coll.) pissed off | annoyed,drkameleon
 干杯,2,14023,verb,gānbēi,to toast; to drink a toast,kaikki
 干杯,2,14023,interjection,gānbēi,cheers!; bottoms up!,kaikki
 干部,7,12896,noun,gànbù,"cadre | officer; ranking member; team leader (of a club, society or similar organization); more specifically, a member of such an organization who holds a leadership position over a team, section or department",kaikki
@@ -3298,7 +3298,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 胳膊,7,5256,noun,gēbo,arm,kaikki
 鸽子,7,9334,noun,gēzi,pigeon; dove,kaikki
 割,7,4717,verb,gē,to cut | to cut apart,drkameleon
-搁,7,13072,verb,gē | gé,to place | to put aside | to shelve | to bear | to stand | to endure,drkameleon
+搁,7,13072,verb,gé | gē,to place | to put aside | to shelve | to bear | to stand | to endure,drkameleon
 搁浅,7,19247,verb,gēqiǎn,to run aground; to be stranded | to reach a deadlock; to run into difficulties and stop,kaikki
 搁置,7,18213,verb,gēzhì,to put (in a certain place); to lay; to place; to set aside; to put aside; to shelve,kaikki
 歌,1,702,noun,gē,song | to sing,drkameleon
@@ -3330,7 +3330,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 隔阂,7,20336,noun,géhé,estrangement; misunderstanding,kaikki
 隔开,4,29275,verb,gékāi,to separate; to set apart,kaikki
 隔离,7,5300,verb,gélí,to isolate; to quarantine; to segregate; to seclude,kaikki
-个,1,19,classifier,gě | gè,(classifier used before a noun that has no specific classifier) | (bound form) individual,drkameleon
+个,1,19,classifier,gè | gě,(classifier used before a noun that has no specific classifier) | (bound form) individual,drkameleon
 个案,7,18891,noun,gè'àn,"individual case (in law, research, etc.)",kaikki
 个案,7,18891,adverb,gè'àn,case-by-case,kaikki
 个别,4,6477,adjective,gèbié,individual; single; respective; independent | very few | exceptional,kaikki
@@ -3506,7 +3506,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 共有,3,5958,verb,gòngyǒu,to share; to have in common | to have altogether,kaikki
 贡献,6,2991,verb,gòngxiàn,to contribute,kaikki
 贡献,6,2991,noun,gòngxiàn,contribution,kaikki
-勾,7,6157,verb,gōu | gòu,to attract | to arouse | to tick | to strike out | to delineate | to collude,drkameleon
+勾,7,6157,verb,gòu | gōu,to attract | to arouse | to tick | to strike out | to delineate | to collude,drkameleon
 勾画,7,26891,verb,gōuhuà,to sketch out; to draw an outline of; to delineate | to describe (with succinct language),kaikki
 勾结,7,15011,verb,gōujié,to collude with; to conspire; to gang up with; to collaborate (to voluntarily cooperate treasonably),kaikki
 沟,5,6312,noun,gōu,ditch | gutter | groove | gully | ravine,drkameleon
@@ -3739,7 +3739,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 归属,7,11242,noun,guīshǔ,belonging; ownership; affiliation; jurisdiction,kaikki
 归宿,7,12905,noun,guīsù,home to return to | final destination; ending | the last thing to depend upon; homeland (of one's soul),kaikki
 归宿,7,12905,verb,guīsù,to return home to sleep,kaikki
-龟,7,8289,noun,qiū | guī | jūn,tortoise | turtle,drkameleon
+龟,7,8289,noun,guī | jūn | qiū,tortoise | turtle,drkameleon
 规定,3,1151,verb,guīdìng,to regulate; to stipulate,kaikki
 规定,3,1151,noun,guīdìng,rule; regulation; stipulation,kaikki
 规范,3,6609,noun,guīfàn,standard; norm; regulation,kaikki
@@ -3864,10 +3864,10 @@ word,level,difficulty,pos,pinyin,definitions,source
 哈,5,676,"adjective, verb",hǎ | hā,(interj.) ha! | (onom. for laughter) | (slang) to be infatuated with | to adore | a Pekinese | a pug | (dialect) to scold,drkameleon
 哈哈,3,1389,adjective,hāhā,the sound of someone laughing out loud,kaikki
 哈哈,3,1389,adverb,hāhā,the sound of someone laughing out loud,kaikki
-咳,5,7383,"interjection, verb",ké | hāi,"sound of sighing | (interjection expressing surprise, sorrow, regret, disappointment etc) oh | damn | wow | cough",drkameleon
+咳,5,7383,"interjection, verb",hāi | ké,"sound of sighing | (interjection expressing surprise, sorrow, regret, disappointment etc) oh | damn | wow | cough",drkameleon
 咳嗽,7,7020,verb,késou,to cough | to make a sound; to speak,kaikki
 嗨,6,2664,interjection,hāi,oh alas | hey! | hi! (loanword) | a high (natural or drug-induced) (loanword),drkameleon
-还,1,37,"adverb, verb",hái | huán,still | still in progress | still more | yet | even more | in addition | fairly | passably (good) | as early as | even | also | else | to pay back | to return,drkameleon
+还,1,37,"adverb, verb",huán | hái,still | still in progress | still more | yet | even more | in addition | fairly | passably (good) | as early as | even | also | else | to pay back | to return,drkameleon
 还款,7,21972,verb,huánkuǎn,to pay back money that is owed; to make a repayment,kaikki
 还是,1,160,adverb,háishì,still | nevertheless; yet | used to form comparative structures; -er than | had better; it would be best (to do something); one would be well-advised to,kaikki
 还是,1,160,conjunction,háishì,or,kaikki
@@ -3952,7 +3952,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 毫无,7,2244,adverb,háowú,not in the least; without any,kaikki
 豪华,7,3618,adjective,háohuá,extravagant; luxurious | grand; majestic; sumptuous,kaikki
 豪迈,6,32272,adjective,háomài,bold and generous; heroic,kaikki
-好,1,20,"adjective, adverb, verb",hǎo | hào,good | appropriate; proper | all right! | (before a verb) easy to | (before a verb) good to | (before an adjective for exclamatory effect) so | (verb complement indicating completion) | (of two people) close; on intimate terms | (after a personal pronoun) hello | to be fond of; to have a tendency to; to be prone to,drkameleon
+好,1,20,"adjective, adverb, verb",hào | hǎo,good | appropriate; proper | all right! | (before a verb) easy to | (before a verb) good to | (before an adjective for exclamatory effect) so | (verb complement indicating completion) | (of two people) close; on intimate terms | (after a personal pronoun) hello | to be fond of; to have a tendency to; to be prone to,drkameleon
 好比,7,8720,verb,hǎobǐ,can be compared to; to be just like | to take for example; for example; for instance; such as,kaikki
 好不容易,6,7605,adjective,hǎobùróngyì,very difficult,kaikki
 好吃,1,2484,adjective,hǎochī | hàochī,delicious; delectable; tasty; scrumptious; yummy | fond of eating; gluttonous,kaikki
@@ -3995,7 +3995,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 好运,5,2099,noun,hǎoyùn,good luck,kaikki
 好在,7,14400,adverb,hǎozài,fortunately; luckily,kaikki
 好转,6,5108,verb,hǎozhuǎn,to take a turn for the better; to take a favorable turn; to improve,kaikki
-号,1,278,"classifier, noun, verb",háo | hào,roar | cry | ordinal number | day of a month | mark | sign | business establishment | size | ship suffix | horn (wind instrument) | bugle call | assumed name | to take a pulse | classifier used to indicate number of people,drkameleon
+号,1,278,"classifier, noun, verb",hào | háo,roar | cry | ordinal number | day of a month | mark | sign | business establishment | size | ship suffix | horn (wind instrument) | bugle call | assumed name | to take a pulse | classifier used to indicate number of people,drkameleon
 号称,7,12869,verb,hàochēng,to be known as | to claim to be,kaikki
 号码,4,2110,noun,hàomǎ,number; code; digit,kaikki
 号召,5,11618,verb,hàozhào,to appeal (for support); to call; to rally; to galvanize; to mobilize,kaikki
@@ -4005,10 +4005,10 @@ word,level,difficulty,pos,pinyin,definitions,source
 耗费,7,14666,verb,hàofèi,to expend; to consume; to use up; to spend,kaikki
 耗费,7,14666,noun,hàofèi,expenditure; consumption; spending,kaikki
 耗时,7,25298,adjective,hàoshí,time-consuming,kaikki
-喝,1,428,verb,hè | hē,to drink | to shout,drkameleon
+喝,1,428,verb,hē | hè,to drink | to shout,drkameleon
 喝彩,7,11597,verb,hècǎi,to acclaim; to cheer,kaikki
 禾苗,7,43232,noun,hémiáo,seedling (of a cereal crop),kaikki
-合,3,1643,verb,gě | hé,"100 ml | one-tenth of a peck | measure for dry grain equal to one-tenth of sheng 升 or liter, or one-hundredth dou 斗 | to close | to join | to fit | to be equal to | whole | together | round (in battle) | conjunction (astronomy) | 1st note of pentatonic scale",drkameleon
+合,3,1643,verb,hé | gě,"100 ml | one-tenth of a peck | measure for dry grain equal to one-tenth of sheng 升 or liter, or one-hundredth dou 斗 | to close | to join | to fit | to be equal to | whole | together | round (in battle) | conjunction (astronomy) | 1st note of pentatonic scale",drkameleon
 合并,5,4049,verb,hébìng,to merge; to amalgamate; to consolidate | to experience complications resulting from a secondary medical condition,kaikki
 合唱,7,11816,verb,héchàng,to sing in a chorus,kaikki
 合唱,7,11816,noun,héchàng,chorus,kaikki
@@ -4042,7 +4042,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 何苦,7,22438,adverb,hékǔ,why bother,kaikki
 何况,7,7062,conjunction,hékuàng,let alone; not to mention; much less | what's more; in addition,kaikki
 何时,7,4100,pronoun,héshí,when; what time,kaikki
-和,1,19,"classifier, conjunction, noun, preposition, verb",hè | hú | huò | hé | huó,"(joining two nouns) and; together with; with | (math.) sum | to make peace | (sports) to draw; to tie | (bound form) harmonious | (bound form) Japan; Japanese | to compose a poem in reply (to sb's poem) using the same rhyme sequence | to join in the singing | to chime in with others | to complete a set in mahjong or playing cards | to combine a powdery substance (flour, plaster etc) with water | to mix (ingredients) together | to blend | classifier for rinses of clothes | classifier for boilings of medicinal herbs | harmonious",drkameleon
+和,1,19,"classifier, conjunction, noun, preposition, verb",huò | hè | hé | hú | huó,"(joining two nouns) and; together with; with | (math.) sum | to make peace | (sports) to draw; to tie | (bound form) harmonious | (bound form) Japan; Japanese | to compose a poem in reply (to sb's poem) using the same rhyme sequence | to join in the singing | to chime in with others | to complete a set in mahjong or playing cards | to combine a powdery substance (flour, plaster etc) with water | to mix (ingredients) together | to blend | classifier for rinses of clothes | classifier for boilings of medicinal herbs | harmonious",drkameleon
 和蔼,7,18111,adjective,hé'ǎi,kind; nice; amiable,kaikki
 和解,7,8297,verb,héjiě,to become reconciled; to make peace | to reach a settlement; to settle (a dispute),kaikki
 和睦,7,15353,adjective,hémù,harmonious; amicable; friendly; peaceful,kaikki
@@ -4107,7 +4107,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 轰,7,6668,verb,hōng,explosion | bang | boom | rumble | to attack | to shoo away | to expel,drkameleon
 轰动,7,9626,verb,hōngdòng,to cause a stir; to cause a sensation,kaikki
 轰炸,7,8976,verb,hōngzhà,to bomb | to bombard (someone with something),kaikki
-哄,7,6776,verb,hōng | hǒng | hòng,roar of laughter (onom.) | hubbub | to roar (as a crowd) | to deceive | to coax | to amuse (a child) | tumult | uproar | commotion | disturbance,drkameleon
+哄,7,6776,verb,hòng | hōng | hǒng,roar of laughter (onom.) | hubbub | to roar (as a crowd) | to deceive | to coax | to amuse (a child) | tumult | uproar | commotion | disturbance,drkameleon
 哄堂大笑,7,43850,idiom,hōngtángdàxiào,the whole room bursts into laughter simultaneously,kaikki
 烘,6,18172,verb,hōng,to bake | to heat by fire | to set off by contrast,drkameleon
 烘干,7,18403,verb,hōnggān,to dry over heat | to dry in a dryer,kaikki
@@ -4402,7 +4402,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 汇款,5,17166,verb,huìkuǎn,to remit; to send payment,kaikki
 汇款,5,17166,noun,huìkuǎn,remittance; payment,kaikki
 汇率,4,18037,noun,huìlǜ,exchange rate (between currencies),kaikki
-会,1,23,"noun, verb",huì | kuài,can; to have the skill; to know how to | to be likely to; to be sure to | to meet; to get together | meeting; gathering | (suffix) union; group; association | (bound form) a moment | to balance an account | accounting | accountant,drkameleon
+会,1,23,"noun, verb",kuài | huì,can; to have the skill; to know how to | to be likely to; to be sure to | to meet; to get together | meeting; gathering | (suffix) union; group; association | (bound form) a moment | to balance an account | accounting | accountant,drkameleon
 会场,7,9918,noun,huìchǎng,conference hall; meeting place; venue,kaikki
 会计,4,4284,noun,kuàijì,accounting; accountancy | accountant,kaikki
 会计,4,4284,verb,kuàijì,to examine and calculate | to do accounting work | to give out rewards to vassals based on merit | to plan; to manage,kaikki
@@ -4437,7 +4437,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 混凝土,7,10054,noun,hùnníngtǔ,concrete (building material),kaikki
 混淆,7,13106,verb,hùnxiáo,to obscure; to blur; to mix up | to obfuscate,kaikki
 混浊,7,34085,adjective,hùnzhuó,muddy; turbid,kaikki
-豁,7,31567,verb,huá | huō | huò,to play Chinese finger-guessing game | opening | stake all | sacrifice | crack | slit | open; clear; liberal-minded; generous | to exempt; to remit,drkameleon
+豁,7,31567,verb,huò | huō | huá,to play Chinese finger-guessing game | opening | stake all | sacrifice | crack | slit | open; clear; liberal-minded; generous | to exempt; to remit,drkameleon
 豁出去,7,21778,verb,huōchuqu,to go ahead at any price; to take the risk,kaikki
 豁达,7,33799,adjective,huòdá,open-minded; broad-minded; sanguine; optimistic; generous; liberal; progressive,kaikki
 活,3,556,"adjective, noun, verb",huó,to live | alive | living | work | workmanship,drkameleon
@@ -4613,7 +4613,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 急诊,7,11305,noun,jízhěn,emergency department; emergency room,kaikki
 急转弯,7,28882,verb,jízhuǎnwān,to curve sharply | to swerve | to make a sudden change,kaikki
 疾病,6,2270,noun,jíbìng,disease; illness; disorder,kaikki
-脊梁,7,28720,noun,jǐ liáng | jǐ liang,backbone | spine | (coll.) back (of a human or other vertebrate),drkameleon
+脊梁,7,28720,noun,jǐ liang | jǐ liáng,backbone | spine | (coll.) back (of a human or other vertebrate),drkameleon
 棘手,7,11249,adjective,jíshǒu,thorny | difficult to handle; thorny; troublesome; knotty; prickly; intractable,kaikki
 集,6,1190,classifier,jí,to gather | to collect | collected works | classifier for sections of a TV series etc: episode,drkameleon
 集合,4,5571,verb,jíhé,to assemble; to gather,kaikki
@@ -4632,7 +4632,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 集资,7,17748,verb,jízī,to raise funds; to collect money; to accumulate funds,kaikki
 嫉妒,7,4056,verb,jídù,to be jealous; to envy; to be envious,kaikki
 籍贯,6,37051,noun,jíguàn,place of origin or birth; one's native country or region,kaikki
-几,1,178,"adverb, numeral",jī | jǐ,small table | almost | how much | how many | several | a few,drkameleon
+几,1,178,"adverb, numeral",jǐ | jī,small table | almost | how much | how many | several | a few,drkameleon
 几乎,4,1001,adverb,jīhū,almost; nearly; all but,kaikki
 几率,7,8030,noun,jīlǜ,probability; odds,kaikki
 挤,5,3042,verb,jǐ,to crowd in | to cram in | to force others aside | to press | to squeeze | to find (time in one's busy schedule),drkameleon
@@ -4754,7 +4754,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 嘉宾,6,5047,noun,jiābīn,guest; guest of honour | sparrow,kaikki
 嘉年华,7,12476,noun,jiāniánhuá,carnival,kaikki
 甲,5,2984,"noun, numeral",jiǎ,"first of the ten Heavenly Stems 干 | first (in a list, as a party to a contract etc) | letter ""A"" or roman ""I"" in list ""A, B, C"", or ""I, II, III"" etc | armor plating | shell or carapace | (of the fingers or toes) nail | bladed leather or metal armor (old) | ranking system used in the Imperial examinations (old) | civil administration unit in the baojia 甲 system (old) | ancient Chinese compass point: 75°",drkameleon
-假,2,1053,"adjective, noun",jià | jiǎ | gēi,fake | false | artificial | to borrow | if | suppose | vacation | to borrow,drkameleon
+假,2,1053,"adjective, noun",gēi | jià | jiǎ,fake | false | artificial | to borrow | if | suppose | vacation | to borrow,drkameleon
 假定,7,12020,verb,jiǎdìng,to assume; to suppose; to presume,kaikki
 假定,7,12020,noun,jiǎdìng,hypothesis,kaikki
 假冒,7,11160,verb,jiǎmào,to pass oneself off as; to impersonate; to counterfeit,kaikki
@@ -4803,7 +4803,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 坚信,7,6704,verb,jiānxìn,to firmly believe; to be certain,kaikki
 坚硬,7,13790,adjective,jiānyìng,hard; solid,kaikki
 歼灭,7,16884,verb,jiānmiè,to annihilate; to eradicate,kaikki
-间,1,546,"classifier, postposition, verb",jiàn | jiān,between | among | within a definite time or space | room | section of a room or lateral space between two pairs of pillars | classifier for rooms | gap | to separate | to thin out (seedlings) | to sow discontent,drkameleon
+间,1,546,"classifier, postposition, verb",jiān | jiàn,between | among | within a definite time or space | room | section of a room or lateral space between two pairs of pillars | classifier for rooms | gap | to separate | to thin out (seedlings) | to sow discontent,drkameleon
 间谍,7,5886,noun,jiàndié,spy; secret agent,kaikki
 间断,7,12754,verb,jiànduàn,to suspend; to discontinue; to interrupt,kaikki
 间隔,7,11622,verb,jiàngé,to divide; to separate; to leave a gap of (a length of time or distance); to be separated by,kaikki
@@ -4970,7 +4970,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 奖项,7,10933,noun,jiǎngxiàng,prize; award (usually as a category),kaikki
 奖学金,4,7771,noun,jiǎngxuéjīn,scholarship; stipend,kaikki
 桨,6,14235,noun,jiǎng,oar | paddle,drkameleon
-降,4,2897,verb,jiàng | xiáng,to drop | to fall | to come down | to descend | to surrender | to capitulate | to subdue | to tame,drkameleon
+降,4,2897,verb,xiáng | jiàng,to drop | to fall | to come down | to descend | to surrender | to capitulate | to subdue | to tame,drkameleon
 降低,4,3058,verb,jiàngdī,to reduce; to lower; to cut down; to drop,kaikki
 降价,4,13945,verb,jiàngjià,to reduce price; to bring down the price,kaikki
 降临,7,5789,verb,jiànglín,to befall; to descend upon; to arrive; to come,kaikki
@@ -5030,7 +5030,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 焦虑,7,6011,noun,jiāolǜ,concern; anxiety,kaikki
 焦躁,7,20658,adjective,jiāozào,fretful; impatient,kaikki
 礁石,7,25109,noun,jiāoshí,reef; submerged rock,kaikki
-角,2,2370,"classifier, noun",jiǎo | jué,"angle | corner | horn | horn-shaped | unit of money equal to 0.1 yuan, or 10 cents (a dime) | role (theater) | to compete | ancient three legged wine vessel | third note of pentatonic scale",drkameleon
+角,2,2370,"classifier, noun",jué | jiǎo,"angle | corner | horn | horn-shaped | unit of money equal to 0.1 yuan, or 10 cents (a dime) | role (theater) | to compete | ancient three legged wine vessel | third note of pentatonic scale",drkameleon
 角度,2,1907,noun,jiǎodù,angle | perspective; point of view; angle,kaikki
 角落,7,4451,noun,jiǎoluò,corner (formed by two walls); nook | remote area; area away from the centre; corner,kaikki
 角色,4,1656,noun,juésè,"role; part (in a play, film, etc.); character (in a story, video game, etc.) | character | function; role; part",kaikki
@@ -5039,7 +5039,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 绞,7,12700,verb,jiǎo,to twist (strands into a thread) | to entangle | to wring | to hang (by the neck) | to turn | to wind | classifier for skeins of yarn,drkameleon
 饺子,2,11834,noun,jiǎozi,crescent-shaped dumpling; jiaozi; gyoza | wonton (Chinese dumpling stuffed with meat or seafood and vegetables),kaikki
 矫正,7,12817,verb,jiǎozhèng,to correct; to rectify,kaikki
-脚,2,1024,"classifier, noun",jiǎo | jué,foot | leg (of an animal or an object) | base (of an object) | classifier for kicks,drkameleon
+脚,2,1024,"classifier, noun",jué | jiǎo,foot | leg (of an animal or an object) | base (of an object) | classifier for kicks,drkameleon
 脚步,5,5649,noun,jiǎobù,footstep; pace (act or movement of making steps) | step (distance covered by a step) | footprints (of forerunners) | standpoint; position,kaikki
 脚印,6,13231,noun,jiǎoyìn,footprint; footmark; track,kaikki
 搅,7,6330,verb,jiǎo,to disturb | to annoy | to mix | to stir,drkameleon
@@ -5055,7 +5055,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 较,3,2836,"adverb, preposition",jiào,to compare | to dispute | compared to | (before adj.) relatively | comparatively | rather,drkameleon
 较劲,7,21666,verb,jiàojìn,to compete against each other; to have a contest | to set oneself against; to be defiant; to oppose | to redouble one's efforts; to exert oneself,kaikki
 较量,7,8379,verb,jiàoliàng,to have a trial of strength or skill; to have a contest; to compete with | to argue; to dispute; to quibble,kaikki
-教,1,988,verb,jiāo | jiào,to teach | religion | teaching | to make | to cause | to tell,drkameleon
+教,1,988,verb,jiào | jiāo,to teach | religion | teaching | to make | to cause | to tell,drkameleon
 教材,3,16199,noun,jiàocái,teaching materials | textbook,kaikki
 教科书,7,13123,noun,jiàokēshū,textbook,kaikki
 教练,3,1838,noun,jiàoliàn,coach; instructor,kaikki
@@ -5165,7 +5165,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 截至,6,13952,verb,jiézhì,to be no later than; up to (a specified time); by,kaikki
 竭尽全力,7,14314,idiom,jiéjìnquánlì,to do all one can; to do one's utmost; to spare no effort; to go all-out,kaikki
 竭力,7,13654,verb,jiélì,to strive; to try one's hardest; to do one's utmost,kaikki
-解,6,1971,verb,jiè | xiè | jiě,to divide | to break up | to split | to separate | to dissolve | to solve | to melt | to remove | to untie | to loosen | to open | to emancipate | to explain | to understand | to know | a solution | a dissection | to transport under guard | acrobatic display (esp. on horseback) (old),drkameleon
+解,6,1971,verb,jiè | jiě | xiè,to divide | to break up | to split | to separate | to dissolve | to solve | to melt | to remove | to untie | to loosen | to open | to emancipate | to explain | to understand | to know | a solution | a dissection | to transport under guard | acrobatic display (esp. on horseback) (old),drkameleon
 解除,5,4352,verb,jiěchú,to remove; to get rid of; to relieve; to lift | to cancel (an agreement); to terminate (a contract),kaikki
 解答,7,10261,verb,jiědá,to answer,kaikki
 解读,7,9527,verb,jiědú,to understand by breaking something down; to decipher; to decode; to decrypt,kaikki
@@ -5543,14 +5543,14 @@ word,level,difficulty,pos,pinyin,definitions,source
 剧团,7,15253,noun,jùtuán,theatrical company; troupe,kaikki
 剧院,7,6873,noun,jùyuàn,theater (building where performances are given); playhouse; centre for the performing arts | theatrical company; troupe,kaikki
 剧组,7,7482,noun,jùzǔ,cast and crew; film crew,kaikki
-据,6,1000,preposition,jū | jù,according to | to act in accordance with | to depend on | to seize | to occupy,drkameleon
+据,6,1000,preposition,jù | jū,according to | to act in accordance with | to depend on | to seize | to occupy,drkameleon
 据此,7,15841,adverb,jù cǐ,according to this | on the ground of the above | (formally introduces reported speech in writing),drkameleon
 据说,3,3486,verb,jùshuō,it is said that; ... so they say; apparently; allegedly; reportedly,kaikki
 据悉,7,18018,verb,jùxī,it is reported that; according to reports,kaikki
 距,7,4925,"preposition, verb",jù,at a distance of | distance | to be apart,drkameleon
 距离,4,1725,noun,jùlí,distance,kaikki
 距离,4,1725,verb,jùlí,to be apart; to be away from,kaikki
-锯,7,10918,"noun, verb",jū | jù,a saw | to cut with a saw,drkameleon
+锯,7,10918,"noun, verb",jù | jū,a saw | to cut with a saw,drkameleon
 聚,4,3213,verb,jù,to congregate | to assemble | to mass | to gather together | to amass | to polymerize,drkameleon
 聚会,4,3191,verb,jùhuì,to gather together; to meet,kaikki
 聚会,4,3191,noun,jùhuì,get-together; party; gathering,kaikki
@@ -5711,7 +5711,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 康复,6,4482,verb,kāngfù,to recover (from illness); to be restored to health; to get well,kaikki
 慷慨,7,9697,adjective,kāngkǎi,impassioned; vehement; fervent | forthright; expansive; frank and straightforward | generous; beneficent,kaikki
 慷慨,7,9697,verb,kāngkǎi,to sigh (with regret); to lament; to exclaim,kaikki
-扛,7,7902,verb,káng | gāng,"to raise aloft with both hands | (of two or more people) to carry sth together | to carry on one's shoulder | (fig.) to take on (a burden, duty etc)",drkameleon
+扛,7,7902,verb,gāng | káng,"to raise aloft with both hands | (of two or more people) to carry sth together | to carry on one's shoulder | (fig.) to take on (a burden, duty etc)",drkameleon
 抗衡,7,16255,verb,kànghéng,to contend with; to rival,kaikki
 抗拒,7,8952,verb,kàngjù,to resist; to defy; to oppose,kaikki
 抗生素,7,7830,noun,kàngshēngsù,antibiotic,kaikki
@@ -5753,7 +5753,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 棵,4,4222,classifier,kē,"classifier for trees, cabbages, plants etc",drkameleon
 颗,5,1392,classifier,kē,"classifier for small spheres, pearls, corn grains, teeth, hearts, satellites etc",drkameleon
 颗粒,6,11500,noun,kēlì,grain; pellet; kernel; granule | anything small and roundish,kaikki
-磕,7,9780,verb,kē | kè,"to tap | to knock (against sth hard) | to knock (mud from boots, ashes from a pipe etc)",drkameleon
+磕,7,9780,verb,kè | kē,"to tap | to knock (against sth hard) | to knock (mud from boots, ashes from a pipe etc)",drkameleon
 壳,7,5895,noun,qiào,shell | carapace | crust (earth's crust etc),drkameleon
 可,5,96,"adverb, conjunction, verb",kě | kè,(prefix) can; may; able to; -able | to approve; to permit | to suit | (particle used for emphasis) certainly; very,drkameleon
 可爱,2,799,adjective,kě'ài,cute; adorable; lovable | feminine; effeminate,kaikki
@@ -6139,12 +6139,12 @@ word,level,difficulty,pos,pinyin,definitions,source
 乐意,7,6221,verb,lèyì,to be willing to; to be happy to,kaikki
 乐意,7,6221,adjective,lèyì,willing; glad,kaikki
 乐园,7,6591,noun,lèyuán,heaven | Garden of Eden | paradise | playground; amusement park | garden of pleasure; land of happiness,kaikki
-了,1,3,"particle, verb",liào | liǎo | le,"(completed action marker) | (modal particle indicating change of state, situation now) | (modal particle intensifying preceding clause) | to finish | to achieve | to understand clearly | (of eyes) bright | clear-sighted | to understand clearly",drkameleon
+了,1,3,"particle, verb",liǎo | le | liào,"(completed action marker) | (modal particle indicating change of state, situation now) | (modal particle intensifying preceding clause) | to finish | to achieve | to understand clearly | (of eyes) bright | clear-sighted | to understand clearly",drkameleon
 了不起,4,5874,adjective,liǎobùqǐ,amazing; terrific; extraordinary,kaikki
 了结,7,10105,verb,liǎojié,to finish; to conclude; to wind up; to settle,kaikki
 了解,4,336,verb,liǎojiě,to understand; to comprehend; to learn; to know | to inquire about; to find out about; to acquaint oneself with,kaikki
 了却,7,29733,verb,liǎoquè,to settle; to solve,kaikki
-勒,7,2605,verb,lè | lēi,"to rein in | to compel | to force | to carve | to engrave | (literary) to command | to lead | bridle | (physics) abbr. for 斯, lux | to strap tightly | to bind",drkameleon
+勒,7,2605,verb,lēi | lè,"to rein in | to compel | to force | to carve | to engrave | (literary) to command | to lead | bridle | (physics) abbr. for 斯, lux | to strap tightly | to bind",drkameleon
 雷,5,1494,noun,léi,"thunder | (bound form) (military) mine, as in 雷 land mine | (coll.) to shock; to stun; to astound",drkameleon
 雷达,6,7037,noun,léidá,radar (method of detecting distant objects by analysis of radio waves),kaikki
 雷同,7,27498,verb,léitóng,to be identical (when that should not be the case); to mirror each other; to resemble | to echo what others say; to parrot,kaikki
@@ -6154,7 +6154,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 类别,7,16163,noun,lèibié,category; sort; kind; class,kaikki
 类似,3,2276,verb,lèisì,to be similar (to); to be analogous (to),kaikki
 类型,4,2598,noun,lèixíng,type; category; genre; kind,kaikki
-累,1,1197,"adjective, verb",lěi | lèi | léi,to accumulate | to involve or implicate | continuous | repeated | tired | weary | to strain | to wear out | to work hard | rope | to bind together | to twist around,drkameleon
+累,1,1197,"adjective, verb",lèi | léi | lěi,to accumulate | to involve or implicate | continuous | repeated | tired | weary | to strain | to wear out | to work hard | rope | to bind together | to twist around,drkameleon
 累积,7,13573,verb,lěijī,to accumulate; to gather; to build up; to clock up,kaikki
 累计,7,17303,verb,lěijì,to total; to add up; to amount to,kaikki
 棱角,7,24425,noun,léngjiǎo,"edge; corner; protrusion | edge; sharpness (of a person); inflexibility; unaccommodating personality; pointedness; harshness (of criticism, etc.)",kaikki
@@ -6178,7 +6178,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 冷战,7,10942,noun,lěngzhàn,cold war | tense confrontation between people that does not involve physical or verbal conflict | shiver,kaikki
 愣,7,11493,verb,lèng,to look distracted | to stare blankly | distracted | blank | (coll.) unexpectedly | rash | rashly,drkameleon
 厘米,4,23825,classifier,límǐ,centimetre/centimeter (SI unit),kaikki
-离,2,912,"preposition, verb",chī | lí,"mythical beast (archaic) | to leave | to part from | to be away from | (in giving distances) from | without (sth) | independent of | one of the Eight Trigrams 卦, symbolizing fire | ☲",drkameleon
+离,2,912,"preposition, verb",lí | chī,"mythical beast (archaic) | to leave | to part from | to be away from | (in giving distances) from | without (sth) | independent of | one of the Eight Trigrams 卦, symbolizing fire | ☲",drkameleon
 离不开,4,8817,verb,líbùkāi,to be inseparable from; to be inextricably linked to; to be unable to do without | to be too busy to get away from,kaikki
 离婚,3,2723,verb,líhūn,to divorce (legally dissolve one's marriage),kaikki
 离开,2,557,verb,líkāi,to leave; to depart,kaikki
@@ -6272,7 +6272,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 例外,5,5594,noun,lìwài,exception,kaikki
 例子,2,5034,noun,lìzi,example; instance; case; case in point,kaikki
 粒,7,4781,classifier,lì,"grain | granule | classifier for small round things (peas, bullets, peanuts, pills, grains etc)",drkameleon
-俩,4,1419,numeral,liǎng | liǎ,two (colloquial equivalent of 两个) | both | some,drkameleon
+俩,4,1419,numeral,liǎ | liǎng,two (colloquial equivalent of 两个) | both | some,drkameleon
 连,3,406,"adverb, noun, particle, verb",lián,to link | to join | to connect | continuously | in succession | including | company (military),drkameleon
 连滚带爬,7,59075,idiom,liángǔndàipá,rolling and crawling (describes a scene in which people are chaotically fleeing every which way from danger),kaikki
 连接,5,3426,verb,liánjiē,to link; to join; to connect,kaikki
@@ -6328,7 +6328,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 良心,7,6526,noun,liángxīn,conscience,kaikki
 良心,7,6526,adjective,liángxīn,conscientious,kaikki
 良性,7,15034,adjective,liángxìng,positive; virtuous; healthy (competition) | benign (tumor),kaikki
-凉,2,4088,"adjective, verb",liáng | liàng,cool | cold | to let sth cool down,drkameleon
+凉,2,4088,"adjective, verb",liàng | liáng,cool | cold | to let sth cool down,drkameleon
 凉快,2,19483,adjective,liángkuài,pleasantly cool; nice and cool | scantily clad,kaikki
 凉快,2,19483,verb,liángkuài,"to cool off; to make oneself cool in temperature | to go away; to go to a cool place and enjoy oneself, not meddle with the matter at hand",kaikki
 凉爽,7,18060,adjective,liángshuǎng,pleasantly cool,kaikki
@@ -6350,7 +6350,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 谅解,7,11864,verb,liàngjiě,to understand and forgive,kaikki
 辆,2,699,classifier,liàng,classifier for vehicles,drkameleon
 晾,6,14630,verb,liàng,to dry in the air | (fig.) to cold-shoulder,drkameleon
-量,4,2147,"noun, verb",liáng | liàng,to measure | capacity | quantity | amount | to estimate | measure word,drkameleon
+量,4,2147,"noun, verb",liàng | liáng,to measure | capacity | quantity | amount | to estimate | measure word,drkameleon
 辽阔,7,25015,adjective,liáokuò,vast; extensive,kaikki
 疗法,7,6021,noun,liáofǎ,therapy; medical treatment,kaikki
 疗效,7,13362,noun,liáoxiào,curative effect; treatment or therapy efficacy,kaikki
@@ -6431,7 +6431,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 领袖,6,3957,noun,lǐngxiù,"leader (of a country, a party or an organisation) | collar and sleeves",kaikki
 领养,7,10747,verb,lǐngyǎng,"to adopt (a child, pet, etc.)",kaikki
 领域,7,2459,noun,lǐngyù,occupied area; realm; territory | field; domain; sphere; realm,kaikki
-令,5,776,verb,líng | lǐng | lìng,classifier for a ream of paper | to order | to command | an order | warrant | writ | to cause | to make sth happen | virtuous | honorific title | season | government position (old) | type of short song or poem,drkameleon
+令,5,776,verb,lìng | lǐng | líng,classifier for a ream of paper | to order | to command | an order | warrant | writ | to cause | to make sth happen | virtuous | honorific title | season | government position (old) | type of short song or poem,drkameleon
 另,6,541,"adverb, pronoun",lìng,other | another | separate | separately,drkameleon
 另外,3,725,adjective,lìngwài,other; another; else,kaikki
 另外,3,725,conjunction,lìngwài,furthermore; moreover; in addition,kaikki
@@ -6499,7 +6499,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 楼上,1,5267,noun,lóushàng,upstairs | previous replier in a forum thread | above; more than,kaikki
 楼梯,4,5165,noun,lóutī,stairs; staircase | ladder,kaikki
 楼下,1,4135,noun,lóuxià,downstairs | next replier in a forum thread | below; less than,kaikki
-搂,7,9281,verb,lōu | lǒu,"to draw towards oneself | to gather | to gather up (one's gown, sleeves etc) | to grab (money) | to extort | to hug | to embrace | to hold in one's arms",drkameleon
+搂,7,9281,verb,lǒu | lōu,"to draw towards oneself | to gather | to gather up (one's gown, sleeves etc) | to grab (money) | to extort | to hug | to embrace | to hold in one's arms",drkameleon
 漏,5,4288,verb,lòu,to leak | to divulge | to leave out by mistake | waterclock or hourglass (old),drkameleon
 漏洞,5,7160,noun,lòudòng,leak; hole | loophole (in rules and regulations) | hole (in computer programs),kaikki
 芦花,7,58423,,lú huā,reed catkin | reed flower,drkameleon
@@ -6533,7 +6533,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 路途,7,15788,noun,lùtú,road; path; way | journey; trip; route | distance (to travel),kaikki
 路线,3,2824,noun,lùxiàn,route; itinerary; way; run; path | line (especially of a political nature),kaikki
 路子,7,13393,noun,lùzi,method; way; approach; means | personal connections,kaikki
-露,6,2700,verb,lòu | lù,to show | to reveal | to betray | to expose | dew | syrup | nectar | outdoors (not under cover) | to show | to reveal | to betray | to expose,drkameleon
+露,6,2700,verb,lù | lòu,to show | to reveal | to betray | to expose | dew | syrup | nectar | outdoors (not under cover) | to show | to reveal | to betray | to expose,drkameleon
 露面,7,9214,verb,lòumiàn,to appear in public; to turn up; to show one's face; to show up,kaikki
 露天,7,11290,noun,lùtiān,outdoors; outside,kaikki
 露天,7,11290,adjective,lùtiān,outdoor; in the open; al fresco,kaikki
@@ -6552,7 +6552,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 履行,7,4856,verb,lǚxíng,"to fulfill (one's promise); to perform (one's duty, a contract, etc.); to carry out | to walk",kaikki
 履行,7,4856,noun,lǚxíng,moral conduct; behaviour,kaikki
 律师,4,1246,noun,lǜshī,lawyer; attorney | people who understand religious discipline,kaikki
-率,7,2786,verb,shuài | lu:4,rate | frequency | to lead | to command | rash | hasty | frank | straightforward | generally | usually,drkameleon
+率,7,2786,verb,lu:4 | shuài,rate | frequency | to lead | to command | rash | hasty | frank | straightforward | generally | usually,drkameleon
 率领,5,10605,verb,shuàilǐng,to lead (a group of people); to head; to command,kaikki
 率先,4,12655,verb,shuàixiān,to take the lead; to show initiative; to be the first; to set an example,kaikki
 绿,2,2608,adjective,lu:4,green | (slang) (derived from 绿帽子) to cheat on (one's spouse or boyfriend or girlfriend),drkameleon
@@ -6567,7 +6567,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 卵,7,10123,noun,luǎn,egg | ovum | spawn | (coll.) testicles | (old) penis | (expletive) fucking,drkameleon
 乱,3,1206,"adjective, adverb, verb",luàn,in confusion or disorder | in a confused state of mind | disorder | upheaval | riot | illicit sexual relations | to throw into disorder | to mix up | indiscriminate | random | arbitrary,drkameleon
 乱七八糟,7,8907,idiom,luànqībāzāo,in a complete mess; at sixes and sevens,kaikki
-抡,7,19852,verb,lún | lūn,"to swing (one's arms, a heavy object) | to wave (a sword, one's fists) | to fling (money) | to select",drkameleon
+抡,7,19852,verb,lūn | lún,"to swing (one's arms, a heavy object) | to wave (a sword, one's fists) | to fling (money) | to select",drkameleon
 伦理,7,11350,noun,lúnlǐ,ethics; morality; moral principles,kaikki
 轮,4,1066,"classifier, verb",lún,"wheel; disk; ring | steamship | to take turns; to rotate | classifier for big round objects: disk, or recurring events: round, turn",drkameleon
 轮船,4,17543,noun,lúnchuán,steamship; steamer | any large ship propelled by an engine | a kind of ship propelled by wheels,kaikki
@@ -6593,7 +6593,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 裸,7,4679,other,luǒ,naked,drkameleon
 裸露,7,14013,verb,luǒlù,to be uncovered; to be bare; to be exposed; to be naked,kaikki
 络绎不绝,7,34597,idiom,luòyìbùjué,to flow past endlessly,kaikki
-落,4,1435,verb,lào | là | luò,to leave out | to be missing | to leave behind or forget to bring | to lag or fall behind | colloquial reading for 落 in certain compounds | to fall or drop | (of the sun) to set | (of a tide) to go out | to lower | to decline or sink | to lag or fall behind | to fall onto | to rest with | to get or receive | to write down | whereabouts | settlement,drkameleon
+落,4,1435,verb,là | luò | lào,to leave out | to be missing | to leave behind or forget to bring | to lag or fall behind | colloquial reading for 落 in certain compounds | to fall or drop | (of the sun) to set | (of a tide) to go out | to lower | to decline or sink | to lag or fall behind | to fall onto | to rest with | to get or receive | to write down | whereabouts | settlement,drkameleon
 落差,7,29794,noun,luòchā,"drop in elevation (of a waterfall, between two points in the course of a river, etc.) | head drop (in hydroelectric power plants) | discrepancy (typically between reality and one's expectations); gap",kaikki
 落成,6,20880,verb,luòchéng,to be completed,kaikki
 落地,7,8886,verb,luòdì,to fall to the ground | to land | to be born | to implement; to put into effect; to carry out | to be put out | to be revealed by being turned face up,kaikki
@@ -6630,9 +6630,9 @@ word,level,difficulty,pos,pinyin,definitions,source
 码,7,2833,"classifier, verb",mǎ,"weight | number | code | to pile | to stack | classifier for length or distance (yard), happenings etc",drkameleon
 码头,5,4184,noun,mǎtou,pier; wharf; dock; quay | port city,kaikki
 骂,5,2622,verb,mà,to scold | to abuse | to curse,drkameleon
-吗,1,83,particle,má | mǎ | ma,"(coll.) what? | (question particle for ""yes-no"" questions)",drkameleon
-嘛,6,614,particle,má | ma,modal particle indicating that sth is obvious | particle indicating a pause for emphasis,drkameleon
-埋,6,2776,verb,mái | mán,to bury,drkameleon
+吗,1,83,particle,ma | má | mǎ,"(coll.) what? | (question particle for ""yes-no"" questions)",drkameleon
+嘛,6,614,particle,ma | má,modal particle indicating that sth is obvious | particle indicating a pause for emphasis,drkameleon
+埋,6,2776,verb,mán | mái,to bury,drkameleon
 埋藏,7,14710,verb,máicáng,to bury | to cover up; to hide,kaikki
 埋伏,7,11612,verb,máifú,to set up an ambush; to ambush | to hide; to lie low,kaikki
 埋伏,7,11612,noun,máifú,ambush | ambush combatants,kaikki
@@ -6798,7 +6798,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 迷失,7,7005,verb,míshī,to lose one's way; to get lost,kaikki
 迷信,5,9691,verb,míxìn,to be superstitious; to hold superstitious beliefs | to have blind faith (in); to believe blindly,kaikki
 迷信,5,9691,noun,míxìn,superstition; superstitious belief,kaikki
-谜,7,6848,noun,mí | mèi,riddle,drkameleon
+谜,7,6848,noun,mèi | mí,riddle,drkameleon
 谜底,7,19958,noun,mídǐ,solution to a riddle | truth; mystery,kaikki
 谜团,7,19898,noun,mítuán,mystery; doubts and suspicions,kaikki
 谜语,7,25753,noun,míyǔ,puzzle; riddle,kaikki
@@ -6824,7 +6824,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 蜜月,7,12555,noun,mìyuè,honeymoon,kaikki
 棉,6,5317,noun,mián,generic term for cotton or kapok | cotton | padded or quilted with cotton,drkameleon
 棉花,7,6129,noun,miánhuā,cotton,kaikki
-免,7,3929,"adverb, verb",wèn | miǎn,to excuse sb | to exempt | to remove or dismiss from office | to avoid | to avert | to escape | to be prohibited,drkameleon
+免,7,3929,"adverb, verb",miǎn | wèn,to excuse sb | to exempt | to remove or dismiss from office | to avoid | to avert | to escape | to be prohibited,drkameleon
 免不了,7,20777,verb,miǎnbùliǎo,to be unavoidable; to be inevitable,kaikki
 免除,7,14058,verb,miǎnchú,to prevent | to avoid | to remit; to excuse; to exempt; to relieve | to remove; to clear; to eliminate; to dispel,kaikki
 免得,6,9217,conjunction,miǎnde,so as not to; so as to avoid,kaikki
@@ -6934,7 +6934,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 命题,7,17947,verb,mìngtí,to assign a topic; to set a question,kaikki
 命题,7,17947,noun,mìngtí,proposition,kaikki
 命运,3,2268,noun,mìngyùn,"fate (of a person, country, business, etc.); destiny; kismet; lot | fate (of a person, country, business, etc.); destiny; kismet; lot; fate (final cell type into which a particular cell will develop)",kaikki
-摸,4,2716,verb,mó | mō,to feel with the hand | to touch | to stroke | to grope | to steal | to abstract,drkameleon
+摸,4,2716,verb,mō | mó,to feel with the hand | to touch | to stroke | to grope | to steal | to abstract,drkameleon
 摸索,7,14094,verb,mōsuǒ,to grope; to feel about; to fumble; to fiddle | to try to find,kaikki
 模范,5,7612,noun,mófàn,exemplar; model,kaikki
 模范,5,7612,adjective,mófàn,model,kaikki
@@ -6953,7 +6953,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 摩擦,5,8215,noun,mócā,friction | clash; friction; discord; disagreement,kaikki
 摩托,5,9464,noun,mótuō,motor,kaikki
 摩托车,5,4123,noun,mótuōchē,motorcycle; motorbike | motor vehicle; car,kaikki
-磨,6,4671,"noun, verb",mó | mò,to rub | to grind | to polish | to sharpen | to wear down | to die out | to waste time | to pester | to insist | grindstone | to grind | to turn round,drkameleon
+磨,6,4671,"noun, verb",mò | mó,to rub | to grind | to polish | to sharpen | to wear down | to die out | to waste time | to pester | to insist | grindstone | to grind | to turn round,drkameleon
 磨合,7,22505,verb,móhé,to run in; to grind in | to become intimate by getting used to the habits of another person | to hold a discussion; to negotiate,kaikki
 磨难,7,15243,noun,mónàn,trial; tribulation; torment; cross to bear; hardship; suffering; hard time,kaikki
 磨损,7,13479,verb,mósǔn,to undergo wear and tear; to be worn and torn; to suffer abrasion,kaikki
@@ -6962,7 +6962,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 蘑菇,7,8557,adjective,mógu,innocent; guiltless,kaikki
 魔鬼,7,5671,noun,móguǐ,demon; ghost; monster; the devil; an embodiment of evil,kaikki
 魔术,7,6559,noun,móshù,magic; illusionism (illusion performed to give the appearance of the supernatural),kaikki
-抹,7,4600,"classifier, verb",mā | mǒ | mò,"to wipe | to smear | to wipe | to erase | classifier for wisps of cloud, light-beams etc | to plaster | to go around | to skirt",drkameleon
+抹,7,4600,"classifier, verb",mò | mā | mǒ,"to wipe | to smear | to wipe | to erase | classifier for wisps of cloud, light-beams etc | to plaster | to go around | to skirt",drkameleon
 抹杀,6,23195,verb,mǒshā,to blot out; to erase; to discount (past efforts or achievements); to refuse to acknowledge; to obliterate,kaikki
 末,4,3736,postposition,mò,tip | end | final stage | latter part | inessential detail | powder | dust | opera role of old man,drkameleon
 末日,7,8466,noun,mòrì,the final days; the last day | Judgment Day; doomsday,kaikki
@@ -7018,21 +7018,21 @@ word,level,difficulty,pos,pinyin,definitions,source
 幕,7,3319,"classifier, noun",mù,curtain or screen | canopy or tent | headquarters of a general | act (of a play) | curtain | screen,drkameleon
 幕后,7,6794,noun,mùhòu,backstage; behind the scenes | behind closed doors; stealth,kaikki
 穆斯林,7,8893,noun,mùsīlín,Muslim (believer of Islam),kaikki
-嗯,6,1390,interjection,en | ēn | èn,"(a groaning sound) | (nonverbal grunt as interjection) | OK, yeah | what? | interjection indicating approval, appreciation or agreement",drkameleon
+嗯,6,1390,interjection,ēn | en | èn,"(a groaning sound) | (nonverbal grunt as interjection) | OK, yeah | what? | interjection indicating approval, appreciation or agreement",drkameleon
 拿,1,287,verb,ná,to hold | to seize | to catch | to apprehend | to take,drkameleon
 拿出,2,14568,verb,náchū,to take out; to pull out | to provide; to put forward (a proposal); to come up with (evidence),kaikki
 拿到,2,4622,verb,nádào,to take; to get hold of; to get; to attain,kaikki
 拿手,7,11750,adjective,náshǒu,adept; skilled; good at,kaikki
 拿手,7,11750,noun,náshǒu,assurance; confidence | leverage; handle (against someone),kaikki
 拿走,6,6449,verb,názǒu,to take something away,kaikki
-哪,1,547,"particle, pronoun",něi | né | na | nǎ,"how | which | (emphatic sentence-final particle, used instead of 啊 after a word ending in ""n"") | which? (interrogative, followed by classifier or numeral-classifier)",drkameleon
+哪,1,547,"particle, pronoun",né | nǎ | na | něi,"how | which | (emphatic sentence-final particle, used instead of 啊 after a word ending in ""n"") | which? (interrogative, followed by classifier or numeral-classifier)",drkameleon
 哪儿,1,2534,adverb,nǎr,where | anywhere | how (used in rhetorical questions),kaikki
 哪里,1,750,pronoun,nǎlǐ,where | wherever; anywhere | how (used in rhetorical questions),kaikki
 哪里,1,750,interjection,nǎlǐ,You flatter me! (humble response to compliments),kaikki
 哪怕,4,4106,conjunction,nǎpà,even if; even though,kaikki
 哪些,1,3741,pronoun,nǎxiē,which ones?; what (preceding a noun implied to be plural),kaikki
 哪知道,7,1000000,,nǎ zhī dào,who would have thought that ...?,drkameleon
-那,1,48,"conjunction, pronoun",nuó | nà | nǎ,"(specifier) that; the; those (colloquial pr. [nèi]) | (pronoun) that (referring to persons, things or situations) | then (in that case) | (archaic) many | beautiful | how",drkameleon
+那,1,48,"conjunction, pronoun",nǎ | nà | nuó,"(specifier) that; the; those (colloquial pr. [nèi]) | (pronoun) that (referring to persons, things or situations) | then (in that case) | (archaic) many | beautiful | how",drkameleon
 那边,1,2415,adverb,nàbiān,over there,kaikki
 那边,1,2415,noun,nàbiān,there; that side,kaikki
 那会儿,2,15502,pronoun,nàhuìr,at that time; at the time; then,kaikki
@@ -7156,7 +7156,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 能人,7,21063,noun,néngrén,able or capable person | Homo habilis,kaikki
 能源,7,3465,noun,néngyuán,energy resource; energy source; power source,kaikki
 尼龙,7,23052,noun,nílóng,nylon,kaikki
-泥,6,4211,"noun, verb",nì | ní,mud | clay | paste | pulp | restrained,drkameleon
+泥,6,4211,"noun, verb",ní | nì,mud | clay | paste | pulp | restrained,drkameleon
 泥潭,7,22435,noun,nítán,mire; mud | difficult situation,kaikki
 泥土,7,10271,noun,nítǔ,earth; soil | clay,kaikki
 你,1,5,pronoun,nǐ,"you (informal, as opposed to courteous 您) | you (Note: In Taiwan, 妳 is used to address females, but in mainland China, it is not commonly used. Instead, 你 is used to address both males and females.)",drkameleon
@@ -7190,7 +7190,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 念头,7,5858,noun,niàntou,idea; thought; intention | craving; addiction; desire,kaikki
 酿造,7,25051,verb,niàngzào,"to make (wine, vinegar, etc.); to brew",kaikki
 娘,7,2131,noun,niáng,mother | young lady | (coll.) effeminate,drkameleon
-鸟,2,1593,noun,niǎo | diǎo,"penis | bird | ""bird"" radical in Chinese characters (Kangxi radical 196) | (dialect) to pay attention to | (intensifier) damned | goddamn",drkameleon
+鸟,2,1593,noun,diǎo | niǎo,"penis | bird | ""bird"" radical in Chinese characters (Kangxi radical 196) | (dialect) to pay attention to | (intensifier) damned | goddamn",drkameleon
 鸟巢,7,23612,noun,niǎocháo,bird's nest,kaikki
 尿,7,2899,"noun, verb",niào | suī,to urinate | urine | (coll.) urine,drkameleon
 捏,7,4857,verb,niē,"to hold between the thumb and fingers | to pinch | to mold (using the fingers) | to hold (lit. in one's hand and fig.) | to join together | to fabricate (a story, a report, etc)",drkameleon
@@ -7199,7 +7199,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 宁可,7,8234,adverb,nìngkě,would rather; would prefer; it would be better if,kaikki
 宁肯,6,35373,adverb,nìngkěn,would rather; would prefer; it would be better if,kaikki
 宁愿,7,4690,adverb,nìngyuàn,would rather; would prefer; it would be better if,kaikki
-拧,7,7556,verb,nìng | nǐng | níng,to pinch | wring | mistake | to twist | stubborn,drkameleon
+拧,7,7556,verb,nìng | níng | nǐng,to pinch | wring | mistake | to twist | stubborn,drkameleon
 凝固,7,13476,verb,nínggù,to freeze; (verbal noun) freezing | to solidify; to congeal,kaikki
 凝聚,7,12032,verb,níngjù,to condense | to crystallise; to conglomerate; to embody,kaikki
 凝聚,7,12032,noun,níngjù,condensate,kaikki
@@ -7226,7 +7226,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 浓缩,7,10610,verb,nóngsuō,to concentrate (liquid) | to enrich,kaikki
 浓郁,7,20892,adjective,nóngyù,rich; strong | having a heavy fragrance; dense; full-bodied; intense,kaikki
 浓重,7,28270,adjective,nóngzhòng,strong,kaikki
-弄,2,952,verb,nòng | lòng,lane | alley | to do | to manage | to handle | to play with | to fool with | to mess with | to fix | to toy with,drkameleon
+弄,2,952,verb,lòng | nòng,lane | alley | to do | to manage | to handle | to play with | to fool with | to mess with | to fix | to toy with,drkameleon
 弄虚作假,7,29962,idiom,nòngxūzuòjiǎ,to practice fraud,kaikki
 奴隶,7,7456,noun,núlì,"slave (enslaved person) | slave (to); drudge; minion (person completely controlled by someone or something) | slave (submissive partner in a BDSM relationship who consensually submits to, sexually or personally, serving one or more masters or mistresses)",kaikki
 努力,2,505,verb,nǔlì,to make an effort; to strive; to endeavor; to work hard,kaikki
@@ -7250,7 +7250,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 虐待,7,7321,verb,nüèdài,to abuse; to maltreat; to be cruel to,kaikki
 挪,7,8064,"adjective, verb",nuó,to shift | to move,drkameleon
 诺言,7,9382,noun,nuòyán,promise,kaikki
-哦,7,186,interjection,ó | é | ò | o,"to chant | oh (interjection indicating doubt or surprise) | oh (interjection indicating that one has just learned sth) | sentence-final particle that conveys informality, warmth, friendliness or intimacy | may also indicate that one is stating a fact that the other person is not aware of",drkameleon
+哦,7,186,interjection,é | ò | o | ó,"to chant | oh (interjection indicating doubt or surprise) | oh (interjection indicating that one has just learned sth) | sentence-final particle that conveys informality, warmth, friendliness or intimacy | may also indicate that one is stating a fact that the other person is not aware of",drkameleon
 欧洲,6,1929,adjective,Ōuzhōu,of good luck,kaikki
 殴打,7,8604,verb,ōudǎ,to hit (someone); to beat (someone); to assault (someone),kaikki
 殴打,7,8604,noun,ōudǎ,assault | battery,kaikki
@@ -7314,7 +7314,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 旁,5,2873,postposition,páng,"one side | other | different | lateral component of a Chinese character (such as 刂, 亻 etc)",drkameleon
 旁边,1,1815,noun,pángbiān,side; beside; to the side,kaikki
 旁观,7,21396,verb,pángguān,to be an onlooker; to look on; to stand by,kaikki
-胖,3,2396,adjective,pán | pàng,healthy | at ease | fat | plump,drkameleon
+胖,3,2396,adjective,pàng | pán,healthy | at ease | fat | plump,drkameleon
 胖子,4,4309,noun,pàngzi,fat person; fatty; fatso | Fat Man (nuclear bomb),kaikki
 抛,7,3539,"noun, verb",pāo,to throw | to toss | to fling | to cast | to abandon,drkameleon
 抛开,7,11850,verb,pāokāi,to get rid of; to throw out | to throw aside; to not worry about; to disregard,kaikki
@@ -7326,7 +7326,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 跑车,7,9352,verb,pǎochē,to be on the job (of train conductors) | to accidentally slide down (of mining trolleys) | to drive a vehicle (such as a truck or taxi) for a living,kaikki
 跑道,7,10727,noun,pǎodào,runway; airstrip | track | path; pathway,kaikki
 跑龙套,7,36523,verb,pǎo lóngtào,to have a walk-on part | to play a small role; to be a utility man or general handyman,kaikki
-泡,6,2258,"classifier, noun, verb",pào | pāo,puffed; swollen; spongy | small lake (esp. in place names) | classifier for urine or feces | bubble; foam | blister | to soak; to steep; to infuse | to dawdle; to loiter | to pick up (a girl) | to get off with (a sexual partner) | classifier for occurrences of an action | classifier for number of infusions,drkameleon
+泡,6,2258,"classifier, noun, verb",pāo | pào,puffed; swollen; spongy | small lake (esp. in place names) | classifier for urine or feces | bubble; foam | blister | to soak; to steep; to infuse | to dawdle; to loiter | to pick up (a girl) | to get off with (a sexual partner) | classifier for occurrences of an action | classifier for number of infusions,drkameleon
 泡沫,7,7113,noun,pào mò,foam | (soap) bubble | (economic) bubble,drkameleon
 炮,6,5592,"classifier, noun",páo | pào | bāo,to sauté | to fry | to dry by heating | to prepare herbal medicine by roasting or parching (in a pan) | cannon | firecracker,drkameleon
 胚胎,7,13361,noun,pēitāi,embryo | embryonic stage,kaikki
@@ -7358,7 +7358,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 配音,7,13200,verb,pèiyīn,to voice; to act as a voice actor to portray a character | to dub; to replace the actor's voices with new recordings,kaikki
 配置,6,10372,verb,pèizhì,"to deploy (e.g. troops) | to allocate (e.g. resources, manpower, etc.) | to configure",kaikki
 配置,6,10372,noun,pèizhì,configuration,kaikki
-喷,5,3321,verb,pèn | pēn,"to puff | to spout | to spray | to spurt | (of a smell) strong | peak season (of a crop) | (classifier for the ordinal number of a crop, in the context of multiple harvests)",drkameleon
+喷,5,3321,verb,pēn | pèn,"to puff | to spout | to spray | to spurt | (of a smell) strong | peak season (of a crop) | (classifier for the ordinal number of a crop, in the context of multiple harvests)",drkameleon
 喷泉,7,13972,noun,pēnquán,"fountain (artificial, usually ornamental, water feature)",kaikki
 盆,5,6022,"classifier, noun",pén,"basin | flower pot | unit of volume equal to 12 斗 and 8 升, approx 128 liters",drkameleon
 盆地,6,23207,noun,péndì,basin,kaikki
@@ -7434,11 +7434,11 @@ word,level,difficulty,pos,pinyin,definitions,source
 票,1,956,"classifier, noun",piào,"ticket | ballot | banknote | person held for ransom | amateur performance of Chinese opera | classifier for groups, batches, business transactions",drkameleon
 票房,7,10836,noun,piàofáng,box office (a place where tickets are sold) | box office (the total amount of money paid by people worldwide to watch a movie at cinemas/movie theaters),kaikki
 票价,3,13687,noun,piàojià,ticket price,kaikki
-漂,7,9779,verb,piǎo | piào | piāo,to float | to drift | to bleach | elegant | polished,drkameleon
+漂,7,9779,verb,piào | piǎo | piāo,to float | to drift | to bleach | elegant | polished,drkameleon
 漂浮,6,13367,verb,piāofú,to float (usually in air),kaikki
 漂浮,6,13367,adjective,piāofú,superficial; showy (of style of work),kaikki
 漂亮,2,915,adjective,piàoliang,pretty; beautiful; handsome | brilliant; splendid,kaikki
-撇,7,11433,"classifier, verb",piě | piē,to cast away | to fling aside | to throw | to cast | left-slanting downward brush stroke (calligraphy),drkameleon
+撇,7,11433,"classifier, verb",piē | piě,to cast away | to fling aside | to throw | to cast | left-slanting downward brush stroke (calligraphy),drkameleon
 拼,5,2461,verb,pīn,to piece together | to join together | to stake all | adventurous | at the risk of one's life | to spell,drkameleon
 拼搏,7,12182,verb,pīnbó,to fight with all one's might; to struggle; to wrestle; to work hard; to strive,kaikki
 拼命,7,4700,verb,pīnmìng | pànmìng,to risk one's life | to go to great lengths to accomplish something as if one's life depended on it | to risk one's life | to go to great lengths to accomplish something as if one's life depended on it,kaikki
@@ -7609,7 +7609,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 奇特,7,9112,adjective,qítè,unusual; peculiar; queer,kaikki
 歧视,7,6933,verb,qíshì,to discriminate; to treat with bias,kaikki
 祈祷,7,4534,verb,qídǎo,to pray,kaikki
-骑,2,2231,verb,qí | jì,"mounted soldier | to sit astride | to ride (a horse, bike etc) | classifier for saddle horses",drkameleon
+骑,2,2231,verb,jì | qí,"mounted soldier | to sit astride | to ride (a horse, bike etc) | classifier for saddle horses",drkameleon
 骑车,2,7235,verb,qíchē,to cycle (to ride a bicycle),kaikki
 棋,7,7604,noun,qí,chess | chess-like game | a game of chess | chess piece,drkameleon
 棋子,7,16454,noun,qízǐ,board game piece | chess piece | pawn; person being used to some end,kaikki
@@ -7770,14 +7770,14 @@ word,level,difficulty,pos,pinyin,definitions,source
 潜艇,7,8080,noun,qiántǐng,submarine,kaikki
 潜移默化,7,31990,idiom,qiányímòhuà,"to influence secretly, subtly; to change due to unnoticeable influence",kaikki
 潜在,7,5425,adjective,qiánzài,potential; latent,kaikki
-浅,4,5099,adjective,qiǎn | jiān,sound of moving water | shallow | light (color),drkameleon
+浅,4,5099,adjective,jiān | qiǎn,sound of moving water | shallow | light (color),drkameleon
 谴责,7,7122,verb,qiǎnzé,to condemn; to strongly criticize,kaikki
 欠,5,2126,verb,qiàn,to owe | to lack | (literary) to be deficient in | (bound form) yawn | to raise slightly (a part of one's body),drkameleon
 欠缺,7,15069,noun,qiànquē,shortcoming; deficiency,kaikki
 欠缺,7,15069,verb,qiànquē,to lack; to be deficient in; to be short of | to need something due to deficiency | to not lack; to not be deficient in; to not be short of,kaikki
 欠条,7,36112,noun,qiàntiáo,IOU,kaikki
 歉意,7,11732,noun,qiànyì,apology; regret,kaikki
-呛,7,11625,verb,qiāng | qiàng,"to choke (because of swallowing the wrong way) | to irritate the nose | to choke (of smoke, smell etc) | pungent | to scold | to speak out against sb",drkameleon
+呛,7,11625,verb,qiàng | qiāng,"to choke (because of swallowing the wrong way) | to irritate the nose | to choke (of smoke, smell etc) | pungent | to scold | to speak out against sb",drkameleon
 枪,5,1429,"classifier, noun",qiāng,gun | firearm | rifle | spear | thing with shape or function similar to a gun | to substitute for another person in a test | to knock | classifier for rifle shots | rifle | spear,drkameleon
 枪毙,7,16619,verb,qiāngbì,to execute by firing squad | to be rejected; to be shot down,kaikki
 腔,7,7193,classifier,qiāng,(bound form) cavity | tune | accent (in one's speech) | (old) (classifier for carcasses of slaughtered livestock),drkameleon
@@ -7808,7 +7808,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 强壮,6,8294,adjective,qiángzhuàng,strong; sturdy,kaikki
 墙,2,1741,noun,qiáng,wall,drkameleon
 墙壁,5,7736,noun,qiángbì,wall,kaikki
-抢,5,1191,verb,qiāng | qiǎng,(literary) to knock against (esp. to knock one's head on the ground in grief or rage) | opposite in direction; contrary | to fight over | to rush | to scramble | to grab | to rob | to snatch,drkameleon
+抢,5,1191,verb,qiǎng | qiāng,(literary) to knock against (esp. to knock one's head on the ground in grief or rage) | opposite in direction; contrary | to fight over | to rush | to scramble | to grab | to rob | to snatch,drkameleon
 抢夺,7,16103,verb,qiǎngduó,to pillage; to plunder; to take away by force; to snatch; to wrest; to seize,kaikki
 抢劫,7,3341,verb,qiǎngjié,to rob; to mug,kaikki
 抢救,5,6580,verb,qiǎngjiù,to rescue (in an emergency); to resuscitate (someone) | to salvage; to save; to preserve from potential loss or damage,kaikki
@@ -7844,7 +7844,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 切实,6,10384,adverb,qièshí,conscientiously; thoroughly,kaikki
 窃取,7,16744,verb,qièqǔ,to steal; to snatch; to seize; to filch,kaikki
 锲而不舍,6,38449,idiom,qiè'érbùshě,to persevere; to continue doing something in a determined way and not give up,kaikki
-亲,3,1044,"adjective, verb",qìng | qīn,parent | one's own (flesh and blood) | relative | related | marriage | bride | close | intimate | in person | first-hand | in favor of | pro- | to kiss | (Internet slang) dear | parents-in-law of one's offspring,drkameleon
+亲,3,1044,"adjective, verb",qīn | qìng,parent | one's own (flesh and blood) | relative | related | marriage | bride | close | intimate | in person | first-hand | in favor of | pro- | to kiss | (Internet slang) dear | parents-in-law of one's offspring,drkameleon
 亲爱,4,1202,adjective,qīn'ài,beloved; cherished; dear (as used to address someone at the beginning of a letter),kaikki
 亲和力,7,23658,noun,qīnhélì,personal warmth; approachability | affinity,kaikki
 亲近,7,7302,adjective,qīnjìn,intimate; close,kaikki
@@ -8332,10 +8332,10 @@ word,level,difficulty,pos,pinyin,definitions,source
 弱,4,2968,adjective,ruò,weak; feeble | young | inferior; not as good as | (following a decimal or fraction) slightly less than,drkameleon
 弱点,7,7156,noun,ruòdiǎn,weak point; weakness; shortcoming,kaikki
 弱势,7,20733,noun,ruòshì,comparatively weak position; losing streak | disadvantaged state; marginalised state; vulnerableness,kaikki
-撒,7,2662,verb,sǎ | sā,to let go | to cast | to let loose | to discharge | to give expression to | (coll.) to pee | to scatter | to sprinkle | to spill,drkameleon
+撒,7,2662,verb,sā | sǎ,to let go | to cast | to let loose | to discharge | to give expression to | (coll.) to pee | to scatter | to sprinkle | to spill,drkameleon
 撒谎,7,8163,verb,sāhuǎng,to tell a lie; to lie,kaikki
 洒,5,6215,verb,sǎ,to sprinkle | to spray | to spill | to shed,drkameleon
-塞,6,2163,"adjective, verb",sāi | sè | sài,to stop up | to squeeze in | to stuff | cork | stopper | strategic pass | tactical border position | to stop up | to stuff | to cope with,drkameleon
+塞,6,2163,"adjective, verb",sè | sài | sāi,to stop up | to squeeze in | to stuff | cork | stopper | strategic pass | tactical border position | to stop up | to stuff | to cope with,drkameleon
 腮,6,19518,noun,sāi,cheek,drkameleon
 赛,6,1181,verb,sài,to compete | competition | match | to surpass | better than | superior to | to excel,drkameleon
 赛场,6,7283,noun,sàichǎng,stadium; racetrack; field (for athletics competition); court,kaikki
@@ -8512,7 +8512,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 烧烤,7,7139,verb,shāokǎo,to barbecue,kaikki
 烧烤,7,7139,noun,shāokǎo,barbecue; BBQ,kaikki
 梢,6,17485,other,shāo,tip of branch,drkameleon
-稍,5,2631,adverb,shào | shāo,somewhat | a little,drkameleon
+稍,5,2631,adverb,shāo | shào,somewhat | a little,drkameleon
 稍后,7,8877,adverb,shāohòu,later on; later,kaikki
 稍后,7,8877,verb,shāohòu,"misspelling of 稍候 (shāohòu, “to wait a moment”)",kaikki
 稍候,7,32771,verb,shāohòu,to wait a moment,kaikki
@@ -8717,7 +8717,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 声誉,7,9988,noun,shēngyù,reputation; fame; prestige,kaikki
 牲畜,7,14622,noun,shēngchù,livestock; domestic animals,kaikki
 绳子,7,7161,noun,shéngzi,string; cord; rope,kaikki
-省,2,1081,"noun, verb",shěng | xǐng,to save; to economize; to be frugal | to omit; to delete; to leave out | province | provincial capital | a ministry (of the Japanese government) | (bound form) to scrutinize | (bound form) to reflect (on one's conduct) | (bound form) to come to realize | (bound form) to pay a visit (to one's parents or elders),drkameleon
+省,2,1081,"noun, verb",xǐng | shěng,to save; to economize; to be frugal | to omit; to delete; to leave out | province | provincial capital | a ministry (of the Japanese government) | (bound form) to scrutinize | (bound form) to reflect (on one's conduct) | (bound form) to come to realize | (bound form) to pay a visit (to one's parents or elders),drkameleon
 省略,7,19480,verb,shěnglüè,to omit; to leave out | to use ellipsis,kaikki
 省会,6,27605,noun,shěnghuì,provincial capital,kaikki
 省钱,6,15273,verb,shěngqián,to save money,kaikki
@@ -8973,7 +8973,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 识,6,7967,verb,shí | zhì,to know | knowledge | to record | to write a footnote,drkameleon
 识别,7,5643,verb,shíbié,to distinguish; to discern; to identify,kaikki
 识字,6,14055,verb,shízì,to learn to read | to know how to read; to be literate,kaikki
-拾,5,7430,"noun, verb",shè | shí,to ascend in light steps | to pick up | to collate or arrange | ten (banker's anti-fraud numeral),drkameleon
+拾,5,7430,"noun, verb",shí | shè,to ascend in light steps | to pick up | to collate or arrange | ten (banker's anti-fraud numeral),drkameleon
 收,2,834,verb,shōu,to receive | to accept | to collect | to put away | to restrain | to stop | in care of (used on address line after name),drkameleon
 收藏,6,3669,verb,shōucáng,to collect and store; to store up; to put away for safekeeping,kaikki
 收到,2,1171,verb,shōudào,to receive; to get,kaikki
@@ -9114,7 +9114,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 熟人,3,8931,noun,shúrén,acquaintance (person with whom one is acquainted),kaikki
 熟悉,5,2070,verb,shúxī,to know well; to know clearly | to familiarise oneself with; to make oneself accustomed to,kaikki
 熟悉,5,2070,adjective,shúxī,familiar; accustomed; recognised,kaikki
-属,3,3739,verb,zhǔ | shǔ,category | genus (taxonomy) | family members | dependents | to belong to | subordinate to | affiliated with | be born in the year of (one of the 12 animals) | to be | to prove to be | to constitute | to join together | to fix one's attention on | to concentrate on,drkameleon
+属,3,3739,verb,shǔ | zhǔ,category | genus (taxonomy) | family members | dependents | to belong to | subordinate to | affiliated with | be born in the year of (one of the 12 animals) | to be | to prove to be | to constitute | to join together | to fix one's attention on | to concentrate on,drkameleon
 属性,7,17443,noun,shǔxìng,attribute; property; quality,kaikki
 属于,3,1036,verb,shǔyú,to belong to; to be part of; to fall under; to be categorised as; to be classified as,kaikki
 暑假,4,7249,noun,shǔjià,summer holiday; summer vacation,kaikki
@@ -9136,7 +9136,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 树荫,7,29574,noun,shùyīn,shade of a tree,kaikki
 树枝,7,11026,noun,shùzhī,tree branch; twig,kaikki
 竖,7,9191,"noun, verb",shù,to erect | vertical | vertical stroke (in Chinese characters),drkameleon
-数,2,852,"noun, numeral, verb",shù | shǔ | shuò,to count | to count as; to regard as | to enumerate; to list | number; figure | several; a few | (literary) frequently; repeatedly,drkameleon
+数,2,852,"noun, numeral, verb",shǔ | shuò | shù,to count | to count as; to regard as | to enumerate; to list | number; figure | several; a few | (literary) frequently; repeatedly,drkameleon
 数额,7,10074,noun,shù'é,amount,kaikki
 数据,4,1496,noun,shùjù,data (organized information),kaikki
 数据库,7,5370,noun,shùjùkù,database,kaikki
@@ -9147,7 +9147,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 数学,3,3024,noun,shùxué,mathematics,kaikki
 数字,2,1670,noun,shùzì,numeral | number; figure | amount | several characters | father,kaikki
 数字,2,1670,adjective,shùzì,digital; digitalised,kaikki
-刷,4,3060,verb,shuà | shuā,to brush | to paint | to daub | to paste up | to skip class (of students) | to fire from a job | to select,drkameleon
+刷,4,3060,verb,shuā | shuà,to brush | to paint | to daub | to paste up | to skip class (of students) | to fire from a job | to select,drkameleon
 刷新,7,13412,verb,shuāxīn,"to repaint; to renovate; to refurbish | to refresh (memory, etc.); to write a new page; to break (a record) | to refresh",kaikki
 刷牙,4,10112,verb,shuāyá,to brush one's teeth; to clean one's teeth,kaikki
 刷子,4,21763,noun,shuāzi,brush (implement with a handle) | fool; idiot,kaikki
@@ -9247,7 +9247,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 瞬间,7,3712,adjective,shùnjiān,momentary | transient,kaikki
 瞬间,7,3712,adverb,shùnjiān,in a flash; in the twinkling of an eye,kaikki
 瞬间,7,3712,noun,shùnjiān,moment; flash; instant,kaikki
-说,1,19,verb,shuì | shuō,to persuade | to speak; to talk; to say | to explain; to comment | to scold; to tell off | (bound form) theory; doctrine,drkameleon
+说,1,19,verb,shuō | shuì,to persuade | to speak; to talk; to say | to explain; to comment | to scold; to tell off | (bound form) theory; doctrine,drkameleon
 说白了,7,22831,adverb,shuōbáile,bluntly; put it simply; to be frank,kaikki
 说不定,4,4677,verb,shuōbùdìng,to be unable to say for certain,kaikki
 说不定,4,4677,adverb,shuōbùdìng,perhaps; maybe,kaikki
@@ -9513,7 +9513,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 探望,7,10583,verb,tànwàng,to visit (someone who cannot be easily seen) | to look about,kaikki
 探险,7,8989,verb,tànxiǎn,to explore a perilous place,kaikki
 碳,7,7624,noun,tàn,carbon (chemistry),drkameleon
-汤,3,2237,noun,tāng | shāng,rushing current | soup | hot or boiling water | decoction of medicinal herbs | water in which sth has been boiled,drkameleon
+汤,3,2237,noun,shāng | tāng,rushing current | soup | hot or boiling water | decoction of medicinal herbs | water in which sth has been boiled,drkameleon
 汤圆,7,49606,noun,tāngyuán,tangyuan; Chinese glutinous rice balls,kaikki
 堂,7,3587,classifier,táng,"(main) hall | large room for a specific purpose | relationship between cousins etc on the paternal side of a family | of the same clan | classifier for classes, lectures etc | classifier for sets of furniture",drkameleon
 糖,3,2036,noun,táng,sugar | sweets | candy,drkameleon
@@ -9687,7 +9687,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 填空,4,42424,verb,tiánkòng,to fill a vacant position; to fill a vacancy | to fill in the blanks (in a testpaper),kaikki
 填写,7,10133,verb,tiánxiě,to fill in (a form or other type of document); to complete,kaikki
 舔,7,7383,verb,tiǎn,to lick | to lap,drkameleon
-挑,4,2310,verb,tiāo | tiǎo,to carry on a shoulder pole | to choose | to pick | to nitpick | to raise | to dig up | to poke | to prick | to incite | to stir up,drkameleon
+挑,4,2310,verb,tiǎo | tiāo,to carry on a shoulder pole | to choose | to pick | to nitpick | to raise | to dig up | to poke | to prick | to incite | to stir up,drkameleon
 挑拨,6,27120,verb,tiǎobō,to incite disharmony; to stir up conflict; to instigate; to sow discord,kaikki
 挑起,7,9853,verb,tiāoqǐ | tiǎoqǐ,to carry on a shoulder pole | to provoke; to stir up; to instigate; to incite,kaikki
 挑剔,7,10153,adjective,tiāoti,nitpicky; captious | choosy; fussy,kaikki
@@ -9850,7 +9850,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 偷窥,7,15593,verb,tōukuī,to look secretly; to peep; to have a peek; to be a voyeur,kaikki
 偷懒,7,14374,verb,tōulǎn,to lie down on the job; to shirk one's duties; to goldbrick; to slack off,kaikki
 偷偷,5,4590,adverb,tōutōu,in secret; secretively; stealthily; without being detected,kaikki
-头,2,329,"classifier, noun, numeral",tóu | tou,head | hair style | the top | end | beginning or end | a stub | remnant | chief | boss | side | aspect | first | leading | classifier for pigs or livestock | suffix for nouns,drkameleon
+头,2,329,"classifier, noun, numeral",tou | tóu,head | hair style | the top | end | beginning or end | a stub | remnant | chief | boss | side | aspect | first | leading | classifier for pigs or livestock | suffix for nouns,drkameleon
 头部,7,3966,noun,tóubù,head (part of the body) | head (topmost or leading part),kaikki
 头部,7,3966,adjective,tóubù,leading,kaikki
 头顶,7,8775,noun,tóudǐng,top of the head; crown,kaikki
@@ -10099,7 +10099,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 晚期,7,11966,noun,wǎnqī,later period; end stage or phase,kaikki
 晚上,1,502,noun,wǎnshang,evening; night,kaikki
 碗,2,2866,"classifier, noun",wǎn,bowl | cup,drkameleon
-万,2,557,"noun, numeral",mò | wàn,ten thousand | a great number,drkameleon
+万,2,557,"noun, numeral",wàn | mò,ten thousand | a great number,drkameleon
 万分,7,7486,adverb,wànfēn,extremely,kaikki
 万古长青,7,74217,idiom,wàngǔchángqīng,everlasting; remain fresh forever,kaikki
 万能,7,8366,noun,wànnéng,all-powerful; omnipotent | all-purpose; universal,kaikki
@@ -10215,7 +10215,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 卫生间,3,7314,noun,wèishēngjiān,toilet; bathroom; WC,kaikki
 卫视,7,27956,noun,wèishì,satellite television,kaikki
 卫星,5,3342,noun,wèixīng,"satellite; moon | man-made satellite | hyperbolic, often extremely unrealistic claims or goals | satellite",kaikki
-为,2,58,"preposition, verb",wèi | wéi,as (in the capacity of) | to take sth as | to act as | to serve as | to behave as | to become | to be | to do | by (in the passive voice) | because of | for | to,drkameleon
+为,2,58,"preposition, verb",wéi | wèi,as (in the capacity of) | to take sth as | to act as | to serve as | to behave as | to become | to be | to do | by (in the passive voice) | because of | for | to,drkameleon
 为此,6,2706,adverb,wèicǐ,because of this; for this reason; to this end | Used to express strong evidentiality for the occurrence of an event.,kaikki
 为何,6,1948,adverb,wèihé,why; for what reason,kaikki
 为了,3,229,preposition,wèile,for (the sake of); in order to; to | for; due to; because of,kaikki
@@ -10249,7 +10249,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 畏缩,7,34781,verb,wèisuō,to cower; to flinch; to recoil,kaikki
 胃,5,3072,noun,wèi,stomach,drkameleon
 胃口,7,7324,noun,wèikǒu,appetite (desire for food or drink) | liking,kaikki
-喂,2,1301,"interjection, verb",wèi | wéi,"hello (when answering the phone) | hey | to feed (an animal, baby, invalid etc) | to feed",drkameleon
+喂,2,1301,"interjection, verb",wéi | wèi,"hello (when answering the phone) | hey | to feed (an animal, baby, invalid etc) | to feed",drkameleon
 喂养,7,13029,verb,wèiyǎng,to feed (animals or children); to raise; to keep,kaikki
 慰劳,7,40023,verb,wèiláo,to recognize achievement; to acknowledge service rendered | to requite with gifts; to express appreciation | to express sympathy (for someone); to comfort; to offer condolences,kaikki
 慰问,5,13425,verb,wèiwèn,to comfort; to console; to convey sympathy; to express condolences,kaikki
@@ -10513,7 +10513,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 戏,5,1763,noun,xì,trick | drama | play | show,drkameleon
 戏剧,5,5290,noun,xìjù,"drama; dramatic art; theater (performing art) | play; script of a play; piece of theater, work of theater",kaikki
 戏曲,6,46627,noun,xìqǔ,Chinese opera,kaikki
-系,3,1415,"noun, verb",xì | jì,to connect | to relate to | to tie up | to bind | to be (literary) | system | department | faculty | to tie | to fasten | to button up | to connect | to arrest | to worry,drkameleon
+系,3,1415,"noun, verb",jì | xì,to connect | to relate to | to tie up | to bind | to be (literary) | system | department | faculty | to tie | to fasten | to button up | to connect | to arrest | to worry,drkameleon
 系列,4,2176,noun,xìliè,series,kaikki
 系领带,5,1000000,,xì lǐng dài,to wear a tie,drkameleon
 系统,4,552,noun,xìtǒng,system | operating system,kaikki
@@ -10539,7 +10539,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 西医,2,25471,noun,xīyī,Western medicine | doctor who practices Western medicine,kaikki
 西装,5,6433,noun,xīzhuāng,Western-style clothing (especially referring to a formal or business suit),kaikki
 息息相关,7,19632,idiom,xīxīxiāngguān,to be closely linked; to be closely bound up,kaikki
-虾,7,5399,noun,há | xiā,shrimp | prawn,drkameleon
+虾,7,5399,noun,xiā | há,shrimp | prawn,drkameleon
 瞎,7,3932,"adjective, adverb, verb",xiā,blind | groundlessly | foolishly | to no purpose,drkameleon
 侠义,7,39235,adjective,xiáyì,chivalrous,kaikki
 峡谷,7,10789,noun,xiágǔ,canyon; gorge,kaikki
@@ -10614,7 +10614,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 纤维,7,4880,noun,xiānwéi,fiber (especially in biological contexts),kaikki
 掀,7,13713,verb,xiān,to lift (a lid) | to rock | to convulse,drkameleon
 掀起,7,8186,verb,xiānqǐ,to lift | to raise in height; to rise | upsurge | to begin | to set off (a campaign),kaikki
-鲜,4,6056,adjective,xiān | xiǎn,fresh | bright (in color) | delicious | tasty | delicacy | aquatic foods | few | rare | fish,drkameleon
+鲜,4,6056,adjective,xiǎn | xiān,fresh | bright (in color) | delicious | tasty | delicacy | aquatic foods | few | rare | fish,drkameleon
 鲜花,4,6737,noun,xiānhuā,fresh flower,kaikki
 鲜活,7,14248,adjective,xiānhuó,fresh and alive | vivid and lively,kaikki
 鲜美,7,22932,adjective,xiānměi,delicious; tasty | fresh and pleasing,kaikki
@@ -11006,7 +11006,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 腥,7,15338,adjective,xīng,fishy (smell),drkameleon
 刑法,7,15273,noun,xíngfǎ | xíngfa,criminal law | criminal code; penal code | unlawful corporal punishment imposed on prisoners; torture,kaikki
 刑事,6,5397,adjective,xíngshì,penal; criminal,kaikki
-行,1,272,"adjective, classifier, noun, verb",háng | xíng,"row | line | commercial firm | line of business | profession | to rank (first, second etc) among one's siblings (by age) | (in data tables) row | to walk | to go | to travel | a visit | temporary | makeshift | current | in circulation | to do | to perform | capable | competent | effective | all right | OK! | will do | behavior | conduct",drkameleon
+行,1,272,"adjective, classifier, noun, verb",xíng | háng,"row | line | commercial firm | line of business | profession | to rank (first, second etc) among one's siblings (by age) | (in data tables) row | to walk | to go | to travel | a visit | temporary | makeshift | current | in circulation | to do | to perform | capable | competent | effective | all right | OK! | will do | behavior | conduct",drkameleon
 行程,6,6301,noun,xíngchéng,route; travel distance | trip; journey; excursion | process; course | process | stroke,kaikki
 行动,2,666,verb,xíngdòng,to act; to take action | to move about; to get about; to be mobile,kaikki
 行动,2,666,noun,xíngdòng,action; act | movement | operation; campaign,kaikki
@@ -11263,7 +11263,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 训,7,5758,verb,xùn,to teach | to train | to admonish | instruction (from superiors) | teachings | rule,drkameleon
 训练,3,985,verb,xùnliàn,to train; to drill,kaikki
 丫头,7,6329,noun,yātou,(people with) fork-shaped bun | servant girl; maid; young female slave | girl | daughter,kaikki
-压,3,1672,verb,yā | yà,to press | to push down | to keep under (control) | pressure,drkameleon
+压,3,1672,verb,yà | yā,to press | to push down | to keep under (control) | pressure,drkameleon
 压倒,7,15711,verb,yādǎo,to overpower; to overwhelm,kaikki
 压力,3,981,noun,yālì,"pressure (continuous physical force) | pressure (amount of force applied over a given area) | pressure (stress, distress, sense of urgency, influence on someone, etc.)",kaikki
 压迫,6,7597,verb,yāpò,to oppress; to tyrannise; to repress | to press on; to compress,kaikki
@@ -11283,7 +11283,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 牙膏,7,9450,noun,yágāo,toothpaste,kaikki
 牙刷,4,12849,noun,yáshuā,toothbrush,kaikki
 芽,7,12443,noun,yá,bud | sprout,drkameleon
-哑,7,12656,verb,yā | yǎ,"(onom.) sound of cawing | sound of infant learning to talk | mute; dumb; incapable of speech | (of a voice) hoarse; husky | (of a bullet, bomb etc) dud",drkameleon
+哑,7,12656,verb,yǎ | yā,"(onom.) sound of cawing | sound of infant learning to talk | mute; dumb; incapable of speech | (of a voice) hoarse; husky | (of a bullet, bomb etc) dud",drkameleon
 亚军,5,11554,noun,yàjūn,runner-up; second place; silver medal,kaikki
 亚运会,4,25188,noun,Yà yùn huì,Asian Games,drkameleon
 亚洲,4,3164,noun,Yà zhōu,Asia (abbr. for 亚细亚洲),drkameleon
@@ -11385,7 +11385,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 厌恶,6,7894,verb,yànwù,to loathe; to dislike,kaikki
 厌烦,7,13120,verb,yànfán,to be sick of; to be tired of; to be fed up with,kaikki
 厌倦,7,7767,verb,yànjuàn,to be tired; to be fed up,kaikki
-咽,7,9313,verb,yè | yān | yàn,throat; pharynx | narrow pass | to choke (in crying) | to swallow,drkameleon
+咽,7,9313,verb,yān | yè | yàn,throat; pharynx | narrow pass | to choke (in crying) | to swallow,drkameleon
 咽喉,7,15508,noun,yānhóu,throat (pharynx and larynx) | strategically important place; key link | bottleneck,kaikki
 宴会,6,6859,noun,yànhuì,banquet; dinner party; feast,kaikki
 宴会,6,6859,verb,yànhuì,to banquet (to participate in a banquet),kaikki
@@ -11449,7 +11449,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 药品,6,3431,noun,yàopǐn,pharmaceuticals; drugs; medicines | chemical used in laboratories,kaikki
 药水,2,17705,noun,yàoshuǐ,medicine in liquid form; bottled medicine; lotion,kaikki
 药物,4,1991,noun,yàowù,"medicine; medication; drug | medicinal materials; materia medica (including herbs, minerals and other non-plant-based materials)",kaikki
-要,1,19,verb,yào | yāo,(bound form) to demand; to coerce | to want; to need; to ask for | will; shall; about to | need to; should | if (same as 是) | (bound form) important,drkameleon
+要,1,19,verb,yāo | yào,(bound form) to demand; to coerce | to want; to need; to ask for | will; shall; about to | need to; should | if (same as 是) | (bound form) important,drkameleon
 要不,7,3885,conjunction,yàobù,"otherwise; or else; or | either ... or ...; or | how about (you and I, we); shall (you and I, we); let's",kaikki
 要不然,6,7865,conjunction,yàobùrán,otherwise; or else,kaikki
 要不是,7,14653,conjunction,yàobùshì,were it not for; if not for,kaikki
@@ -11492,7 +11492,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 业余,4,5236,noun,yèyú,free time; leisure; spare time,kaikki
 业余,4,5236,adjective,yèyú,spare (time) | amateur,kaikki
 叶子,4,10287,noun,yèzi,leaf; foliage | tea leaf | marijuana,kaikki
-页,1,2404,classifier,xié | yè,head | page | leaf,drkameleon
+页,1,2404,classifier,yè | xié,head | page | leaf,drkameleon
 夜,2,1082,"classifier, noun",yè,night,drkameleon
 夜班,7,11872,noun,yèbān,night shift,kaikki
 夜间,5,6232,noun,yèjiān,nighttime,kaikki
@@ -11708,7 +11708,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 疑虑,7,11913,verb,yílǜ,to hesitate; to have misgivings; to have doubt,kaikki
 疑虑,7,11913,noun,yílǜ,hesitation; misgivings; doubt,kaikki
 疑问,4,5419,noun,yíwèn,query; question; doubt,kaikki
-乙,5,7820,"noun, numeral",yǐ | zhé,"second of the ten Heavenly Stems 干 | second in order | letter ""B"" or Roman ""II"" in list ""A, B, C"", or ""I, II, III"" etc | second party (in legal contract, usually 方, as opposed to 方) | ethyl | bent | winding | radical in Chinese characters (Kangxi radical 5) | ancient Chinese compass point: 105° | turning stroke (in Chinese characters), aka 折",drkameleon
+乙,5,7820,"noun, numeral",zhé | yǐ,"second of the ten Heavenly Stems 干 | second in order | letter ""B"" or Roman ""II"" in list ""A, B, C"", or ""I, II, III"" etc | second party (in legal contract, usually 方, as opposed to 方) | ethyl | bent | winding | radical in Chinese characters (Kangxi radical 5) | ancient Chinese compass point: 105° | turning stroke (in Chinese characters), aka 折",drkameleon
 已,3,303,adverb,yǐ,already | to stop | then | afterwards,drkameleon
 已经,2,85,adverb,yǐjīng,already; anymore,kaikki
 以,7,166,"adjective, conjunction, preposition",yǐ,to use | by means of | according to | in order to | because of | at (a certain date or place),drkameleon
@@ -12097,7 +12097,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 愚昧,6,18748,adjective,yúmèi,ignorant; benighted,kaikki
 愚昧,6,18748,verb,yúmèi,to keep ignorant; to keep in the dark,kaikki
 舆论,7,9147,noun,yúlùn,public opinion,kaikki
-与,6,147,"conjunction, preposition",yú | yǔ | yù,and | to give | together with | to take part in,drkameleon
+与,6,147,"conjunction, preposition",yǔ | yù | yú,and | to give | together with | to take part in,drkameleon
 与此同时,7,4800,adverb,yǔcǐtóngshí,at the same time; meanwhile,kaikki
 与否,7,7060,particle,yǔfǒu,whether or not (at the end of a phrase),kaikki
 与其,7,14771,conjunction,yǔqí,rather than,kaikki
@@ -12109,7 +12109,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 宇宙,7,3871,noun,yǔzhòu,"universe; cosmos; macrocosm; space | roof, ridgepole and beams (of a house) | heaven and earth; all under heaven; country | space and time",kaikki
 羽毛球,5,16966,noun,yǔmáoqiú,badminton (a racquet sport) | shuttlecock (an object used in badminton),kaikki
 羽绒服,5,37036,noun,yǔróngfú,down-padded garment,kaikki
-雨,1,1929,noun,yù | yǔ,"rain | (literary) to rain | (of rain, snow etc) to fall | to precipitate | to wet",drkameleon
+雨,1,1929,noun,yǔ | yù,"rain | (literary) to rain | (of rain, snow etc) to fall | to precipitate | to wet",drkameleon
 雨水,5,11013,noun,yǔshuǐ,rainwater | rainfall; precipitation,kaikki
 雨衣,6,23626,noun,yǔyī,raincoat,kaikki
 语法,4,13430,noun,yǔfǎ,grammar (system of rules and principles for speaking and writing a language),kaikki
@@ -12218,7 +12218,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 源头,7,8224,noun,yuántóu,source of a river; headwaters; headspring; fountainhead | source; origin; fountainhead,kaikki
 源于,7,9722,verb,yuányú,to come from; to originate from; to stem from,kaikki
 源源不断,7,18347,idiom,yuányuánbùduàn,like a steady stream; continuously,kaikki
-远,1,635,adjective,yuàn | yuǎn,far | distant | remote | (intensifier in a comparison) by far | much (lower etc) | to distance oneself from (classical),drkameleon
+远,1,635,adjective,yuǎn | yuàn,far | distant | remote | (intensifier in a comparison) by far | much (lower etc) | to distance oneself from (classical),drkameleon
 远程,7,7829,adjective,yuǎnchéng,long-distance; remote,kaikki
 远处,5,7573,noun,yuǎnchù,distant place; somewhere far,kaikki
 远方,6,10239,noun,yuǎnfāng,far away place; distant location,kaikki
@@ -12240,7 +12240,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 愿望,3,2889,noun,yuànwàng,wish; desire; aspiration,kaikki
 愿意,2,738,verb,yuànyì,to be willing | to wish; to want,kaikki
 曰,7,15711,other,yuē,to speak | to say,drkameleon
-约,3,797,"adjective, adverb, verb",yuē | yāo,to weigh in a balance or on a scale | to make an appointment | to invite | approximately | pact | treaty | to economize | to restrict | to reduce (a fraction) | concise,drkameleon
+约,3,797,"adjective, adverb, verb",yāo | yuē,to weigh in a balance or on a scale | to make an appointment | to invite | approximately | pact | treaty | to economize | to restrict | to reduce (a fraction) | concise,drkameleon
 约定,6,4371,verb,yuēdìng,to agree on; to appoint; to arrange,kaikki
 约定,6,4371,noun,yuēdìng,arrangement; promise; agreement,kaikki
 约定俗成,7,53683,idiom,yuēdìngsúchéng,conventional; customary; socially fixed; having an unwritten law,kaikki
@@ -12306,7 +12306,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 杂乱无章,7,34808,idiom,záluàn wú zhāng,disorderly and chaotic,kaikki
 杂志,3,1627,noun,zázhì,magazine,kaikki
 砸,7,2037,verb,zá,to smash | to pound | to fail | to muck up | to bungle,drkameleon
-咋,6,4187,pronoun,zǎ | zhà | zé,dialectal equivalent of 怎么 | gnaw | loud noise | shout | suddenly,drkameleon
+咋,6,4187,pronoun,zhà | zǎ | zé,dialectal equivalent of 怎么 | gnaw | loud noise | shout | suddenly,drkameleon
 灾,5,8756,noun,zāi,disaster | calamity,drkameleon
 灾害,5,13624,noun,zāihài,disaster; calamity; catastrophe,kaikki
 灾难,5,4796,noun,zāinàn,disaster; calamity; catastrophe,kaikki
@@ -12341,7 +12341,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 在职,7,16273,verb,zàizhí,to be on the job; to be at one's post; to be employed,kaikki
 在职,7,16273,noun,zàizhí,incumbency,kaikki
 载体,7,18861,noun,zàitǐ,carrier; vehicle; medium; purveyor | vector,kaikki
-咱,2,3116,pronoun,zán | zá,I or me | we (including both the speaker and the person spoken to),drkameleon
+咱,2,3116,pronoun,zá | zán,I or me | we (including both the speaker and the person spoken to),drkameleon
 咱们,2,1405,pronoun,zánmen,we; us,kaikki
 攒,7,11208,verb,zǎn | cuán,to bring together | to collect | to hoard | to accumulate | to save,drkameleon
 暂,7,8838,adverb,zàn,temporary | to scurry,drkameleon
@@ -12425,7 +12425,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 增值,6,19210,verb,zēngzhí,"to increase in value; to appreciate; to add value; to recharge; to top up (a smartcard, etc.) | to increase in value; to appreciate; to add value; to enrich (oneself); to pursue self-improvement (by acquiring new knowledge or skill, etc.)",kaikki
 赠,5,8918,verb,zèng,to give as a present | to repel | to bestow an honorary title after death (old),drkameleon
 赠送,5,8534,verb,zèngsòng,to give as a gift; to give away free; to present a gift; to be complimentary,kaikki
-扎,6,3490,verb,zā | zhá | zhā,"to prick | to run or stick (a needle etc) into | mug or jug used for serving beer (loanword from ""jar"") | to tie | to bind | classifier for flowers, banknotes etc: bundle | (of troops) to be stationed (at)",drkameleon
+扎,6,3490,verb,zhá | zhā | zā,"to prick | to run or stick (a needle etc) into | mug or jug used for serving beer (loanword from ""jar"") | to tie | to bind | classifier for flowers, banknotes etc: bundle | (of troops) to be stationed (at)",drkameleon
 扎根,7,20613,verb,zhāgēn,to take root | to build a foundation,kaikki
 扎实,6,16716,adjective,zhāshi,tightly secured; sturdy | solid; sound; reliable,kaikki
 渣,6,4720,noun,zhā,slag (in mining or smelting) | dregs,drkameleon
@@ -12448,7 +12448,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 债务,7,5497,noun,zhàiwù,debt,kaikki
 沾,7,5557,verb,zhān,to moisten | to be infected by | to receive benefit or advantage through a contact | to touch | to moisten,drkameleon
 沾光,7,57428,verb,zhānguāng,to benefit from an association with someone,kaikki
-粘,7,3640,verb,nián | zhān,to glue | to paste | to adhere | to stick to,drkameleon
+粘,7,3640,verb,zhān | nián,to glue | to paste | to adhere | to stick to,drkameleon
 粘贴,5,26487,verb,zhān tiē,"to stick | to affix | to adhere | to paste (as in ""copy and paste"")",drkameleon
 瞻仰,7,31432,verb,zhānyǎng,to look at with reverence; to pay homage to,kaikki
 斩,7,9472,verb,zhǎn,to behead (as form of capital punishment) | to chop,drkameleon
@@ -12522,7 +12522,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 长远,6,8868,adverb,chángyuǎn,for a long time; for ages,kaikki
 长征,7,27081,verb,chángzhēng,to march to remote regions; to undertake expeditions,kaikki
 长足,7,26492,adjective,chángzú,"remarkable (of progress, improvement, expansion, etc.); marked; rapid",kaikki
-涨,5,4020,verb,zhàng | zhǎng,"to rise (of prices, rivers) | to swell | to distend",drkameleon
+涨,5,4020,verb,zhǎng | zhàng,"to rise (of prices, rivers) | to swell | to distend",drkameleon
 涨价,5,14037,verb,zhǎngjià,to increase; to rise,kaikki
 掌管,7,14059,verb,zhǎngguǎn,to be in charge of; to manage,kaikki
 掌管,7,14059,noun,zhǎngguǎn,store manager; shopkeeper,kaikki
@@ -12582,7 +12582,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 遮挡,6,23348,verb,zhēdǎng,to shelter from; to keep out; to cover,kaikki
 遮挡,6,23348,noun,zhēdǎng,shelter; cover,kaikki
 遮盖,7,21080,verb,zhēgài,to cover | to hide; to conceal; to cover up,kaikki
-折,4,3422,"classifier, verb",shé | zhé | zhē,"to snap | to break (a stick, a bone etc) | (bound form) to sustain a loss (in business) | to turn sth over | to turn upside down | to tip sth out (of a container) | to break | to fracture | to snap | to suffer loss | to bend | to twist | to turn | to change direction | convinced | to convert into (currency) | discount | rebate | tenth (in price) | classifier for theatrical scenes | to fold | accounts book | to fold",drkameleon
+折,4,3422,"classifier, verb",zhé | shé | zhē,"to snap | to break (a stick, a bone etc) | (bound form) to sustain a loss (in business) | to turn sth over | to turn upside down | to tip sth out (of a container) | to break | to fracture | to snap | to suffer loss | to bend | to twist | to turn | to change direction | convinced | to convert into (currency) | discount | rebate | tenth (in price) | classifier for theatrical scenes | to fold | accounts book | to fold",drkameleon
 折叠,7,13701,verb,zhédié,to fold,kaikki
 折合,7,31485,verb,zhéhé,to convert into (another currency); to amount to,kaikki
 折扣,7,9396,noun,zhékòu,discount; concession,kaikki
@@ -12603,7 +12603,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 这些,1,132,pronoun,zhèxiē,these,kaikki
 这样,2,85,adverb,zhèyàng,this way; such,kaikki
 这样一来,7,29867,adverb,zhèyàngyīlái,thus; if this happens then,kaikki
-着,1,38,"classifier, noun, particle, verb",zhuó | zhe | zhāo | zháo,(chess) move | trick | all right! | (dialect) to add | to touch | to come in contact with | to feel | to be affected by | to catch fire | to burn | (coll.) to fall asleep | (after a verb) hitting the mark | succeeding in | aspect particle indicating action in progress or ongoing state | to wear (clothes) | to contact | to use | to apply,drkameleon
+着,1,38,"classifier, noun, particle, verb",zháo | zhāo | zhe | zhuó,(chess) move | trick | all right! | (dialect) to add | to touch | to come in contact with | to feel | to be affected by | to catch fire | to burn | (coll.) to fall asleep | (after a verb) hitting the mark | succeeding in | aspect particle indicating action in progress or ongoing state | to wear (clothes) | to contact | to use | to apply,drkameleon
 着火,4,8629,verb,zháohuǒ,to catch fire | to be in an extreme degree,kaikki
 着急,4,4461,verb,zháojí,to worry; to feel anxious; to be worried,kaikki
 着急,4,4461,adjective,zháojí,anxious; worried,kaikki
@@ -12970,7 +12970,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 滞后,7,22998,verb,zhìhòu,to lag behind; to be delayed,kaikki
 滞留,7,15567,verb,zhìliú,to be detained; to be held up | to be retained in the body,kaikki
 置,7,3076,verb,zhì,to install | to place | to put | to buy,drkameleon
-中,1,71,"adjective, postposition, verb",zhōng | zhòng,"within; among; in | middle; center | while (doing sth); during | (dialect) OK; all right | to hit (the mark) | to be hit by | to suffer | to win (a prize, a lottery)",drkameleon
+中,1,71,"adjective, postposition, verb",zhòng | zhōng,"within; among; in | middle; center | while (doing sth); during | (dialect) OK; all right | to hit (the mark) | to be hit by | to suffer | to win (a prize, a lottery)",drkameleon
 中部,3,6364,noun,zhōngbù,middle; middle part | central section,kaikki
 中餐,2,14640,noun,zhōngcān,Chinese cuisine; Chinese food | lunch,kaikki
 中等,6,8572,adjective,zhōngděng,"medium; middle (grade, class, level, quality, degree, scale, scope, etc.); intermediate; moderate; middling; secondary (school); general; ordinary; common; average (e.g. of height)",kaikki
@@ -13182,7 +13182,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 抓,3,797,verb,zhuā,to grab | to catch | to arrest | to snatch | to scratch,drkameleon
 抓紧,4,3896,verb,zhuājǐn,to clutch; to grip tightly | to seize; to rush (to get something done),kaikki
 抓住,3,1500,verb,zhuāzhù,to clutch; to grip tightly; to seize; to grab | to seize; to rush (to get something done),kaikki
-拽,7,6459,verb,yè | zhuāi | zhuài | zhuǎi,to drag | to haul | to throw | to fling | alternate writing of 跩 | to pull | to tug at (sth),drkameleon
+拽,7,6459,verb,zhuài | zhuǎi | zhuāi | yè,to drag | to haul | to throw | to fling | alternate writing of 跩 | to pull | to tug at (sth),drkameleon
 专程,7,12055,adverb,zhuānchéng,on a special trip (to see somebody) | specifically,kaikki
 专柜,7,20297,noun,zhuānguì,special counter (for a specific type of products in a shop),kaikki
 专辑,5,3299,noun,zhuānjí,"album (on CD, vinyl, etc.) | special edition (of a periodical) | collection; issue (of any printed material)",kaikki
@@ -13210,7 +13210,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 专注,7,7159,verb,zhuānzhù,to be absorbed in; to concentrate completely on; to devote oneself to; to focus all of one's attention on,kaikki
 砖,7,6186,noun,zhuān,brick,drkameleon
 砖瓦,6,65496,noun,zhuānwǎ,bricks and tiles,kaikki
-转,3,508,verb,zhuǎn | zhuǎi | zhuàn,"to turn | to change direction | to transfer | to forward (mail) | (Internet) to share (sb else's content) | to revolve | to turn | to circle about | to walk about | classifier for revolutions (per minute etc): revs, rpm | classifier for repeated actions",drkameleon
+转,3,508,verb,zhuǎi | zhuàn | zhuǎn,"to turn | to change direction | to transfer | to forward (mail) | (Internet) to share (sb else's content) | to revolve | to turn | to circle about | to walk about | classifier for revolutions (per minute etc): revs, rpm | classifier for repeated actions",drkameleon
 转变,3,3151,verb,zhuǎnbiàn,to change; to transform; to shift,kaikki
 转播,7,10252,verb,zhuǎnbō,to retransmit; to rebroadcast (a program); to relay (a TV signal),kaikki
 转达,7,14912,verb,zhuǎndá,to relay (a message); to pass on; to convey,kaikki
@@ -13274,7 +13274,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 状元,7,23703,noun,zhuàngyuan,"zhuangyuan, someone who was ranked first class in the palace examination, the highest level of the Chinese imperial examination; champion | one who achieves the highest score in an examination; top scorer; valedictorian | the very best in a field; top performer | the winning dice roll in a Mooncake Festival Dice Game",kaikki
 撞,5,2075,verb,zhuàng,to knock against | to bump into | to run into | to meet by accident,drkameleon
 撞击,7,7572,verb,zhuàngjī,to strike; to hit; to ram,kaikki
-追,3,1265,verb,zhuī | duī,to sculpt | to carve | musical instrument (old) | to chase | to pursue | to look into | to investigate | to reminisce | to recall | to court (one's beloved) | to binge-watch (a TV drama) | retroactively | posthumously,drkameleon
+追,3,1265,verb,duī | zhuī,to sculpt | to carve | musical instrument (old) | to chase | to pursue | to look into | to investigate | to reminisce | to recall | to court (one's beloved) | to binge-watch (a TV drama) | retroactively | posthumously,drkameleon
 追悼,6,28513,verb,zhuīdào,to mourn (someone's death),kaikki
 追悼会,7,21919,noun,zhuīdàohuì,memorial service,kaikki
 追赶,7,10339,verb,zhuīgǎn,to pursue; to run after; to chase; to try to catch up with,kaikki
@@ -13540,7 +13540,7 @@ word,level,difficulty,pos,pinyin,definitions,source
 左右,3,1351,postposition,zuǒyòu,about; or so; or thereabouts; around; approximately,kaikki
 左右,3,1351,verb,zuǒyòu,to control; to manipulate; to influence; to dominate,kaikki
 佐料,7,30583,noun,zuǒliào,seasoning; condiments (especially those added after the dish was made),kaikki
-作,6,483,verb,zuò | zuō,"worker | workshop | (slang) troublesome | high-maintenance (person) | to do; to engage in | to write; to compose | to pretend; to feign | to regard as; to consider to be | to be; to act the part of | to feel (itchy, nauseous etc) | writings; works",drkameleon
+作,6,483,verb,zuō | zuò,"worker | workshop | (slang) troublesome | high-maintenance (person) | to do; to engage in | to write; to compose | to pretend; to feign | to regard as; to consider to be | to be; to act the part of | to feel (itchy, nauseous etc) | writings; works",drkameleon
 作弊,7,7875,verb,zuòbì,to practice fraud; to cheat | to practice fraud; to cheat; to cheat in an exam or test,kaikki
 作出,4,3060,verb,zuòchū,"to put out | to come up with | to make (a choice, decision, proposal, response, comment etc.) | to issue (a permit, statement, explanation, apology, reassurance to the public etc.) | to draw (a conclusion) | to deliver (a speech, judgment, etc.) | to devise (an explanation) | to extract",kaikki
 作对,7,17854,verb,zuòduì,to oppose; to set oneself against | to pair off in marriage,kaikki

@@ -43,20 +43,41 @@ ALLOWED_SYMBOLS = PUNCT_TERMINAL | PUNCT_NONTERMINAL | MATH
 
 # Process sentences data
 def process_sentences(sentences, words, characters, export=False):
+    """
+    Process raw sentence datasets.
+    """
     # Load and tag Tatoeba sentence set
-    print("Processing Tatoeba sentences...")
-    sentences_tatoeba = load_sentences_tatoeba(characters)
-    tag_sentences(sentences_tatoeba, words, characters)
+    try:
+        with open("tagged/sentences_tatoeba.json", "r", encoding="utf-8") as sentences_json:
+            sentences_tatoeba = json.load(sentences_json)
+    except:
+        print("Processing Tatoeba sentences...")
+        sentences_tatoeba = load_sentences_tatoeba(characters)
+        tag_sentences(sentences_tatoeba, words, characters)
+        with open("tagged/sentences_tatoeba.json", "w", encoding="utf-8") as sentences_json:
+            json.dump(sentences_tatoeba, sentences_json, ensure_ascii=False)
     
     # Load and tag Wiktionary example sentences
-    print("Processing Kaikki sentences...")
-    sentences_kaikki = load_sentences_kaikki(characters)
-    tag_sentences(sentences_kaikki, words, characters)
+    try:
+        with open("tagged/sentences_kaikki.json", "r", encoding="utf-8") as sentences_json:
+            sentences_kaikki = json.load(sentences_json)
+    except:
+        print("Processing Kaikki sentences...")
+        sentences_kaikki = load_sentences_kaikki(characters)
+        tag_sentences(sentences_kaikki, words, characters)
+        with open("tagged/sentences_kaikki.json", "w", encoding="utf-8") as sentences_json:
+            json.dump(sentences_kaikki, sentences_json, ensure_ascii=False)
     
     # Load and tag Leipzig corpus sentences
-    print("Processing Leipzig sentences...")
-    sentences_leipzig = load_sentences_leipzig(characters)
-    tag_sentences(sentences_leipzig, words, characters)
+    try:
+        with open("tagged/sentences_leipzig.json", "r", encoding="utf-8") as sentences_json:
+            sentences_leipzig = json.load(sentences_json)
+    except:
+        print("Processing Leipzig sentences...")
+        sentences_leipzig = load_sentences_leipzig(characters)
+        tag_sentences(sentences_leipzig, words, characters)
+        with open("tagged/sentences_leipzig.json", "w", encoding="utf-8") as sentences_json:
+            json.dump(sentences_leipzig, sentences_json, ensure_ascii=False)
 
     # Merge sentence datasets
     sentences.update(sentences_tatoeba)
@@ -101,7 +122,7 @@ def load_sentences_tatoeba(characters, export_csv=False):
     return sentences_tatoeba
 
 
-def load_sentences_kaikki(characters, export_csv=True):
+def load_sentences_kaikki(characters, export_csv=False):
     """
     Load Wiktionary example sentences.
 
@@ -146,7 +167,7 @@ def load_sentences_kaikki(characters, export_csv=True):
     return sentences_kaikki
 
 
-def load_sentences_leipzig(characters, export_csv=True):
+def load_sentences_leipzig(characters, export_csv=False):
     """
     Load Leipzig corpus sentences.
 
@@ -242,6 +263,8 @@ def export_sentence_data(sentences):
         writer = csv.DictWriter(sentences_csv, ["sentence", "character_level", "word_level", "source"])
         writer.writeheader()
         for sentence in sentences:
+            if "tags" not in sentences[sentence]:
+                continue
             writer.writerow({
                 "sentence": sentence
             } | {
@@ -249,9 +272,11 @@ def export_sentence_data(sentences):
             })
 
     with open("../export/csv/tags.csv", "w", encoding="utf-8") as tags_csv:
-        writer = csv.DictWriter(sentences_csv, ["sentence", "word", "pos"])
+        writer = csv.DictWriter(tags_csv, ["sentence", "word", "pos"])
         writer.writeheader()
         for sentence in sentences:
+            if "tags" not in sentences[sentence]:
+                continue
             for tag in sentence["tags"]:
                 writer.writerow({
                     "sentence": sentence,

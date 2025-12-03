@@ -88,7 +88,7 @@ def load_words_drkameleon(words, characters, export_csv=False):
         words_full = json.load(words_json)
 
         # Extract needed fields
-        for word in enumerate(words_full):
+        for word in words_full:
             word_level = int(re.sub(r"[a-zA-Z\+\-]", "", word["level"][0]))
             words[word["simplified"]] = {
                 "level": word_level,
