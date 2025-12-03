@@ -6,6 +6,7 @@ import json
 
 from words import process_words
 from sentences import process_sentences
+from sql import export_sql
 
 
 def main():
@@ -28,6 +29,9 @@ def main():
             sentences = json.load(sentences_json)
     except:
         process_sentences(sentences, words, characters, export=True)
+    
+    # Export data to SQL
+    export_sql(sentences, words, characters, rewrite=True)
 
 
 # Run program

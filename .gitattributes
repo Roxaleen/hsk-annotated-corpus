@@ -1,3 +1,4 @@
 data/raw/words/kaikki_dictionary-Chinese.jsonl filter=lfs diff=lfs merge=lfs -text
 data/raw/sentences/leipzig_zho-cn_web_2015_1M-sentences.txt filter=lfs diff=lfs merge=lfs -text
 export/csv/tags.csv filter=lfs diff=lfs merge=lfs -text
+export/sql/data.db filter=lfs diff=lfs merge=lfs -text
