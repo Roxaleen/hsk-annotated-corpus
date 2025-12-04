@@ -7,6 +7,8 @@ Wiktionary dataset: https://kaikki.org/dictionary/Chinese/index.html
 
 import chinese_converter, csv, json, re
 
+from pos import tag_definition_pos
+
 
 # Standardized POS labels
 POS_PKU = {
@@ -62,10 +64,28 @@ def process_words(words, characters, export=False):
     Process raw word datasets.
     """
     # Load word set by drkameleon
-    words_drkameleon = load_words_drkameleon(words, characters)
+    try:
+        with open("tagged/words_drkameleon.json", "r", encoding="utf-8") as words_json:
+            words_drkameleon = json.load(words_json)
+    except:
+        words_drkameleon = load_words_drkameleon(words, characters)
     
     # Load Wiktionary dataset
-    words_kaikki = load_words_kaikki(words)
+    try:
+        with open("tagged/words_kaikki.json", "r", encoding="utf-8") as words_json:
+            words_kaikki = json.load(words_json)
+    except:
+        words_kaikki = load_words_kaikki(words)
+        with open("tagged/words_kaikki.json", "w", encoding="utf-8") as words_json:
+            json.dump(words_kaikki, words_json, ensure_ascii=False)
+    
+    # Tag drkameleon definitions by part of speech
+    words_drkameleon = tag_definition_pos(words_drkameleon, words_kaikki, POS_PKU)
+
+    return
+
+    with open("tagged/words_drkameleon.json", "w", encoding="utf-8") as words_json:
+        json.dump(words_drkameleon, words_json, ensure_ascii=False)
 
     # Merge word datasets
     merge_word_sources(words, words_drkameleon, words_kaikki)
