@@ -8,14 +8,9 @@ import hanlp, math
 
 from deep_translator import GoogleTranslator
 
-<<<<<<< HEAD
-# Standardized POS labels
-from words import POS_PKU
-=======
 
 # Standardized POS labels
 from pos import POS_PKU
->>>>>>> b34cd66 (Train POS tagger)
 
 # HanLP constituency parser
 # Documentation: https://hanlp.hankcs.com/docs/api/hanlp/pretrained/constituency.html
