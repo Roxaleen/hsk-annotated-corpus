@@ -1,3 +1,4 @@
 chinese_converter
+deep_translator
 hanlp
 tensorflow

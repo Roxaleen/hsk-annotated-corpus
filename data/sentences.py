@@ -8,7 +8,7 @@ Leipzig 2015 Chinese web corpus: https://corpora.uni-leipzig.de/en?corpusId=zho_
 
 import chinese_converter, csv, json, re
 
-from tags import tag_sentences
+from parse import parse_sentences
 
 
 # Sentence length limits (including punctuation)
@@ -53,7 +53,7 @@ def process_sentences(sentences, words, characters, export=False):
     except:
         print("Processing Tatoeba sentences...")
         sentences_tatoeba = load_sentences_tatoeba(characters)
-        tag_sentences(sentences_tatoeba, words, characters)
+        parse_sentences(sentences_tatoeba, words, characters)
         with open("tagged/sentences_tatoeba.json", "w", encoding="utf-8") as sentences_json:
             json.dump(sentences_tatoeba, sentences_json, ensure_ascii=False)
     
@@ -64,7 +64,7 @@ def process_sentences(sentences, words, characters, export=False):
     except:
         print("Processing Kaikki sentences...")
         sentences_kaikki = load_sentences_kaikki(characters)
-        tag_sentences(sentences_kaikki, words, characters)
+        parse_sentences(sentences_kaikki, words, characters)
         with open("tagged/sentences_kaikki.json", "w", encoding="utf-8") as sentences_json:
             json.dump(sentences_kaikki, sentences_json, ensure_ascii=False)
     
@@ -75,7 +75,7 @@ def process_sentences(sentences, words, characters, export=False):
     except:
         print("Processing Leipzig sentences...")
         sentences_leipzig = load_sentences_leipzig(characters)
-        tag_sentences(sentences_leipzig, words, characters)
+        parse_sentences(sentences_leipzig, words, characters, translate=True)
         with open("tagged/sentences_leipzig.json", "w", encoding="utf-8") as sentences_json:
             json.dump(sentences_leipzig, sentences_json, ensure_ascii=False)
 
@@ -89,46 +89,70 @@ def process_sentences(sentences, words, characters, export=False):
         export_sentence_data(sentences)
 
 
-def load_sentences_tatoeba(characters, export_csv=False):
+def load_sentences_tatoeba(characters, export_csv=True):
     """
     Load Tatoeba sentence set.
 
     Source: https://tatoeba.org/en/downloads
     """
     sentences_tatoeba = {}
+    log = {
+        "accepted": 0,
+        "incomplete": 0,
+        "invalid characters": 0,
+        "too long": 0,
+        "too short": 0
+    }
 
     # Read raw sentence data from TSV file
-    with open("raw/sentences/tatoeba_cmn_sentences.tsv", "r") as sentences_tsv:
+    with open("raw/sentences/tatoeba_cmn_sentence-pairs.tsv", "r") as sentences_tsv:
         reader = csv.reader(sentences_tsv, delimiter="\t")
         for row in reader:
             # Read sentence
-            sentence = row[2]
+            try:
+                sentence = row[1]
+                translation = row[3]
+            except:
+                continue
             
             # Clean sentence
-            sentence = clean_sentence(sentence, characters)
+            sentence = clean_sentence(sentence, characters, log)
             if sentence is None:
                 continue
             
-            sentences_tatoeba[sentence] = {"source": "tatoeba"}
+            # Record sentence
+            sentences_tatoeba[sentence] = {
+                "translation": translation,
+                "source": "tatoeba"
+            }
+            log["accepted"] += 1
 
     # Export cleaned data to CSV
     if export_csv:
         with open("cleaned/sentences_tatoeba.csv", "w") as sentences_csv:
             writer = csv.writer(sentences_csv)
-            writer.writerow(["sentence"])
+            writer.writerow(["sentence", "translation"])
             for sentence in sentences_tatoeba:
-                writer.writerow([sentence])
+                writer.writerow([sentence, sentences_tatoeba[sentence]["translation"]])
     
+    print(log)
     return sentences_tatoeba
 
 
-def load_sentences_kaikki(characters, export_csv=False):
+def load_sentences_kaikki(characters, export_csv=True):
     """
     Load Wiktionary example sentences.
 
     Source: https://kaikki.org/dictionary/Chinese/index.html
     """
     sentences_kaikki = {}
+    log = {
+        "accepted": 0,
+        "incomplete": 0,
+        "invalid characters": 0,
+        "too long": 0,
+        "too short": 0
+    }
 
     # Read raw data from JSONL file
     with open("raw/words/kaikki_dictionary-Chinese.jsonl", "r", encoding="utf-8") as data_jsonl:
@@ -141,39 +165,63 @@ def load_sentences_kaikki(characters, export_csv=False):
             if set(entry_headword) - set(characters.keys()):
                 continue
             
-            # Extract examples
-            examples = {
-                example.get("text", "")
+            # Extract examples and corresponding translations
+            examples_raw = {
+                example.get("text", "") : example.get("translation", "")
                 for sense in entry.get("senses", [])
                 for example in sense.get("examples", [])
-                if "tags" in example and "Classical-Chinese" not in example["tags"]
+                if "text" in example and "translation" in example
+                and ("tags" not in example or not any(
+                    tag in example["tags"]
+                    for tag in ["Pre-Classical Chinese", "Classical-Chinese", "Literary-Chinese"]
+                ))
+                and ("raw_tags" not in example or not any(
+                    tag in example["raw_tags"]
+                    for tag in ["Pre-Classical Chinese", "Classical-Chinese", "Literary-Chinese"]
+                ))
             }
 
             # Clean examples
-            examples = {clean_sentence(example, characters) for example in examples} - {None}
+            examples = {}
+            for example in examples_raw:
+                example_cleaned = clean_sentence(example, characters, log)
+                if example_cleaned is not None:
+                    examples[example_cleaned] = examples_raw[example]
             
             # Record cleaned sentences
             for sentence in examples:
-                sentences_kaikki[sentence] = {"source": "kaikki"}
+                sentences_kaikki[sentence] = {
+                    "translation": examples[sentence],
+                    "source": "kaikki"
+                }
+                log["accepted"] += 1
 
     # Export cleaned data to CSV
     if export_csv:
         with open("cleaned/sentences_kaikki.csv", "w") as sentences_csv:
             writer = csv.writer(sentences_csv)
-            writer.writerow(["sentence"])
+            writer.writerow(["sentence", "translation"])
             for sentence in sentences_kaikki:
-                writer.writerow([sentence])
+                writer.writerow([sentence, sentences_kaikki[sentence]["translation"]])
     
+    print(log)
     return sentences_kaikki
 
 
-def load_sentences_leipzig(characters, export_csv=False):
+def load_sentences_leipzig(characters, export_csv=True):
     """
     Load Leipzig corpus sentences.
 
     Source: https://corpora.uni-leipzig.de/en?corpusId=zho_news_2020
     """
     sentences_leipzig = {}
+    log = {
+        "accepted": 0,
+        "incomplete": 0,
+        "invalid characters": 0,
+        "too long": 0,
+        "too short": 0
+    }
 
     # Read raw data from TXT file
     with open("raw/sentences/leipzig_zho-cn_web_2015_1M-sentences.txt", "r", encoding="utf-8") as sentences_txt:
@@ -184,11 +232,12 @@ def load_sentences_leipzig(characters, export_csv=False):
             sentence = line.strip().split("\t")[1]
 
             # Clean sentence
-            sentence = clean_sentence(sentence, characters)
+            sentence = clean_sentence(sentence, characters, log)
             if sentence is None:
                 continue
             
             sentences_leipzig[sentence] = {"source": "leipzig"}
+            log["accepted"] += 1
 
     # Export cleaned data to CSV
     if export_csv:
@@ -198,20 +247,27 @@ def load_sentences_leipzig(characters, export_csv=False):
             for sentence in sentences_leipzig:
                 writer.writerow([sentence])
     
+    print(log)
     return sentences_leipzig
 
 
-def clean_sentence(sentence, characters):
+def clean_sentence(sentence, characters, log):
     """
-    Standardize and check the validity of a sentence.
-    Return processed sentence if valid, else None.
+    Standardize sentence and conduct validity pre-checks.
+    Return processed sentence if all checks pass, else None.
     """
     # Convert to simplified characters
     sentence = chinese_converter.to_simplified(sentence)
 
     # Standardize punctuation
     sentence = sentence.translate(PUNCT_STANDARDIZE)
+    sentence = sentence.replace("。。。", "…")
     sentence = re.sub(r"([0-9])。([0-9])", r"\1\.\2", sentence)
+
+    # If sentence ends with multiple periods, trim the extra ones
+    match = re.search(r"。+$", sentence)
+    if match:
+        sentence = sentence[:match.start() + 1]
 
     # If any brackets are opened but not closed, trim sentence up to the opening brackets
     match = re.search(r"(（(?![^）]*）))|(「(?![^」]*」))|(《(?![^》]*》))", sentence)
@@ -228,23 +284,31 @@ def clean_sentence(sentence, characters):
     
     # Reject sentences with invalid starting or ending punctuation
     if sentence.startswith(tuple(PUNCT_NONINITIAL)) or not sentence.endswith(tuple(PUNCT_TERMINAL)):
+        log["incomplete"] += 1
         return None
 
     # Reject sentences starting with enumeration (which also tend to be incomplete)
     if re.search(r"^(第?[一二三四五六七八九十0-9]+[、，。是则])|(（[一二三四五六七八九十0-9]+）)", sentence):
+        log["incomplete"] += 1
         return None
 
     # Reject sentences containing Latin alphabet characters or non-HSK characters:
     character_set = set(characters.keys())
     if re.search(r"[a-zA-Z]", sentence) or set(sentence) - character_set - ALLOWED_SYMBOLS:
+        log["invalid characters"] += 1
         return None
 
     # Reject sentences that are too long or too short
-    if len(sentence) > MAX_SENTENCE_LENGTH or len(sentence) < MIN_SENTENCE_LENGTH:
+    if len(sentence) > MAX_SENTENCE_LENGTH:
+        log["too long"] += 1
+        return None
+    if len(sentence) < MIN_SENTENCE_LENGTH:
+        log["too short"] += 1
         return None
     
     # Reject sentences with only two unique characters (or fewer)
     if len(set(sentence) & character_set) <= 2:
+        log["too short"] += 1
         return None
     
     return sentence
@@ -260,7 +324,7 @@ def export_sentence_data(sentences):
 
     # Export to CSV
     with open("../export/csv/sentences.csv", "w", encoding="utf-8") as sentences_csv:
-        writer = csv.DictWriter(sentences_csv, ["sentence", "character_level", "word_level", "source"])
+        writer = csv.DictWriter(sentences_csv, ["sentence", "translation", "level", "character_level", "word_level", "source"])
         writer.writeheader()
         for sentence in sentences:
             if "tags" not in sentences[sentence]:
@@ -268,7 +332,7 @@ def export_sentence_data(sentences):
             writer.writerow({
                 "sentence": sentence
             } | {
-                key : sentences[sentence][key] for key in ["character_level", "word_level", "source"] 
+                key : sentences[sentence][key] for key in ["level", "translation", "character_level", "word_level", "source"] 
             })
 
     with open("../export/csv/tags.csv", "w", encoding="utf-8") as tags_csv:

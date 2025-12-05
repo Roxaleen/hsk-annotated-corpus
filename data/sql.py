@@ -56,8 +56,8 @@ def export_sql(sentences, words, characters, rewrite=True):
     # Write words
     print("Writing words...")
     cur.executemany(
-        "INSERT INTO words (word, level, difficulty) VALUES (?, ?, ?);",
-        [(word, words[word]["level"], words[word]["difficulty"]) for word in words]
+        "INSERT INTO words (word, level, frequency_ranking) VALUES (?, ?, ?);",
+        [(word, words[word]["level"], words[word]["frequency_ranking"]) for word in words]
     )
     cur.execute("CREATE INDEX IF NOT EXISTS word_index ON words (word);")
     con.commit()

@@ -6,8 +6,7 @@ Wiktionary dataset: https://kaikki.org/dictionary/Chinese/index.html
 """
 
 import chinese_converter, csv, json, re
-
-from pos import tag_definition_pos
+import tensorflow as tf
 
 
 # Standardized POS labels
@@ -58,6 +57,10 @@ POS_WIKTIONARY = {
 }
 
 
+# Join separator for definition lists
+JOIN_STRING = " | "
+
+
 # Process word data
 def process_words(words, characters, export=False):
     """
@@ -68,24 +71,20 @@ def process_words(words, characters, export=False):
         with open("tagged/words_drkameleon.json", "r", encoding="utf-8") as words_json:
             words_drkameleon = json.load(words_json)
     except:
+        print("Loading drkameleon word data...")
         words_drkameleon = load_words_drkameleon(words, characters)
+        with open("tagged/words_drkameleon.json", "w", encoding="utf-8") as words_json:
+            json.dump(words_drkameleon, words_json, ensure_ascii=False)
     
     # Load Wiktionary dataset
     try:
         with open("tagged/words_kaikki.json", "r", encoding="utf-8") as words_json:
             words_kaikki = json.load(words_json)
     except:
+        print("Loading Kaikki word data...")
         words_kaikki = load_words_kaikki(words)
         with open("tagged/words_kaikki.json", "w", encoding="utf-8") as words_json:
             json.dump(words_kaikki, words_json, ensure_ascii=False)
-    
-    # Tag drkameleon definitions by part of speech
-    words_drkameleon = tag_definition_pos(words_drkameleon, words_kaikki, POS_PKU)
-
-    return
-
-    with open("tagged/words_drkameleon.json", "w", encoding="utf-8") as words_json:
-        json.dump(words_drkameleon, words_json, ensure_ascii=False)
 
     # Merge word datasets
     merge_word_sources(words, words_drkameleon, words_kaikki)
@@ -95,7 +94,7 @@ def process_words(words, characters, export=False):
         export_word_data(words, characters)
 
 
-def load_words_drkameleon(words, characters, export_csv=False):
+def load_words_drkameleon(words, characters, export_csv=True):
     """
     Load word set by drkameleon.
 
@@ -107,12 +106,13 @@ def load_words_drkameleon(words, characters, export_csv=False):
     with open("raw/words/drkameleon_hsk-vocabulary-complete.json", "r", encoding="utf-8") as words_json:
         words_full = json.load(words_json)
 
-        # Extract needed fields
+        # Extract headword fields
         for word in words_full:
+            # Compile headword fields
             word_level = int(re.sub(r"[a-zA-Z\+\-]", "", word["level"][0]))
             words[word["simplified"]] = {
                 "level": word_level,
-                "difficulty": int(word["frequency"]),
+                "frequency_ranking": int(word["frequency"]),
             }
 
             # Discard proper noun forms
@@ -136,9 +136,9 @@ def load_words_drkameleon(words, characters, export_csv=False):
             
             # Compile word data
             word_data = {
-                "pos": ", ".join(sorted(list(pos_set))),
-                "pinyin": " | ".join({form["transcriptions"]["pinyin"] for form in word_forms}),
-                "definitions": " | ".join(word_meanings),
+                "pos": JOIN_STRING.join(sorted(list(pos_set))),
+                "pinyin": JOIN_STRING.join({form["transcriptions"]["pinyin"] for form in word_forms}),
+                "definitions": word_meanings,
                 "source": "drkameleon"
             }            
             words_drkameleon[word["simplified"]] = [word_data]
@@ -153,22 +153,24 @@ def load_words_drkameleon(words, characters, export_csv=False):
     # Export cleaned data to CSV
     if export_csv:
         with open("cleaned/words_drkameleon.csv", "w", encoding="utf-8") as words_csv:
-            writer = csv.DictWriter(words_csv, ["word", "level", "difficulty", 
+            writer = csv.DictWriter(words_csv, ["word", "level", "frequency_ranking", 
                                     "pos", "pinyin", "definitions"])
             writer.writeheader()
             for word in words_drkameleon:
                 writer.writerow({
                     "word": word
                 } | {
-                    key : words[word][key] for key in ["level", "difficulty"]
+                    key : words[word][key] for key in ["level", "frequency_ranking"]
                 } | {
-                    key : words_drkameleon[word][0][key] for key in ["pos", "pinyin", "definitions"]
+                    key : words_drkameleon[word][0][key] for key in ["pos", "pinyin"]
+                } | {
+                    "definitions": JOIN_STRING.join(words_drkameleon[word][0]["definitions"])
                 })
 
     return words_drkameleon
 
 
-def load_words_kaikki(words, export_csv=False):
+def load_words_kaikki(words, export_csv=True):
     """
     Load Wiktionary dataset.
 
@@ -215,7 +217,7 @@ def load_words_kaikki(words, export_csv=False):
                     word_definitions.append(word_definition)
             if len(word_definitions) == 0:
                 continue
-            word_data["definitions"] = " | ".join(word_definitions)
+            word_data["definitions"] = word_definitions
             
             # Extract pinyin
             if "sounds" not in word_full:
@@ -233,8 +235,8 @@ def load_words_kaikki(words, export_csv=False):
             # Check if an entry already exists for the same POS
             for i in range(len(words_kaikki[word])):
                 if words_kaikki[word][i]["pos"] == word_data["pos"]:
-                    words_kaikki[word][i]["pinyin"] += "" if word_data["pinyin"] in words_kaikki[word][i]["pinyin"] else " | " + word_data["pinyin"]
-                    words_kaikki[word][i]["definitions"] += " | " + word_data["definitions"]
+                    words_kaikki[word][i]["pinyin"] += "" if word_data["pinyin"] in words_kaikki[word][i]["pinyin"] else JOIN_STRING + word_data["pinyin"]
+                    words_kaikki[word][i]["definitions"].extend(word_data["definitions"])
                     break
             else:
                 words_kaikki[word].append(word_data)
@@ -242,7 +244,7 @@ def load_words_kaikki(words, export_csv=False):
     # Export cleaned data to CSV
     if export_csv:
         with open("cleaned/words_kaikki.csv", "w") as words_csv:
-            writer = csv.DictWriter(words_csv, ["word", "level", "difficulty", 
+            writer = csv.DictWriter(words_csv, ["word", "level", "frequency_ranking", 
                                     "pos", "pinyin", "definitions"])
             writer.writeheader()
             for word in words_kaikki:
@@ -250,9 +252,11 @@ def load_words_kaikki(words, export_csv=False):
                     writer.writerow({
                         "word": word
                     } | {
-                        key : words[word][key] for key in ["level", "difficulty"]
+                        key : words[word][key] for key in ["level", "frequency_ranking"]
                     } | {
-                        key : word_entry[key] for key in ["pos", "pinyin", "definitions"]
+                        key : word_entry[key] for key in ["pos", "pinyin"]
+                    } | {
+                        "definitions": JOIN_STRING.join(word_entry["definitions"])
                     })
 
     return words_kaikki
@@ -287,7 +291,7 @@ def export_word_data(words, characters):
 
     # Export to CSV
     with open("../export/csv/words.csv", "w", encoding="utf-8") as words_csv:
-        writer = csv.DictWriter(words_csv, ["word", "level", "difficulty", 
+        writer = csv.DictWriter(words_csv, ["word", "level", "frequency_ranking", 
                                 "pos", "pinyin", "definitions", "source"])
         writer.writeheader()
         for word in words:
@@ -295,8 +299,13 @@ def export_word_data(words, characters):
                 writer.writerow({
                     "word": word
                 } | {
-                    key : words[word][key] for key in ["level", "difficulty"] 
-                } | word_entry)
+                    key : words[word][key] for key in ["level", "frequency_ranking"] 
+                } | {
+                    "pos" : word_entry["pos"],
+                    "pinyin" : word_entry["pinyin"],
+                    "definitions" : JOIN_STRING.join(word_entry["definitions"]),
+                    "source" : word_entry["source"]
+                })
     
     with open("../export/csv/characters.csv", "w", encoding="utf-8") as characters_csv:
         writer = csv.DictWriter(characters_csv, ["character", "level"])

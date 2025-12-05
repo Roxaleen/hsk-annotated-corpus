@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS words (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     word TEXT NOT NULL,
     level INTEGER NOT NULL,
-    difficulty INTEGER NOT NULL
+    frequency_ranking INTEGER NOT NULL
 );
 -- CREATE INDEX IF NOT EXISTS word_index ON words (word);
 
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS word_matches (
 -- Word definition view
 CREATE VIEW IF NOT EXISTS word_definition_view AS
 SELECT word_id, pos_id,
-       word, level, difficulty,
+       word, level, frequency_ranking,
        pos_label,
        pinyin, definitions, source
 FROM word_definitions
