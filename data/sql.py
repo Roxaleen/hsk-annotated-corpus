@@ -5,7 +5,7 @@ Export all data to a SQLite database.
 import sqlite3
 
 # Standardized POS labels
-from words import POS_PKU
+from pos import POS_PKU
 
 
 def export_sql(sentences, words, characters, rewrite=True):

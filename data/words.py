@@ -10,51 +10,11 @@ import tensorflow as tf
 
 
 # Standardized POS labels
-POS_PKU = {
-    "a": "adjective",
-    "b": "adjective",
-    "c": "conjunction",
-    "d": "adverb",
-    "e": "interjection",
-    "f": "postposition",
-    "g": "other",
-    "h": "other",
-    "i": "idiom",
-    "j": "other",
-    "k": "other",
-    "l": "idiom",
-    "m": "numeral",
-    "n": "noun",
-    "o": "other",
-    "p": "preposition",
-    "q": "classifier",
-    "r": "pronoun",
-    "s": "noun",
-    "t": "noun",
-    "u": "particle",
-    "v": "verb",
-    "w": "other",
-    "x": "other",
-    "y": "particle",
-    "z": "adjective",
-}
-POS_WIKTIONARY = {
-    "adj": "adjective",
-    "adv": "adverb",
-    "conj": "conjunction",
-    "classifier": "classifier",
-    "det": "pronoun",
-    "intj": "interjection",
-    "noun": "noun",
-    "num": "numeral",
-    "particle": "particle",
-    "phrase": "idiom",
-    "postp": "postposition",
-    "prep": "preposition",
-    "pron": "pronoun",
-    "proverb": "idiom",
-    "verb": "verb",
-}
+from pos import POS_PKU, POS_WIKTIONARY
+
+
+# Join separator for definition lists
+JOIN_STRING = " | "
 
 
 # Join separator for definition lists
