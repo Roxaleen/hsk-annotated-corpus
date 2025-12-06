@@ -6,11 +6,10 @@ Wiktionary dataset: https://kaikki.org/dictionary/Chinese/index.html
 """
 
 import chinese_converter, csv, json, re
-import tensorflow as tf
 
 
 # Standardized POS labels
-from pos import POS_PKU, POS_WIKTIONARY
+from pos import POS_PKU, POS_WIKTIONARY, predict_pos
 
 
 # Join separator for definition lists
@@ -27,24 +26,10 @@ def process_words(words, characters, export=False):
     Process raw word datasets.
     """
     # Load word set by drkameleon
-    try:
-        with open("tagged/words_drkameleon.json", "r", encoding="utf-8") as words_json:
-            words_drkameleon = json.load(words_json)
-    except:
-        print("Loading drkameleon word data...")
-        words_drkameleon = load_words_drkameleon(words, characters)
-        with open("tagged/words_drkameleon.json", "w", encoding="utf-8") as words_json:
-            json.dump(words_drkameleon, words_json, ensure_ascii=False)
+    words_drkameleon = load_words_drkameleon(words, characters)
     
     # Load Wiktionary dataset
-    try:
-        with open("tagged/words_kaikki.json", "r", encoding="utf-8") as words_json:
-            words_kaikki = json.load(words_json)
-    except:
-        print("Loading Kaikki word data...")
-        words_kaikki = load_words_kaikki(words)
-        with open("tagged/words_kaikki.json", "w", encoding="utf-8") as words_json:
-            json.dump(words_kaikki, words_json, ensure_ascii=False)
+    words_kaikki = load_words_kaikki(words)
 
     # Merge word datasets
     merge_word_sources(words, words_drkameleon, words_kaikki)
@@ -54,7 +39,7 @@ def process_words(words, characters, export=False):
         export_word_data(words, characters)
 
 
-def load_words_drkameleon(words, characters, export_csv=True):
+def load_words_drkameleon(words, characters, export=True):
     """
     Load word set by drkameleon.
 
@@ -72,7 +57,7 @@ def load_words_drkameleon(words, characters, export_csv=True):
             word_level = int(re.sub(r"[a-zA-Z\+\-]", "", word["level"][0]))
             words[word["simplified"]] = {
                 "level": word_level,
-                "frequency_ranking": int(word["frequency"]),
+                "frequency_ranking": int(word["frequency"])
             }
 
             # Discard proper noun forms
@@ -89,18 +74,12 @@ def load_words_drkameleon(words, characters, export_csv=True):
             if len(word_meanings) == 0:
                 continue
             
-            # Standardize parts of speech
-            pos_set = {POS_PKU[key.lower()[0]] for key in word["pos"]}
-            if len(pos_set) > 1:
-                pos_set -= {"other"}
-            
             # Compile word data
             word_data = {
-                "pos": JOIN_STRING.join(sorted(list(pos_set))),
                 "pinyin": JOIN_STRING.join({form["transcriptions"]["pinyin"] for form in word_forms}),
                 "definitions": word_meanings,
                 "source": "drkameleon"
-            }            
+            }
             words_drkameleon[word["simplified"]] = [word_data]
             
             # Record character level
@@ -110,8 +89,26 @@ def load_words_drkameleon(words, characters, export_csv=True):
                 else:
                     characters[character] = words[word["simplified"]]["level"]
     
-    # Export cleaned data to CSV
-    if export_csv:
+    # Classify definitions by part of speech
+    definition_labels = {}
+    definition_list = [definition for word in words_drkameleon for definition in words_drkameleon[word][0]["definitions"]]
+    label_list = predict_pos(definition_list)
+    for (index, label) in enumerate(label_list):
+        definition_labels[definition_list[index]] = label
+    
+    for word in words_drkameleon:
+        entry_base = {key : words_drkameleon[word][0][key] for key in ["pinyin", "source"]}
+        pos_labels = {}
+        for definition in words_drkameleon[word][0]["definitions"]:
+            label = definition_labels[definition]
+            if label not in pos_labels:
+                pos_labels[label] = []
+            pos_labels[label].append(definition)
+        
+        words_drkameleon[word] = [{"pos": label, "definitions": pos_labels[label]} | entry_base for label in pos_labels]
+
+    # Export cleaned data
+    if export:
         with open("cleaned/words_drkameleon.csv", "w", encoding="utf-8") as words_csv:
             writer = csv.DictWriter(words_csv, ["word", "level", "frequency_ranking", 
                                     "pos", "pinyin", "definitions"])
@@ -126,11 +123,14 @@ def load_words_drkameleon(words, characters, export_csv=True):
                 } | {
                     "definitions": JOIN_STRING.join(words_drkameleon[word][0]["definitions"])
                 })
+        
+        with open("tagged/words_drkameleon.json", "w", encoding="utf-8") as words_json:
+            json.dump(words_drkameleon, words_json, ensure_ascii=False)
 
     return words_drkameleon
 
 
-def load_words_kaikki(words, export_csv=True):
+def load_words_kaikki(words, export=True):
     """
     Load Wiktionary dataset.
 
@@ -201,8 +201,8 @@ def load_words_kaikki(words, export_csv=True):
             else:
                 words_kaikki[word].append(word_data)
     
-    # Export cleaned data to CSV
-    if export_csv:
+    # Export cleaned data
+    if export:
         with open("cleaned/words_kaikki.csv", "w") as words_csv:
             writer = csv.DictWriter(words_csv, ["word", "level", "frequency_ranking", 
                                     "pos", "pinyin", "definitions"])
@@ -218,6 +218,9 @@ def load_words_kaikki(words, export_csv=True):
                     } | {
                         "definitions": JOIN_STRING.join(word_entry["definitions"])
                     })
+
+        with open("tagged/words_kaikki.json", "w", encoding="utf-8") as words_json:
+            json.dump(words_kaikki, words_json, ensure_ascii=False)
 
     return words_kaikki
 

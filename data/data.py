@@ -14,9 +14,6 @@ def main():
     words = {}
     sentences = {}
 
-    process_words(words, characters, export=False)
-    return
-
     # Import word and character data
     try:
         with open("../export/json/words.json", "r", encoding="utf-8") as words_json:

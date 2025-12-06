@@ -3,6 +3,7 @@ Train a neural network to classify word definitions by part of speech.
 """
 
 import json, re
+import numpy as np
 import tensorflow as tf
 
 from sklearn.model_selection import train_test_split
@@ -158,6 +159,20 @@ def create_model(x_train):
     model.compile(loss="sparse_categorical_crossentropy", metrics=["accuracy"])
 
     return model
+
+
+def predict_pos(definition_list):
+    """
+    Use trained neural network to predict POS labels for given dictionary definitions.
+    """
+    model = tf.keras.models.load_model("pos.keras")
+
+    # Predict POS labels
+    definition_dataset = tf.data.Dataset.from_tensor_slices(definition_list).batch(32)
+    labels = model.predict(definition_dataset, verbose=2).tolist()
+    labels = np.argmax(labels, axis=1)
+    
+    return [POS_LABELS[label] for label in labels]
 
 
 if __name__ == "__main__":

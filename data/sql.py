@@ -7,6 +7,9 @@ import sqlite3
 # Standardized POS labels
 from pos import POS_PKU
 
+# Join separator for definition lists
+JOIN_STRING = " | "
+
 
 def export_sql(sentences, words, characters, rewrite=True):
     """
@@ -77,7 +80,9 @@ def export_sql(sentences, words, characters, rewrite=True):
             (
                 word,
                 entry["pos"] if entry["pos"] in set(POS_PKU.values()) else "multiple",
-                entry["pinyin"], entry["definitions"], entry["source"]
+                entry["pinyin"],
+                JOIN_STRING.join(entry["definitions"]),
+                entry["source"]
             )
             for word in words
             for entry in words[word]["entries"]
