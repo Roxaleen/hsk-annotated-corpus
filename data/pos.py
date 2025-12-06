@@ -2,7 +2,7 @@
 Train a neural network to classify word definitions by part of speech.
 """
 
-import json, re
+import chinese_converter, json, re
 import numpy as np
 import tensorflow as tf
 
@@ -68,17 +68,17 @@ def main():
     # Load training data
     try:
         with open("tagged/pos_training.json", "r", encoding="utf-8") as training_json:
-            [definitions, labels] = json.load(training_json)
+            [headwords, definitions, labels] = json.load(training_json)
     except:
-        (definitions, labels) = load_training_data()
+        (headwords, definitions, labels) = load_training_data()
 
     # Split training data into training and testing sets
-    (x_train, x_test, y_train, y_test) = train_test_split(definitions, labels, test_size=TEST_SIZE)
-    train_dataset = tf.data.Dataset.from_tensor_slices((x_train, y_train)).batch(32)
-    test_dataset = tf.data.Dataset.from_tensor_slices((x_test, y_test)).batch(32)
+    (xh_train, xh_test, xd_train, xd_test, y_train, y_test) = train_test_split(headwords, definitions, labels, test_size=TEST_SIZE)
+    train_dataset = tf.data.Dataset.from_tensor_slices(({"headword": xh_train, "definition": xd_train}, y_train)).batch(32)
+    test_dataset = tf.data.Dataset.from_tensor_slices(({"headword": xh_test, "definition": xd_test}, y_test)).batch(32)
 
     # Create neural network model
-    model = create_model(x_train)
+    model = create_model(xh_train, xd_train)
 
     # Train model
     model.fit(train_dataset, epochs=EPOCHS)
@@ -96,6 +96,7 @@ def load_training_data():
     
     The full database of words and definitions is used, regardless of HSK status.
     """
+    headwords = []
     definitions = []
     labels = []
 
@@ -104,6 +105,11 @@ def load_training_data():
         for line in words_jsonl:
             # Read word data
             word_full = json.loads(line)
+
+            # Extract headword
+            word_head = chinese_converter.to_simplified(word_full["word"])
+            if re.search(r"[a-zA-Z]", word_head):
+                continue
 
             # Extract POS label
             if word_full["pos"] not in POS_WIKTIONARY:
@@ -124,36 +130,44 @@ def load_training_data():
             
             # Record definition-label pairs
             for definition in word_definitions:
+                headwords.append(word_head)
                 definitions.append(definition)
                 labels.append(POS_LABELS.index(word_pos))
     
     # Export loaded data to JSON
     with open("tagged/pos_training.json", "w", encoding="utf-8") as training_json:
-        json.dump([definitions, labels], training_json, ensure_ascii=False)
+        json.dump([headwords, definitions, labels], training_json, ensure_ascii=False)
 
-    return (definitions, labels)
+    return (headwords, definitions, labels)
 
 
-def create_model(x_train):
+def create_model(xh_train, xd_train):
     """
     Create and compile a neural network model.
     """
-    # Create text vectorization layer
-    text_vectorization = tf.keras.layers.TextVectorization(max_tokens=MAX_TOKENS)
-    text_vectorization.adapt(x_train)
+    # Model inputs
+    input_head = tf.keras.Input(dtype="string", shape=(), name="headword")
+    input_def = tf.keras.Input(dtype="string", shape=(), name="definition")
+
+    # Text vectorization & embedding
+    vectorization_head = tf.keras.layers.TextVectorization(max_tokens=MAX_TOKENS, output_sequence_length=64, split="character")
+    vectorization_def = tf.keras.layers.TextVectorization(max_tokens=MAX_TOKENS, output_sequence_length=64)
+
+    vectorization_head.adapt(xh_train)
+    vectorization_def.adapt(xd_train)
+
+    embed_head = tf.keras.layers.Embedding(MAX_TOKENS, 64)(vectorization_head(input_head))
+    embed_def = tf.keras.layers.Embedding(MAX_TOKENS, 64)(vectorization_def(input_def))
+    
+    # Model layers
+    x = tf.keras.layers.Concatenate()([embed_head, embed_def])
+    x = tf.keras.layers.Bidirectional(tf.keras.layers.GRU(64))(x)
+    x = tf.keras.layers.Dense(100, activation="relu")(x)
+    x = tf.keras.layers.Dropout(0.25)(x)
+    output = tf.keras.layers.Dense(len(POS_LABELS), activation="softmax")(x)
 
     # Create model
-    model = tf.keras.Sequential(
-        [
-            tf.keras.Input(dtype="string", shape=()),
-            text_vectorization,
-            tf.keras.layers.Embedding(MAX_TOKENS, 64),
-            tf.keras.layers.Bidirectional(tf.keras.layers.GRU(64)),
-            tf.keras.layers.Dense(100, activation="relu"),
-            tf.keras.layers.Dropout(0.25),
-            tf.keras.layers.Dense(len(POS_LABELS), activation="softmax")
-        ]
-    )
+    model = tf.keras.Model(inputs=[input_head, input_def], outputs=output)
 
     # Compile model
     model.compile(loss="sparse_categorical_crossentropy", metrics=["accuracy"])
@@ -161,15 +175,18 @@ def create_model(x_train):
     return model
 
 
-def predict_pos(definition_list):
+def predict_pos(input):
     """
     Use trained neural network to predict POS labels for given dictionary definitions.
     """
     model = tf.keras.models.load_model("pos.keras")
 
+    headword_list = [item[0] for item in input]
+    definition_list = [item[1] for item in input]
+
     # Predict POS labels
-    definition_dataset = tf.data.Dataset.from_tensor_slices(definition_list).batch(32)
-    labels = model.predict(definition_dataset, verbose=2).tolist()
+    data = tf.data.Dataset.from_tensor_slices({"headword": headword_list, "definition": definition_list}).batch(32)
+    labels = model.predict(data, verbose=2).tolist()
     labels = np.argmax(labels, axis=1)
     
     return [POS_LABELS[label] for label in labels]

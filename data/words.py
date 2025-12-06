@@ -90,22 +90,22 @@ def load_words_drkameleon(words, characters, export=True):
                     characters[character] = words[word["simplified"]]["level"]
     
     # Classify definitions by part of speech
-    definition_labels = {}
-    definition_list = [definition for word in words_drkameleon for definition in words_drkameleon[word][0]["definitions"]]
-    label_list = predict_pos(definition_list)
+    input = [(word, definition) for word in words_drkameleon for definition in words_drkameleon[word][0]["definitions"]]
+    label_list = predict_pos(input)
+    label_dict = {}
     for (index, label) in enumerate(label_list):
-        definition_labels[definition_list[index]] = label
+        label_dict[input[index]] = label
     
     for word in words_drkameleon:
-        entry_base = {key : words_drkameleon[word][0][key] for key in ["pinyin", "source"]}
-        pos_labels = {}
+        word_base = {key : words_drkameleon[word][0][key] for key in ["pinyin", "source"]}
+        word_definitions = {}
         for definition in words_drkameleon[word][0]["definitions"]:
-            label = definition_labels[definition]
-            if label not in pos_labels:
-                pos_labels[label] = []
-            pos_labels[label].append(definition)
+            pos = label_dict[(word, definition)]
+            if pos not in word_definitions:
+                word_definitions[pos] = []
+            word_definitions[pos].append(definition)
         
-        words_drkameleon[word] = [{"pos": label, "definitions": pos_labels[label]} | entry_base for label in pos_labels]
+        words_drkameleon[word] = [{"pos": pos, "definitions": word_definitions[pos]} | word_base for pos in word_definitions]
 
     # Export cleaned data
     if export:
