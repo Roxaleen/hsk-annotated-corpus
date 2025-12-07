@@ -83,6 +83,9 @@ In the HSK level fields, the number value `7` is used to collectively represent 
 ```
 
 ## SQL
+
+[`data.db`](./sql/data.db): SQLite database with populated data tables and views, as described in [`schema.sql`](./sql/schema.sql)
+
 ```sql
 -- DATA TABLES
 
