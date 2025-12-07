@@ -144,7 +144,7 @@ def translate_sentences(sentences):
     """
     sentence_list = list(sentences.keys())
 
-    for sentence_list_batch in generate_sentence_feed(sentence_list):
+    for sentence_list_batch in generate_sentence_feed(sentence_list, feed_size=100):
         # Load existing progress log
         try:
             with open("working/translations.json", "r", encoding="utf-8") as translations_json:
