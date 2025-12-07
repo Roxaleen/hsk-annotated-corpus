@@ -36,7 +36,7 @@ In the HSK level fields, the number value `7` is used to collectively represent 
 
 ```json
 {
-    "character [string]": HSK level [integer],
+    "character [string]": "HSK level [integer]",
 }
 ```
 
@@ -46,9 +46,9 @@ In the HSK level fields, the number value `7` is used to collectively represent 
 {
     "sentence text [string]": {
         "translation": "translation text [string]",
-        "level": HSK level, determined by the higher value between `character_level` and `word_level` [integer],
-        "character_level": highest HSK level among all the characters present in the sentence [integer],
-        "word_level": highest HSK level among all the HSK words identified in the sentence [integer],
+        "level": "HSK level, determined by the higher value between `character_level` and `word_level` [integer]",
+        "character_level": "highest HSK level among all the characters present in the sentence [integer]",
+        "word_level": "highest HSK level among all the HSK words identified in the sentence [integer]",
         "tags": [
             [
                 "word [string]",
@@ -65,8 +65,8 @@ In the HSK level fields, the number value `7` is used to collectively represent 
 ```json
 {
     "word [string]": {
-        "level": HSK level [integer],
-        "frequency_ranking": frequency ranking (lower value = higher frequency) [integer],
+        "level": "HSK level [integer]",
+        "frequency_ranking": "frequency ranking (lower value = higher frequency) [integer]",
         "forms": {
             "part of speech [string]": {
                 "pinyin": [
