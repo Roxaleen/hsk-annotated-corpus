@@ -179,7 +179,7 @@ def predict_pos(input):
     """
     Use trained neural network to predict POS labels for given dictionary definitions.
     """
-    model = tf.keras.models.load_model("pos.keras")
+    model = tf.keras.models.load_model("tagged/pos_model.keras")
 
     headword_list = [item[0] for item in input]
     definition_list = [item[1] for item in input]
