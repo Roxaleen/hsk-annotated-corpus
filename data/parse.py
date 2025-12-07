@@ -2,11 +2,10 @@
 Parse and tag each sentence using HanLP's NLP tools.
 
 HanLP documentation: https://hanlp.hankcs.com/docs/index.html
+Argos Translate documentation: https://argos-translate.readthedocs.io/en/latest/
 """
 
-import hanlp, math
-
-from deep_translator import GoogleTranslator
+import deep_translator, hanlp, json, math
 
 
 # Standardized POS labels
@@ -26,14 +25,14 @@ pos = hanlp.load(hanlp.pretrained.pos.PKU_POS_ELECTRA_SMALL)
 
 # deep_translator GoogleTranslator instance
 # Documentation: https://deep-translator.readthedocs.io/en/latest/
-translator = GoogleTranslator(source="zh-CN", target="en")
+translator = deep_translator.GoogleTranslator(source='zh-CN', target='en')
 
 # Processing batch sizes
 FEED_SIZE = 480
 BATCH_SIZE = 32
 
 
-def parse_sentences(sentences, words, characters, translate=False):
+def parse_sentences(sentences, words, characters):
     """
     Tokenize, parse, and tag every sentence in the collection.
     """
@@ -55,11 +54,6 @@ def parse_sentences(sentences, words, characters, translate=False):
         # Record tagged words
         print("Recording tagged words...")
         record_tags(sentences, words, characters, sentence_list_batch, tokens, tags)
-
-        # Translate sentences
-        if translate:
-            print("Translating sentences...")
-            translate_sentences(sentences, sentence_list_batch)
 
 
 def generate_sentence_feed(sentence_list, feed_size=FEED_SIZE):
@@ -87,8 +81,11 @@ def validate_sentences(sentence_list, tokens):
     invalid = {}
     for (index, sentence) in enumerate(sentence_list):
         # Check if top node is a clause ("CP" or "IP")
-        if any(clause_label in trees[index][0].label() for clause_label in ["CP", "IP"]):
-            continue
+        try:
+            if any(clause_label in trees[index][0].label() for clause_label in ["CP", "IP"]):
+                continue
+        except:
+            pass
         # If top node is not a clause, mark sentence for deletion (sentence is incomplete)
         invalid[index] = sentence
     
@@ -141,11 +138,35 @@ def compute_sentence_level(sentence, sentences, words, characters):
     return (character_level, word_level)
 
 
-def translate_sentences(sentences, sentence_list):
+def translate_sentences(sentences):
     """
     Supply translations for each sentence in the collection.
     """
-    translations = translator.translate_batch(sentence_list)
+    sentence_list = list(sentences.keys())
 
-    for (index, sentence) in enumerate(sentence_list):
-        sentences[sentence]["translation"] = translations[index]
+    for sentence_list_batch in generate_sentence_feed(sentence_list):
+        # Load existing progress log
+        try:
+            with open("working/translations.json", "r", encoding="utf-8") as translations_json:
+                translations = json.load(translations_json)
+        except:
+            translations = {}
+
+        for sentence in sentence_list_batch:
+            # Check if a translation already exists
+            if "translation" in sentences[sentence] and sentences[sentence]["translation"]:
+                continue
+
+            # Translate sentence
+            if sentence in translations:
+                translation = translations[sentence]
+            else:
+                translation = translator.translate(sentence)
+                translation = translation[0].upper() + translation[1:]  # Capitalize first letter
+                translations[sentence] = translation
+            
+            sentences[sentence]["translation"] = translation
+        
+        # Save current progress log
+        with open("working/translations.json", "w", encoding="utf-8") as translations_json:
+            json.dump(translations, translations_json, ensure_ascii=False)

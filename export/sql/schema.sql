@@ -39,8 +39,10 @@ CREATE TABLE IF NOT EXISTS word_definitions (
 CREATE TABLE IF NOT EXISTS sentences (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     sentence TEXT NOT NULL,
+    translation TEXT NOT NULL,
     character_level INTEGER NOT NULL,
     word_level INTEGER NOT NULL,
+    level INTEGER NOT NULL,
     source TEXT NOT NULL
 );
 -- CREATE INDEX IF NOT EXISTS sentence_index ON sentences (sentence);
@@ -83,10 +85,10 @@ INNER JOIN pos
 -- Sentence-character view
 CREATE VIEW IF NOT EXISTS character_match_view AS
 SELECT sentence_id, character_id,
-       sentence,
+       sentence, translation,
        character,
        characters.level AS character_level,
-       MAX(sentences.character_level, sentences.word_level) AS sentence_level,
+       sentences.level AS sentence_level,
        source AS sentence_source
 FROM character_matches
 INNER JOIN sentences
@@ -97,13 +99,13 @@ INNER JOIN characters
 -- Sentence-word view
 CREATE VIEW IF NOT EXISTS word_match_view AS
 SELECT sentence_id, word_matches.word_id, word_matches.pos_id,
-       sentence,
+       sentence, translation,
        word,
        pos.pos_label AS sentence_pos,
        word_definition_view.pos_label AS definition_pos,
        pinyin, definitions,
        word_definition_view.level AS word_level,
-       MAX(sentences.character_level, sentences.word_level) AS sentence_level,
+       sentences.level AS sentence_level,
        sentences.source AS sentence_source,
        word_definition_view.source AS definition_source
 FROM word_matches

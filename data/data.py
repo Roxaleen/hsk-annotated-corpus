@@ -24,11 +24,11 @@ def main():
         process_words(words, characters, export=True)
 
     # Import sentence data
-    # try:
-    #     with open("../export/json/sentences.json", "r", encoding="utf-8") as sentences_json:
-    #         sentences = json.load(sentences_json)
-    # except:
-    #     process_sentences(sentences, words, characters, export=True)
+    try:
+        with open("../export/json/sentences.json", "r", encoding="utf-8") as sentences_json:
+            sentences = json.load(sentences_json)
+    except:
+        process_sentences(sentences, words, characters, export=True)
     
     # Export data to SQL
     # export_sql(sentences, words, characters, rewrite=True)

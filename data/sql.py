@@ -43,7 +43,7 @@ def export_sql(sentences, words, characters, rewrite=True):
     print("Writing parts of speech...")
     cur.executemany(
         "INSERT INTO pos (pos_label) VALUES (?);",
-        [(pos,) for pos in sorted(set(POS_PKU.values())) + ["multiple"]]
+        [(pos,) for pos in sorted(set(POS_PKU.values())) + ["unsorted"]]
     )
     con.commit()
 
@@ -79,13 +79,13 @@ def export_sql(sentences, words, characters, rewrite=True):
         [
             (
                 word,
-                entry["pos"] if entry["pos"] in set(POS_PKU.values()) else "multiple",
-                entry["pinyin"],
-                JOIN_STRING.join(entry["definitions"]),
-                entry["source"]
+                pos if pos in set(POS_PKU.values()) else "unsorted",
+                JOIN_STRING.join(words[word]["forms"][pos]["pinyin"]),
+                JOIN_STRING.join(words[word]["forms"][pos]["definitions"]),
+                words[word]["forms"][pos]["source"]
             )
             for word in words
-            for entry in words[word]["entries"]
+            for pos in words[word]["forms"]
         ]
     )
     con.commit()
@@ -93,9 +93,9 @@ def export_sql(sentences, words, characters, rewrite=True):
     # Write sentences
     print("Writing sentences...")
     cur.executemany(
-        "INSERT INTO sentences (sentence, character_level, word_level, source) VALUES (?, ?, ?, ?);",
+        "INSERT INTO sentences (sentence, translation, character_level, word_level, level, source) VALUES (?, ?, ?, ?);",
         [
-            (sentence, sentences[sentence]["character_level"], sentences[sentence]["word_level"], sentences[sentence]["source"])
+            (sentence, sentences[sentence]["translation"], sentences[sentence]["character_level"], sentences[sentence]["word_level"], sentences[sentence]["level"], sentences[sentence]["source"])
             for sentence in sentences
         ]
     )

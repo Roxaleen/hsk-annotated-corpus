@@ -8,7 +8,7 @@ Leipzig 2015 Chinese web corpus: https://corpora.uni-leipzig.de/en?corpusId=zho_
 
 import chinese_converter, csv, json, re
 
-from parse import parse_sentences
+from parse import parse_sentences, translate_sentences
 
 
 # Sentence length limits (including punctuation)
@@ -75,7 +75,7 @@ def process_sentences(sentences, words, characters, export=False):
     except:
         print("Processing Leipzig sentences...")
         sentences_leipzig = load_sentences_leipzig(characters)
-        parse_sentences(sentences_leipzig, words, characters, translate=True)
+        parse_sentences(sentences_leipzig, words, characters)
         with open("tagged/sentences_leipzig.json", "w", encoding="utf-8") as sentences_json:
             json.dump(sentences_leipzig, sentences_json, ensure_ascii=False)
 
@@ -83,6 +83,10 @@ def process_sentences(sentences, words, characters, export=False):
     sentences.update(sentences_tatoeba)
     sentences.update(sentences_kaikki)
     sentences.update(sentences_leipzig)
+
+    # Add sentence translations (where applicable)
+    print("Translating sentences...")
+    translate_sentences(sentences)
 
     # Export processed data
     if export:
@@ -170,7 +174,7 @@ def load_sentences_kaikki(characters, export_csv=True):
                 example.get("text", "") : example.get("translation", "")
                 for sense in entry.get("senses", [])
                 for example in sense.get("examples", [])
-                if "text" in example and "translation" in example
+                if "text" in example
                 and ("tags" not in example or not any(
                     tag in example["tags"]
                     for tag in ["Pre-Classical Chinese", "Classical-Chinese", "Literary-Chinese"]
