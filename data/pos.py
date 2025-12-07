@@ -67,7 +67,7 @@ EPOCHS = 5
 def main():
     # Load training data
     try:
-        with open("tagged/pos_training.json", "r", encoding="utf-8") as training_json:
+        with open("working/pos_training.json", "r", encoding="utf-8") as training_json:
             [headwords, definitions, labels] = json.load(training_json)
     except:
         (headwords, definitions, labels) = load_training_data()
@@ -87,7 +87,7 @@ def main():
     model.evaluate(test_dataset, verbose=2)
 
     # Export model
-    model.save("pos.keras")
+    model.save("working/pos_model.keras")
 
 
 def load_training_data():
@@ -179,7 +179,7 @@ def predict_pos(input):
     """
     Use trained neural network to predict POS labels for given dictionary definitions.
     """
-    model = tf.keras.models.load_model("tagged/pos_model.keras")
+    model = tf.keras.models.load_model("working/pos_model.keras")
 
     headword_list = [item[0] for item in input]
     definition_list = [item[1] for item in input]
