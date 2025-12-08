@@ -142,31 +142,48 @@ def translate_sentences(sentences):
     """
     Supply translations for each sentence in the collection.
     """
-    sentence_list = list(sentences.keys())
+    # Load existing progress log
+    try:
+        with open("working/translations.json", "r", encoding="utf-8") as translations_json:
+            translations = json.load(translations_json)
+    except:
+        translations = {}
+
+    # List all sentences with no recorded translation
+    sentence_list = [
+        sentence for sentence in sentences
+        if "translation" not in sentences[sentence]
+        or not sentences[sentence]["translation"]
+    ]
+
+    # Process sentences in batches
+    skipped = False
 
     for sentence_list_batch in generate_sentence_feed(sentence_list, feed_size=100):
-        # Load existing progress log
-        try:
-            with open("working/translations.json", "r", encoding="utf-8") as translations_json:
-                translations = json.load(translations_json)
-        except:
-            translations = {}
-
+        # Translate sentences
         for sentence in sentence_list_batch:
-            # Check if a translation already exists
-            if "translation" in sentences[sentence] and sentences[sentence]["translation"]:
-                continue
+            new_translation = False
 
-            # Translate sentence
             if sentence in translations:
                 translation = translations[sentence]
             else:
-                translation = translator.translate(sentence)
+                try:
+                    translation = translator.translate(sentence)
+                except:
+                    skipped = True
+                    continue
                 translation = translation[0].upper() + translation[1:]  # Capitalize first letter
                 translations[sentence] = translation
+                new_translation = True
             
             sentences[sentence]["translation"] = translation
         
         # Save current progress log
+        if not new_translation:
+            continue
         with open("working/translations.json", "w", encoding="utf-8") as translations_json:
             json.dump(translations, translations_json, ensure_ascii=False)
+    
+    # Re-run until all sentences are translated successfully
+    if skipped:
+        translate_sentences(sentences)
