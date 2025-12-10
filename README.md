@@ -1,6 +1,6 @@
 # HSK Annotated Corpus
 
-This project is an annotated collection of over 10,000 words and 250,000 sentences for Mandarin Chinese language learning.
+This project is an annotated collection of over 11,000 words and 260,000 sentences for Mandarin Chinese language learning.
 
 ## Key Features
 
@@ -85,3 +85,5 @@ This project relies heavily on the following tools and resources:
 - NLP and machine learning libraries: [HanLP](https://hanlp.hankcs.com/docs/index.html), [TensorFlow](https://www.tensorflow.org/)
 
 - Translation: [deep_translator](https://deep-translator.readthedocs.io/en/latest/)
+
+The Sankey diagram of the sentence processing flow is created using [SankeyMATIC.com](https://sankeymatic.com/).
