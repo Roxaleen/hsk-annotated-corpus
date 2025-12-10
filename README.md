@@ -74,16 +74,9 @@ For sentences that don't already come with English translations (some sentences 
 
 This project relies heavily on the following tools and resources:
 
-- Data sources:
-
-    - Word lists and definitions: [drkameleon/complete-hsk-vocabulary](https://github.com/drkameleon/complete-hsk-vocabulary), [Kaikki.org](https://kaikki.org/dictionary/Chinese/index.html)
-
-    - Sentence collections: [Tatoeba.org](https://tatoeba.org/en/downloads), [Leipzig Corpora Collection](https://corpora.uni-leipzig.de/en?corpusId=zho_news_2020)
-
+- Data sources: [drkameleon/complete-hsk-vocabulary](https://github.com/drkameleon/complete-hsk-vocabulary), [Kaikki.org](https://kaikki.org/dictionary/Chinese/index.html), [Tatoeba.org](https://tatoeba.org/en/downloads), [Leipzig Corpora Collection](https://corpora.uni-leipzig.de/en?corpusId=zho_news_2020)
 - Traditional to simplified character conversion: [zachary822/chinese-converter](https://github.com/zachary822/chinese-converter)
-
 - NLP and machine learning libraries: [HanLP](https://hanlp.hankcs.com/docs/index.html), [TensorFlow](https://www.tensorflow.org/)
-
 - Translation: [deep_translator](https://deep-translator.readthedocs.io/en/latest/)
 
 The Sankey diagram of the sentence processing flow is created using [SankeyMATIC.com](https://sankeymatic.com/).
