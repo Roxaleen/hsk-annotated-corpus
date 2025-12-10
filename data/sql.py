@@ -93,7 +93,7 @@ def export_sql(sentences, words, characters, rewrite=True):
     # Write sentences
     print("Writing sentences...")
     cur.executemany(
-        "INSERT INTO sentences (sentence, translation, character_level, word_level, level, source) VALUES (?, ?, ?, ?);",
+        "INSERT INTO sentences (sentence, translation, character_level, word_level, level, source) VALUES (?, ?, ?, ?, ?, ?);",
         [
             (sentence, sentences[sentence]["translation"], sentences[sentence]["character_level"], sentences[sentence]["word_level"], sentences[sentence]["level"], sentences[sentence]["source"])
             for sentence in sentences
@@ -137,6 +137,7 @@ def export_sql(sentences, words, characters, rewrite=True):
             (sentence, tag[0], tag[1])
             for sentence in sentences
             for tag in sentences[sentence]["tags"]
+            if tag[0] in words
         ]
     )
     con.commit()

@@ -331,8 +331,6 @@ def export_sentence_data(sentences):
         writer = csv.DictWriter(sentences_csv, ["sentence", "translation", "level", "character_level", "word_level", "source"])
         writer.writeheader()
         for sentence in sentences:
-            if "tags" not in sentences[sentence]:
-                continue
             writer.writerow({
                 "sentence": sentence
             } | {
@@ -343,8 +341,6 @@ def export_sentence_data(sentences):
         writer = csv.DictWriter(tags_csv, ["sentence", "word", "pos"])
         writer.writeheader()
         for sentence in sentences:
-            if "tags" not in sentences[sentence]:
-                continue
             for tag in sentences[sentence]["tags"]:
                 writer.writerow({
                     "sentence": sentence,

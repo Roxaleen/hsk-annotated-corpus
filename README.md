@@ -66,6 +66,8 @@ The [HanLP NLP library](https://hanlp.hankcs.com/docs/index.html) is used to per
 
 - **Part-of-speech tagging:** Lastly, each token in every sentence is tagged by its part of speech.
 
+![Sankey diagram of sentence processing flow](/data/working/sentences_diagram.png)
+
 For sentences that don't already come with English translations (some sentences from Wiktionary, and all sentences from Leipzig), translations are generated with [deep_translator](https://deep-translator.readthedocs.io/en/latest/).
 
 ## Acknowledgements

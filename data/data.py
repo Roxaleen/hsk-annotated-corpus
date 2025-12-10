@@ -31,7 +31,7 @@ def main():
         process_sentences(sentences, words, characters, export=True)
     
     # Export data to SQL
-    # export_sql(sentences, words, characters, rewrite=True)
+    export_sql(sentences, words, characters, rewrite=True)
 
 
 # Run program

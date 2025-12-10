@@ -45,7 +45,7 @@ def parse_sentences(sentences, words, characters):
 
         # Perform constituency parsing to validate each sentence
         print("Parsing sentences...")
-        validate_sentences(sentence_list_batch, tokens)
+        validate_sentences(sentences, sentence_list_batch, tokens)
 
         # Perform POS tagging
         print("Tagging parts of speech...")
@@ -67,7 +67,7 @@ def generate_sentence_feed(sentence_list, feed_size=FEED_SIZE):
         yield sentence_list[i * feed_size : (i + 1) * feed_size]
 
 
-def validate_sentences(sentence_list, tokens):
+def validate_sentences(sentences, sentence_list, tokens):
     """
     Perform constituency parsing to validate each sentence.
     """
@@ -93,6 +93,7 @@ def validate_sentences(sentence_list, tokens):
     for index in reversed(list(invalid.keys())):
         sentence_list.pop(index)
         tokens.pop(index)
+        sentences.pop(invalid[index])
 
 
 def record_tags(sentences, words, characters, sentence_list, tokens, tags):

@@ -116,6 +116,7 @@ INNER JOIN sentences
 INNER JOIN word_definition_view
     ON word_matches.word_id = word_definition_view.word_id
 WHERE word_matches.pos_id = word_definition_view.pos_id
+    -- If there's no exact POS match, list all available definitions
     OR NOT EXISTS (
         SELECT 1
         FROM word_definition_view
