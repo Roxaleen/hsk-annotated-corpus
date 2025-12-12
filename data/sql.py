@@ -54,6 +54,7 @@ def export_sql(sentences, words, characters, rewrite=True):
         [(character, characters[character]) for character in characters]
     )
     cur.execute("CREATE INDEX IF NOT EXISTS character_index ON characters (character);")
+    cur.execute("CREATE INDEX IF NOT EXISTS character_level_index ON characters (level);")
     con.commit()
 
     # Write words
@@ -63,6 +64,7 @@ def export_sql(sentences, words, characters, rewrite=True):
         [(word, words[word]["level"], words[word]["frequency_ranking"]) for word in words]
     )
     cur.execute("CREATE INDEX IF NOT EXISTS word_index ON words (word);")
+    cur.execute("CREATE INDEX IF NOT EXISTS word_level_index ON words (level);")
     con.commit()
 
     # Write word definitions
@@ -100,6 +102,7 @@ def export_sql(sentences, words, characters, rewrite=True):
         ]
     )
     cur.execute("CREATE INDEX IF NOT EXISTS sentence_index ON sentences (sentence);")
+    cur.execute("CREATE INDEX IF NOT EXISTS sentence_level_index ON sentences (level);")
     con.commit()
 
     # Write character matches

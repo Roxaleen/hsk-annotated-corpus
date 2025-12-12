@@ -102,6 +102,7 @@ CREATE TABLE IF NOT EXISTS characters (
     level INTEGER NOT NULL
 );
 CREATE INDEX IF NOT EXISTS character_index ON characters (character);
+CREATE INDEX IF NOT EXISTS character_level_index ON characters (level);
 
 -- Words
 CREATE TABLE IF NOT EXISTS words (
@@ -111,6 +112,7 @@ CREATE TABLE IF NOT EXISTS words (
     frequency_ranking INTEGER NOT NULL
 );
 CREATE INDEX IF NOT EXISTS word_index ON words (word);
+CREATE INDEX IF NOT EXISTS word_level_index ON words (level);
 
 -- Word definitions
 CREATE TABLE IF NOT EXISTS word_definitions (
@@ -135,6 +137,7 @@ CREATE TABLE IF NOT EXISTS sentences (
     source TEXT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS sentence_index ON sentences (sentence);
+CREATE INDEX IF NOT EXISTS sentence_level_index ON sentences (level);
 
 -- Sentence-character matches
 CREATE TABLE IF NOT EXISTS character_matches (
