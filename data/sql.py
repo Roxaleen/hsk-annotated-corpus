@@ -109,10 +109,10 @@ def export_sql(sentences, words, characters, rewrite=True):
     print("Writing character matches...")
     cur.executemany(
         """
-            INSERT INTO character_matches (sentence_id, character_id)
+            INSERT INTO character_matches (character_id, sentence_id)
             VALUES (
-                (SELECT id FROM sentences WHERE sentence = ?),
-                (SELECT id FROM characters WHERE character = ?)
+                (SELECT id FROM characters WHERE character = ?),
+                (SELECT id FROM sentences WHERE sentence = ?)
             )
             ON CONFLICT DO NOTHING;
         """,
@@ -128,11 +128,11 @@ def export_sql(sentences, words, characters, rewrite=True):
     print("Writing word matches...")
     cur.executemany(
         """
-            INSERT INTO word_matches (sentence_id, word_id, pos_id)
+            INSERT INTO word_matches (word_id, pos_id, sentence_id)
             VALUES (
-                (SELECT id FROM sentences WHERE sentence = ?),
                 (SELECT id FROM words WHERE word = ?),
-                (SELECT id FROM pos WHERE pos_label = ?)
+                (SELECT id FROM pos WHERE pos_label = ?),
+                (SELECT id FROM sentences WHERE sentence = ?)
             )
             ON CONFLICT DO NOTHING;
         """,

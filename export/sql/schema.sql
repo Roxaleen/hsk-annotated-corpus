@@ -52,22 +52,22 @@ CREATE TABLE IF NOT EXISTS sentences (
 
 -- Sentence-character matches
 CREATE TABLE IF NOT EXISTS character_matches (
-    sentence_id INTEGER NOT NULL,
     character_id INTEGER NOT NULL,
+    sentence_id INTEGER NOT NULL,
+    FOREIGN KEY (character_id) REFERENCES characters(id),
     FOREIGN KEY (sentence_id) REFERENCES sentences(id),
-    FOREIGN KEY (character_id) REFERENCES words(id),
-    PRIMARY KEY (sentence_id, character_id)
+    PRIMARY KEY (character_id, sentence_id)
 );
 
 -- Sentence-words matches with POS tags
 CREATE TABLE IF NOT EXISTS word_matches (
-    sentence_id INTEGER NOT NULL,
     word_id INTEGER NOT NULL,
     pos_id INTEGER NOT NULL,
-    FOREIGN KEY (sentence_id) REFERENCES sentences(id),
+    sentence_id INTEGER NOT NULL,
     FOREIGN KEY (word_id) REFERENCES words(id),
     FOREIGN KEY (pos_id) REFERENCES pos(id),
-    PRIMARY KEY (sentence_id, word_id, pos_id)
+    FOREIGN KEY (sentence_id) REFERENCES sentences(id),
+    PRIMARY KEY (word_id, pos_id, sentence_id)
 );
 
 
@@ -101,6 +101,10 @@ INNER JOIN characters
 
 -- Sentence-word view
 CREATE VIEW IF NOT EXISTS word_match_view AS
+WITH exact_matches AS (
+    SELECT DISTINCT word_definition_view.word_id, word_definition_view.pos_id
+    FROM word_definition_view
+)
 SELECT sentence_id, word_matches.word_id, word_matches.pos_id,
        sentence, translation,
        word,
@@ -116,13 +120,12 @@ INNER JOIN pos
     ON word_matches.pos_id = pos.id
 INNER JOIN sentences
     ON word_matches.sentence_id = sentences.id
+LEFT JOIN exact_matches
+    ON word_matches.pos_id = exact_matches.pos_id
+    AND word_matches.word_id = exact_matches.word_id
 INNER JOIN word_definition_view
     ON word_matches.word_id = word_definition_view.word_id
-WHERE word_matches.pos_id = word_definition_view.pos_id
-    -- If there's no exact POS match, list all available definitions
-    OR NOT EXISTS (
-        SELECT 1
-        FROM word_definition_view
-        WHERE word_matches.word_id = word_definition_view.word_id
-        AND word_matches.pos_id = word_definition_view.pos_id
+    AND (
+        word_definition_view.pos_id = exact_matches.pos_id
+        OR exact_matches.word_id IS NULL
     );
