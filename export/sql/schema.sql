@@ -69,6 +69,7 @@ CREATE TABLE IF NOT EXISTS word_matches (
     FOREIGN KEY (sentence_id) REFERENCES sentences(id),
     PRIMARY KEY (word_id, pos_id, sentence_id)
 );
+-- CREATE INDEX IF NOT EXISTS word_match_index ON word_matches (word_id, sentence_id);
 
 
 -- CREATE VIEWS

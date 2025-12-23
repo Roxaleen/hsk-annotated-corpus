@@ -143,6 +143,7 @@ def export_sql(sentences, words, characters, rewrite=True):
             if tag[0] in words
         ]
     )
+    cur.execute("CREATE INDEX IF NOT EXISTS word_match_index ON word_matches (word_id, sentence_id);")
     con.commit()
 
     # Close connection
