@@ -46,52 +46,52 @@ def load_words_drkameleon(words, characters, export=True):
     with open("raw/words/drkameleon_hsk-vocabulary-complete.json", "r", encoding="utf-8") as words_json:
         words_full = json.load(words_json)
 
-        # Extract headword fields
-        for word in words_full:
+    # Extract headword fields
+    for word in words_full:
 
-            # Compile headword fields
-            word_level = int(re.sub(r"[a-zA-Z\+\-]", "", word["level"][0]))
-            words[word["simplified"]] = {
-                "level": word_level,
-                "frequency_ranking": int(word["frequency"])
-            }
+        # Compile headword fields
+        word_level = int(re.sub(r"[a-zA-Z\+\-]", "", word["level"][0]))
+        words[word["simplified"]] = {
+            "level": word_level,
+            "frequency_ranking": int(word["frequency"])
+        }
 
-            # Discard proper noun forms
-            word_forms = [form for form in word["forms"] if (not re.search(r"[A-Z]", form["transcriptions"]["numeric"])) or len(word["forms"]) == 1]
-            
-            # Discard Taiwan-specific or trivial definitions
-            word_meanings = [
-                re.sub(r" \(Taiwan pr\. .*\)", "", meaning)
-                for form in word_forms for meaning in form["meanings"] if not (
-                    meaning.startswith(("Taiwan", "(Taiwan", "Beijing pr. ", "also ", "used in ", "(used ", "equivalent ", "(indicates ", "abbr. ", "see ", "Kangxi radical ")) or
-                    any(substring in meaning for substring in ["(Tw)", "(Taiwan)", "variant of"])
-                )
-            ]
-            if len(word_meanings) == 0:
-                continue
-            
-            # Compile word data
-            word_data = {
-                "pinyin": list({form["transcriptions"]["pinyin"] for form in word_forms}),
-                "definitions": word_meanings,
-                "source": "drkameleon"
-            }
+        # Discard proper noun forms
+        word_forms = [form for form in word["forms"] if (not re.search(r"[A-Z]", form["transcriptions"]["numeric"])) or len(word["forms"]) == 1]
+        
+        # Discard Taiwan-specific or trivial definitions
+        word_meanings = [
+            re.sub(r" \(Taiwan pr\. .*\)", "", meaning)
+            for form in word_forms for meaning in form["meanings"] if not (
+                meaning.startswith(("Taiwan", "(Taiwan", "Beijing pr. ", "also ", "used in ", "(used ", "equivalent ", "(indicates ", "abbr. ", "see ", "Kangxi radical ")) or
+                any(substring in meaning for substring in ["(Tw)", "(Taiwan)", "variant of"])
+            )
+        ]
+        if len(word_meanings) == 0:
+            continue
+        
+        # Compile word data
+        word_data = {
+            "pinyin": list({form["transcriptions"]["pinyin"] for form in word_forms}),
+            "definitions": word_meanings,
+            "source": "drkameleon"
+        }
 
-            # Record word data
-            words_drkameleon[word["simplified"]] = {}
+        # Record word data
+        words_drkameleon[word["simplified"]] = {}
 
-            word_pos_set = {POS_PKU[pos_code.lower()[0]] for pos_code in word["pos"]}
-            if len(word_pos_set) == 1:
-                words_drkameleon[word["simplified"]][word_pos_set.pop()] = word_data
+        word_pos_set = {POS_PKU[pos_code.lower()[0]] for pos_code in word["pos"]}
+        if len(word_pos_set) == 1:
+            words_drkameleon[word["simplified"]][word_pos_set.pop()] = word_data
+        else:
+            words_drkameleon[word["simplified"]]["unsorted"] = word_data
+        
+        # Record character level
+        for character in set(word["simplified"]):
+            if character in characters:
+                characters[character] = min(characters[character], word_level)
             else:
-                words_drkameleon[word["simplified"]]["unsorted"] = word_data
-            
-            # Record character level
-            for character in set(word["simplified"]):
-                if character in characters:
-                    characters[character] = min(characters[character], word_level)
-                else:
-                    characters[character] = words[word["simplified"]]["level"]
+                characters[character] = words[word["simplified"]]["level"]
     
     # Extract all unsorted definitions for POS tagging
     input = [(word, definition) for word in words_drkameleon for definition in words_drkameleon[word].get("unsorted", {}).get("definitions", [])]
