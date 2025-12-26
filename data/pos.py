@@ -2,8 +2,7 @@
 Train a neural network to classify CC-CEDICT word definitions by part of speech.
 """
 
-import hanlp, json, re
-import numpy as np
+import chinese_converter, json, re
 import tensorflow as tf
 
 from sklearn.model_selection import train_test_split
@@ -59,9 +58,9 @@ POS_LABELS = sorted(set(POS_PKU.values()))
 
 
 # Training parameters
-TEST_SIZE = 0.2
-BATCH_SIZE = 16
-MAX_TOKENS = 10000
+TEST_SIZE = 0.5
+BATCH_SIZE = 32
+MAX_TOKENS = 15000
 EPOCHS = 5
 
 
@@ -69,13 +68,9 @@ def main():
     # Load training data
     try:
         with open("working/pos_training.json", "r", encoding="utf-8") as training_json:
-            [labeled, unlabeled] = json.load(training_json)
+            [headwords, definitions, labels] = json.load(training_json)
     except:
-        (labeled, unlabeled) = sort_raw_data()
-    
-    headwords = [item[0] for item in labeled]
-    definitions = [item[1] for item in labeled]
-    labels = [POS_LABELS.index(item[2]) for item in labeled]
+        (headwords, definitions, labels) = load_training_data()
 
     # Split training data into training and testing sets
     (xh_train, xh_test, xd_train, xd_test, y_train, y_test) = train_test_split(headwords, definitions, labels, test_size=TEST_SIZE)
@@ -95,66 +90,55 @@ def main():
     model.save("working/pos_model.keras")
 
 
-def sort_raw_data():
+def load_training_data():
     """
-    Load raw dataset and isolate labeled items for training.
+    Load and format Kaikki Wiktionary dataset for training.
     
-    Words tagged with only one POS (based on the sentence corpus) are labeled accordingly for training.
-    Words with multiple POS tags are set aside to later be labeled by the trained model.
+    The full database of words and definitions is used, regardless of HSK status.
     """
-    labeled = []
-    unlabeled = []
+    headwords = []
+    definitions = []
+    labels = []
 
-    # Comb sentence corpus to collate all POS tags for each word
-    tags = {}
-    with open("../export/json/sentences.json", "r", encoding="utf-8") as sentences_json:
-        sentences = json.load(sentences_json)
+    # Read word data from JSONL file
+    with open("raw/words/kaikki_dictionary-Chinese.jsonl", "r", encoding="utf-8") as words_jsonl:
+        for line in words_jsonl:
+            # Read word data
+            word_full = json.loads(line)
 
-    for sentence in sentences:
-        for [word, pos] in sentences[sentence]["tags"]:
-            if word not in tags:
-                tags[word] = {pos}
-            else:
-                tags[word].add(pos)
-    
-    # Load raw drkameleon word set with definitions
-    with open("raw/words/drkameleon_hsk-vocabulary-complete.json", "r", encoding="utf-8") as words_json:
-        word_entries = json.load(words_json)
+            # Extract headword
+            word_head = chinese_converter.to_simplified(word_full["word"])
+            if re.search(r"[a-zA-Z]", word_head):
+                continue
 
-    for word_entry in word_entries:
-        # Extract headword
-        word = word_entry["simplified"]
+            # Extract POS label
+            if word_full["pos"] not in POS_WIKTIONARY:
+                continue
+            word_pos = POS_WIKTIONARY[word_full["pos"]]
 
-        # Discard proper noun forms
-        word_forms = [form for form in word_entry["forms"] if (not re.search(r"[A-Z]", form["transcriptions"]["numeric"])) or len(word_entry["forms"]) == 1]
-        
-        # Discard Taiwan-specific or trivial definitions
-        word_meanings = [
-            re.sub(r" \(Taiwan pr\. .*\)", "", meaning)
-            for form in word_forms for meaning in form["meanings"] if not (
-                meaning.startswith(("Taiwan", "(Taiwan", "Beijing pr. ", "also ", "used in ", "(used ", "equivalent ", "(indicates ", "abbr. ", "see ", "Kangxi radical ")) or
-                any(substring in meaning for substring in ["(Tw)", "(Taiwan)", "variant of"])
-            )
-        ]
-        if len(word_meanings) == 0:
-            continue
+            # Extract definitions
+            word_definitions = []
+            for sense in word_full["senses"]:
+                if "glosses" not in sense:
+                    continue
+                word_definitions.extend([
+                    re.sub(r" \(Classifier: .*\)", "", gloss)
+                    for gloss in sense["glosses"] if not(
+                        gloss.lower().startswith(("alternative ", "synonym of", "short for", "erhua"))
+                    )
+                ])
             
-        # If word only has one POS tag, add word and all its definitions to labeled set
-        if len(tags.get(word, set())) == 1:
-            pos = tags[word].pop()
-            for definition in word_meanings:
-                labeled.append((word, definition, pos))
-        
-        # Otherwise, add word and all its definitions to unlabeled set
-        else:
-            for definition in word_meanings:
-                unlabeled.append((word, definition))
-
-    # Export sorted data to JSON
+            # Record definition-label pairs
+            for definition in word_definitions:
+                headwords.append(word_head)
+                definitions.append(definition)
+                labels.append(POS_LABELS.index(word_pos))
+    
+    # Export loaded data to JSON
     with open("working/pos_training.json", "w", encoding="utf-8") as training_json:
-        json.dump([labeled, unlabeled], training_json, ensure_ascii=False)
+        json.dump([headwords, definitions, labels], training_json, ensure_ascii=False)
 
-    return (labeled, unlabeled)
+    return (headwords, definitions, labels)
 
 
 def create_model(xh_train, xd_train):
@@ -172,35 +156,14 @@ def create_model(xh_train, xd_train):
     vectorization_head.adapt(xh_train)
     vectorization_def.adapt(xd_train)
 
-    embed_head = tf.keras.layers.Embedding(
-        len(vectorization_head.get_vocabulary()),
-        100,
-        embeddings_initializer=tf.keras.initializers.Constant(
-            create_embedding_matrix(
-                hanlp.load(hanlp.pretrained.word2vec.RADICAL_CHAR_EMBEDDING_100),
-                100,
-                vectorization_head.get_vocabulary()
-            )
-        ),
-        trainable=False
-    )(vectorization_head(input_head))
-    embed_def = tf.keras.layers.Embedding(
-        len(vectorization_def.get_vocabulary()),
-        50,
-        embeddings_initializer=tf.keras.initializers.Constant(
-            create_embedding_matrix(
-                hanlp.load(hanlp.pretrained.glove.GLOVE_6B_50D),
-                50,
-                vectorization_def.get_vocabulary()
-            )
-        ),
-        trainable=False
-    )(vectorization_def(input_def))
+    embed_head = tf.keras.layers.Embedding(MAX_TOKENS, 200)(vectorization_head(input_head))
+    embed_def = tf.keras.layers.Embedding(MAX_TOKENS, 200)(vectorization_def(input_def))
     
     # Model layers
     x = tf.keras.layers.Concatenate()([embed_head, embed_def])
-    x = tf.keras.layers.Bidirectional(tf.keras.layers.GRU(32))(x)
-    x = tf.keras.layers.Dense(25, activation="relu")(x)
+    x = tf.keras.layers.Bidirectional(tf.keras.layers.GRU(64))(x)
+    x = tf.keras.layers.Dense(100, activation="relu")(x)
+    x = tf.keras.layers.Dropout(0.25)(x)
     output = tf.keras.layers.Dense(len(POS_LABELS), activation="softmax")(x)
 
     # Create model
@@ -212,34 +175,55 @@ def create_model(xh_train, xd_train):
     return model
 
 
-def create_embedding_matrix(embedding, dim, vocab):
-    """
-    Build embedding matrix from pretrained embedding
-    """
-    embedding_matrix = np.zeros((len(vocab), dim), dtype='float32')
-    for (index, word) in enumerate(vocab):
-        try:
-            embedding_matrix[index] = embedding(word)
-        except KeyError:
-            pass
-    return embedding_matrix
-
-
 def predict_pos(input):
     """
     Use trained neural network to predict POS labels for given dictionary definitions.
     """
+    # Comb sentence corpus to collate all POS tags for each word
+    tags = {}
+    with open("../export/json/sentences.json", "r", encoding="utf-8") as sentences_json:
+        sentences = json.load(sentences_json)
+
+    for sentence in sentences:
+        for [word, pos] in sentences[sentence]["tags"]:
+            if word not in tags:
+                tags[word] = [pos]
+            else:
+                tags[word].append(pos)
+                tags[word] = list(dict.fromkeys(tags[word]))
+
+    # Load model
     model = tf.keras.models.load_model("working/pos_model.keras")
 
+    # Calculate POS probabilities
     headword_list = [item[0] for item in input]
     definition_list = [item[1] for item in input]
-
-    # Predict POS labels
-    data = tf.data.Dataset.from_tensor_slices({"headword": headword_list, "definition": definition_list}).batch(32)
-    labels = model.predict(data, verbose=2).tolist()
-    labels = np.argmax(labels, axis=1)
+    data = tf.data.Dataset.from_tensor_slices({"headword": headword_list, "definition": definition_list}).batch(BATCH_SIZE)
+    probabilities = model.predict(data, verbose=2).tolist()
     
-    return [POS_LABELS[label] for label in labels]
+    # Determine and apply POS labels
+    output = []
+    for (index, (word, definition, pinyin)) in enumerate(input):
+        # If the highest probability >= 0.5, accept it directly
+        top_probability = max(probabilities[index])
+        if top_probability >= 0.5:
+            top_label = probabilities[index].index(top_probability)
+
+        # Otherwise, select the highest-probability label among the word's existing POS tags
+        else:
+            allowed_labels = [POS_LABELS.index(tag) for tag in tags[word]] if word in tags else range(len(POS_LABELS))
+
+            top_label = None
+            top_probability = 0
+
+            for label in allowed_labels:
+                if probabilities[index][label] > top_probability:
+                    top_label = label
+                    top_probability = probabilities[index][label]
+        
+        output.append((word, definition, POS_LABELS[top_label], pinyin))
+    
+    return output
 
 
 if __name__ == "__main__":

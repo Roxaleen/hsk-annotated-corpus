@@ -19,6 +19,8 @@ def export_sql(sentences, words, characters, rewrite=True):
     con = sqlite3.connect("../export/sql/data.db")
     cur = con.cursor()
 
+    cur.execute("PRAGMA journal_mode=WAL;")
+
     # Drop existing tables and views
     if rewrite:
         cur.executescript("""
@@ -117,7 +119,7 @@ def export_sql(sentences, words, characters, rewrite=True):
             ON CONFLICT DO NOTHING;
         """,
         [
-            (sentence, character)
+            (character, sentence)
             for sentence in sentences
             for character in set(sentence) & set(characters.keys())
         ]
@@ -137,7 +139,7 @@ def export_sql(sentences, words, characters, rewrite=True):
             ON CONFLICT DO NOTHING;
         """,
         [
-            (sentence, tag[0], tag[1])
+            (tag[0], tag[1], sentence)
             for sentence in sentences
             for tag in sentences[sentence]["tags"]
             if tag[0] in words

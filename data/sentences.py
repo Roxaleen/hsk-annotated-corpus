@@ -283,7 +283,8 @@ def clean_sentence(sentence, characters, log):
         sentence = sentence[:-1]
     
     # If sentence begins and ends with matching brackets, trim both brackets
-    if (sentence.endswith("」") and sentence.startswith("「")) or (sentence.endswith("》") and sentence.startswith("《")):
+    match = re.search(r"(^「[^「」]+」$)|(^《[^《》]+》$)", sentence)
+    if match:
         sentence = sentence[1:-1]
     
     # Reject sentences with invalid starting or ending punctuation

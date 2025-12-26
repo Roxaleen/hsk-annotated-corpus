@@ -41,6 +41,7 @@ def load_words_drkameleon(words, characters, export=True):
     Source: https://github.com/drkameleon/complete-hsk-vocabulary
     """
     words_drkameleon = {}
+    definitions_unlabeled = []
 
     # Read full word data from JSON file
     with open("raw/words/drkameleon_hsk-vocabulary-complete.json", "r", encoding="utf-8") as words_json:
@@ -55,36 +56,6 @@ def load_words_drkameleon(words, characters, export=True):
             "level": word_level,
             "frequency_ranking": int(word["frequency"])
         }
-
-        # Discard proper noun forms
-        word_forms = [form for form in word["forms"] if (not re.search(r"[A-Z]", form["transcriptions"]["numeric"])) or len(word["forms"]) == 1]
-        
-        # Discard Taiwan-specific or trivial definitions
-        word_meanings = [
-            re.sub(r" \(Taiwan pr\. .*\)", "", meaning)
-            for form in word_forms for meaning in form["meanings"] if not (
-                meaning.startswith(("Taiwan", "(Taiwan", "Beijing pr. ", "also ", "used in ", "(used ", "equivalent ", "(indicates ", "abbr. ", "see ", "Kangxi radical ")) or
-                any(substring in meaning for substring in ["(Tw)", "(Taiwan)", "variant of"])
-            )
-        ]
-        if len(word_meanings) == 0:
-            continue
-        
-        # Compile word data
-        word_data = {
-            "pinyin": list({form["transcriptions"]["pinyin"] for form in word_forms}),
-            "definitions": word_meanings,
-            "source": "drkameleon"
-        }
-
-        # Record word data
-        words_drkameleon[word["simplified"]] = {}
-
-        word_pos_set = {POS_PKU[pos_code.lower()[0]] for pos_code in word["pos"]}
-        if len(word_pos_set) == 1:
-            words_drkameleon[word["simplified"]][word_pos_set.pop()] = word_data
-        else:
-            words_drkameleon[word["simplified"]]["unsorted"] = word_data
         
         # Record character level
         for character in set(word["simplified"]):
@@ -92,32 +63,48 @@ def load_words_drkameleon(words, characters, export=True):
                 characters[character] = min(characters[character], word_level)
             else:
                 characters[character] = words[word["simplified"]]["level"]
-    
-    # Extract all unsorted definitions for POS tagging
-    input = [(word, definition) for word in words_drkameleon for definition in words_drkameleon[word].get("unsorted", {}).get("definitions", [])]
-    labels = predict_pos(input)
-    labels = {input[index] : labels[index] for index in range(len(input))}
-    
-    # Reorganize definitions by POS
-    for word in words_drkameleon:
-        if "unsorted" not in words_drkameleon[word]:
-            continue
 
-        for definition in words_drkameleon[word]["unsorted"]["definitions"]:
-            # Get predicted POS label
-            label = labels[((word, definition))]
+        # Create word record entry
+        words_drkameleon[word["simplified"]] = {}
+
+        # Discard proper noun forms
+        word_forms = [form for form in word["forms"] if (not re.search(r"[A-Z]", form["transcriptions"]["numeric"])) or len(word["forms"]) == 1]
+
+        # Extract definition data
+        for form in word_forms:
+            # Extract pinyin
+            form_pinyin = form["transcriptions"]["pinyin"]
             
-            # Check if an entry already exists with the same POS
-            if label in words_drkameleon[word]:
-                words_drkameleon[word][label]["definitions"].append(definition)
-            else:
-                words_drkameleon[word][label] = {
-                    "definitions": [definition],
-                    "pinyin": words_drkameleon[word]["unsorted"]["pinyin"],
-                    "source": words_drkameleon[word]["unsorted"]["source"],
-                }
-        
-        words_drkameleon[word].pop("unsorted")
+            # Discard Taiwan-specific or trivial definitions
+            form_meanings = [
+                re.sub(r" \(Taiwan pr\. .*\)", "", meaning)
+                for meaning in form["meanings"] if not (
+                    meaning.startswith(("Taiwan", "(Taiwan", "Beijing pr. ", "also ", "used in ", "(used ", "equivalent ", "(indicates ", "abbr. ", "see ", "Kangxi radical ")) or
+                    any(substring in meaning for substring in ["(Tw)", "(Taiwan)", "variant of", "Note:"])
+                )
+            ]
+            if len(form_meanings) == 0:
+                continue
+            
+            # Compile definition data
+            for definition in form_meanings:
+                definitions_unlabeled.append((word["simplified"], definition, form_pinyin))
+    
+    # Get labeled definitions with predicted POS and pinyin
+    definitions_labeled = predict_pos(definitions_unlabeled)
+
+    # Record labeled definitions
+    for (word, definition, pos, pinyin) in definitions_labeled:
+        if pos not in words_drkameleon[word]:
+            words_drkameleon[word][pos] = {
+                "pinyin": [pinyin],
+                "definitions": [definition],
+                "source": "drkameleon"
+            }
+        else:
+            words_drkameleon[word][pos]["pinyin"].append(pinyin)
+            words_drkameleon[word][pos]["pinyin"] = list(dict.fromkeys(words_drkameleon[word][pos]["pinyin"]))
+            words_drkameleon[word][pos]["definitions"].append(definition)
 
     # Export cleaned data
     if export:

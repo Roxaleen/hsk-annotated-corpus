@@ -1,4 +1,6 @@
 chinese_converter
 deep_translator
 hanlp
+numpy
+scikit-learn
 tensorflow
